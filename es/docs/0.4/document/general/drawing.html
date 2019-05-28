@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/bolts/static/favicon.ico" />
+  
+  <link rel="stylesheet" href="/bolts/static/css/style.css?019e02bb" type="text/css" media="screen">
+  
+  <title>Documentation</title>
+</head>
+<body>
+
+   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/bolts/es/index.html">Home</a></li>
+          <li><a href="/bolts/es/blog/index.html">Blog</a></li>
+          <li><a href="/bolts/es/parts/index.html">Parts</a></li>
+          <li><a href="/bolts/es/docs/index.html">Documentation</a></li>
+          <li><a href="/bolts/es/contribute.html">Contribute</a></li>
+          <li><a href="/bolts/es/downloads.html">Downloads</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">es<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/bolts/en/docs/0.4/document/general/drawing.html">English</a></li>
+              <li><a href="/bolts/de/docs/0.4/document/general/drawing.html">German</a></li>
+              <li><a href="/bolts/fr/docs/0.4/document/general/drawing.html">French</a></li>
+              <li><a href="/bolts/es/docs/0.4/document/general/drawing.html">Spanish</a></li>
+              <li><a href="/bolts/sv/docs/0.4/document/general/drawing.html">Swedish</a></li>
+            </ul>
+          </li>
+          <li><a class="github" href="https://github.com/jreinhardt/BOLTS">Github</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+
+
+  <div class="page-title-bar">
+    <div class="container">
+      
+      <h2>Documentation for BOLTS 0.4 (development version)</h2>
+      <a href="/bolts/es/docs/0.3/index.html">stable</a>
+      <a class="active" href="/bolts/es/docs/0.4/index.html">dev</a>
+      
+    </div>
+  </div>
+
+<div class="container">
+  
+<div class="row">
+  <div class="col-sm-8 doc-main">
+    <div class="doc-page">
+      <h2 class="doc-page-title">How to make a nice drawing for BOLTS</a></h2>
+      <h3>Prerequisites</h3>
+<p>You need to have installed <a href="http://freecadweb.org/">FreeCAD</a> and <a href="/bolts/en/docs/0.4/document/freecad/installation.html">BOLTS for
+FreeCAD</a> and the free Vector Graphics Editor
+<a href="http://inkscape.org/">Inkscape</a>.</p>
+<p>If the part for which you want to create the drawing is not in BOLTS for
+FreeCAD, you also need <a href="http://www.openscad.org/">OpenSCAD</a> and <a href="/bolts/en/docs/0.4/document/openscad/installation.html">BOLTS for
+OpenSCAD</a>.</p>
+<h3>Follow this guide and contribute</h3>
+<p>There is a <a href="/bolts/en/tasks.html?version=0.4">list of classes</a> for which no drawing is
+available. You are invited to pick one, follow this guide and contribute the
+result.</p>
+<h3>Scope</h3>
+<p>The main purpose of drawings in BOLTS is to give a quick visual explanation of
+the meaning of the parameters of the class. It is not a full-fledged technical
+drawing, whose purpose is to provide all the informations necessary to produce
+the part. Nevertheless we borrow some conventions and techniques from technical
+drawings.</p>
+<h3>Loading a part</h3>
+<p>Depending on whether the part for your drawing is available in BOLTS for
+FreeCAD or BOLTS for OpenSCAD, the first steps of this process differ.</p>
+<p>It is a bit easier to work with parts from BOLTS for FreeCAD, because the
+drawing is mostly created in FreeCAD.</p>
+<p>If your part is available in BOLTS for FreeCAD, you have to start with the next
+step.</p>
+<p>If your part is only in BOLTS for OpenSCAD, you have to skip the next step and
+continue at "Loading a part from BOLTS for OpenSCAD".</p>
+<h3>Loading a part from BOLTS for FreeCAD</h3>
+<p>You can skip this step if you want to create a drawing for a part that is only
+in BOLTS for OpenSCAD.</p>
+<p>Start FreeCAD. Add a part of the class for which you want to create the
+drawing, as described <a href="/bolts/en/docs/0.4/document/freecad/usage.html">here</a>. The value of the
+parameters does not matter too much, the default values will be usually fine.</p>
+<h3>Exporting a part from BOLTS for OpenSCAD</h3>
+<p>You can skip this step if you have executed the previous step.</p>
+<p>FreeCAD has the ability to load a part from a CSG file created by OpenSCAD. To
+create such a file, fire up OpenSCAD, and type in the following short piece of
+code</p>
+<pre><code>include &lt;BOLTS.scad&gt;
+ISO7089();
+</code></pre>
+<p>The first line includes the BOLTS library. The second line creates a
+part, in this case <a href="/bolts/en/parts/standards/ISO7089.html">a washer</a>.</p>
+<p>If you hit F5, or select Design-&gt;Compile, the part should appear in the preview
+window. You can now export the part to a CSG file by choosing Design-&gt;Export as
+CSG....</p>
+<p><a href="/bolts/es/docs/static/0.4/openscad_drawing2.png"><img alt="Part from BOLTS in OpenSCAD" src="/bolts/es/docs/static/0.4/openscad_drawing2.png" /></a></p>
+<p>Save the file to some place where you can find it again, it is only temporary
+and you can remove it afterwards.</p>
+<p>You can close OpenSCAD now.</p>
+<h3>Loading a CSG file into FreeCAD</h3>
+<p>Start FreeCAD. Then select File-&gt;Open and select the CSG file that you created in the previous step.</p>
+<p><a href="/bolts/es/docs/static/0.4/openscad_drawing3.png"><img alt="Loading a CSG file into FreeCAD" src="/bolts/es/docs/static/0.4/openscad_drawing3.png" /></a></p>
+<p>The part should now be visible in the preview window.</p>
+<h3>Create a drawing</h3>
+<p>You should now have a document with the part for which you want to create the
+drawing, and this should be the active object in this document (the one shown
+in boldface letters in the combo view).</p>
+<p>Now we can use the python console in FreeCAD to create a drawing:</p>
+<pre><code>import BOLTS
+obj = FreeCAD.ActiveDocument.ActiveObject
+BOLTS.make_drawing(4.5,obj)
+</code></pre>
+<p>The first line starts BOLTS for FreeCAD (see also
+<a href="/bolts/en/docs/0.4/document/freecad/usage.html">here</a>, the second one creates a variable containing
+the part and the third line calls a helper function from the BOLTS module.</p>
+<p>This helper function has two parameters, a scaling factor and the object, and
+it creates a new drawing from the BOLTS template and inserts various views on
+the object.</p>
+<p>Now an additional object should have vanished in the combo view, a page. </p>
+<p><a href="/bolts/es/docs/static/0.4/drawing1.png"><img alt="Finished drawing of washer" src="/bolts/es/docs/static/0.4/drawing1.png" /></a></p>
+<p>You can open it in a new drawing viewer by double clicking on it. There will be
+nothing visible, because the drawing needs to be recomputed, which you can do
+by pressing the keys Ctrl-r.</p>
+<p>Now you should see a page with the BOLTS logo in the lower right corner, and
+different views on the object. If the scaling factor that you used was too big
+or too small, you notice now. It is good to have a bit of space between the
+different views to add dimensions, but the part should be not too tiny.</p>
+<p>If the scaling factor was not good, you can close the Drawing Viewer, delete
+the Page Object from the Combo View and type the last line again, with an
+adjusted scaling factor.</p>
+<p><a href="/bolts/es/docs/static/0.4/drawing2.png"><img alt="Finished drawing of washer" src="/bolts/es/docs/static/0.4/drawing2.png" /></a></p>
+<p>When you are happy with the drawing, change to the Drawing Workbench, make sure
+the page object is selected in the Combo View and then choose Drawing-&gt;Export
+Page (or use the button in the Drawing toolbar).</p>
+<p>Save it somewhere where you can find it again.</p>
+<h3>Post processing in Inkscape</h3>
+<p>Now we need to add dimensions to the drawing, this is best done in Inkscape.
+Open the svg file from the previous step in Inkscape.</p>
+<p>In the case of the washer, there are three dimensions: the inner and outer
+diameters and the thickness.</p>
+<p>Now it is convenient to add a few guidelines by left-clicking on the rulers at
+the sides and dragging into the picture. Depending on where you click you can
+get horizontal (top), vertical (left) and diagonal (corner) guidelines.</p>
+<p>The guidelines are added in such way that they are convenient for the
+dimensions. The image below shows a possible choice: The inner diameter will be
+indicated on the left side of the front view, the outer below. The thickness
+will be indicated on the left side view.</p>
+<p><a href="/bolts/es/docs/static/0.4/drawing3.png"><img alt="Guidelines" src="/bolts/es/docs/static/0.4/drawing3.png" /></a></p>
+<p>Select the bezier line tool (Shift-F6 or the corresponding icon). Then click on
+one of the guidelines, press Ctrl to lock in the angle to vertical or
+horizontal and then click on the other guideline. The cursor should snap to the
+guideline. Now finish the path by pressing Enter. Repeat for all dimensions.</p>
+<p><a href="/bolts/es/docs/static/0.4/drawing4.png"><img alt="Raw dimension lines" src="/bolts/es/docs/static/0.4/drawing4.png" /></a></p>
+<p>To convert these lines into nice dimensions open the fill and stroke dialog
+using Object-&gt;Fill and Stroke and select the Stroke Style tab. Change to the
+selection cursor (arrow icon in the toolbar), select one of your lines and do
+the following three things:</p>
+<ol>
+<li>Change the width to 0.4 px</li>
+<li>For Start Markers select DistanceStart</li>
+<li>For End Markers select DistanceEnd</li>
+</ol>
+<p>If the Markers go in the wrong direction (away from the object), choose
+Object-&gt;Flip Horizontal or Object-&gt;Flip Vertical, depending on the orientation
+of your dimension.</p>
+<p>If the dimension is very small (like the thickness of the washer), put
+DistanceEnd as Start Marker and DistanceStart as End Marker.</p>
+<p>Repeat for all lines.</p>
+<p><a href="/bolts/es/docs/static/0.4/drawing5.png"><img alt="Dimension lines" src="/bolts/es/docs/static/0.4/drawing5.png" /></a></p>
+<p>Then choose the text tool in the toolbar on the left and add the dimension
+names. You can look them up on the
+<a href="/bolts/en/parts/standards/ISO7089.html">Specification page</a> by following
+the source url or by checking the blt file.</p>
+<p>In the case of the washer we have inner diameter d1, outer diameter d2 and
+thickness s.</p>
+<p><a href="/bolts/es/docs/static/0.4/drawing6.png"><img alt="Dimension lines with labels" src="/bolts/es/docs/static/0.4/drawing6.png" /></a></p>
+<p>Now remove the guidelines by hovering over them until they change color and
+then pressing delete.</p>
+<h3>Filenames and PNG export</h3>
+<p>Now we can save-as the svg to its final destination. The filename is arbitrary
+in principle, but follows a few conventions:</p>
+<ul>
+<li>The drawing goes in the drawings directory, in a subfolder named like the id of
+  the collection to which the part belongs. If the same drawing can be used for
+  parts from different collections, save the same file multiple times.</li>
+<li>If the drawing applies to more than one class, then the filename should
+  follow the (function/file/module) name of the base. This can be looked up in
+  the base files. Be careful that also the parameter names have to be the same
+  across all classes.</li>
+<li>Otherwise the filename should follow the class id, which can be looked
+  up on the specification page.</li>
+</ul>
+<p>For the washer, the collection id is <code>washer</code>, and the drawing applies to
+multiple classes of the collection, so we choose the name of the base, which is
+<code>washer1</code>.</p>
+<p>So the filename for the svg file is <code>drawings/washer/washer1.svg</code>.</p>
+<p>We also want a png version of the drawing, so we choose <code>File-&gt;Export Bitmap</code>,
+select Page for the export area and set the resolution to 300dpi. The filename
+is the same as the one for the svg, just with extension <code>.png</code>. Clicking on
+export exports the file, but does not close the dialog, which must be closed
+manually.</p>
+<p>Now we are done and can close Inkscape again.</p>
+<h3>update the base file</h3>
+<p>The last step is to tell BOLTS about the drawing in the base file of the
+drawing directory by adding an entry of the form:</p>
+<pre><code>- filename: washer1
+  author: Johannes Reinhardt &lt;jreinhardt@ist-dein-freund.de&gt;
+  license: CC0 1.0 &lt;http://creativecommons.org/publicdomain/zero/1.0/&gt;
+  type: drawing-dimensions
+  source: own work
+  classids: [plainwasher1, plainwasher2, plainwasherforcheesehead, heavydutyplainwasher]
+</code></pre>
+<p>where classids is a list of classes that are covered by this drawing. The
+filename is relative to the subdirectory of the collection and given without
+extension to cover both svg and png versions. The type field distinguishes
+drawings that explain the parameters and dimensions of a part from other images
+that e.g. show <a href="/bolts/en/docs/0.4/document/openscad/basemodule.html#adding_connectors">the location of connectors</a></p>
+      <h2>Comments</h2>
+      <div id="comments"></div>
+    </div>
+  </div>
+</div>
+
+  
+  <hr>
+  <footer id="footer">
+    <p>© Johannes Reinhardt, title image by <a href="https://www.flickr.com/photos/dkpphotography/9468970843">Dhruv Patel</a>, theme based on a <a href="https://github.com/Wolfr/cactus-jekyll-theme">design</a> by <a href="http://wolfslittlestore.be">Wolf's Little Store</a></p>
+  </footer>
+  
+</div>
+
+<script type="text/javascript" class="juvia">
+(function() {
+    var options = {
+        container    : '#comments',
+        site_key     : 'i2tzqcns7cm0alygsdvh9fhyfe2g0u1',
+        topic_key    : location.pathname,
+        topic_url    : location.href,
+        topic_title  : document.title || location.href,
+        comment_order: 'latest-first'
+    };
+
+    function makeQueryString(options) {
+        var key, params = [];
+        for (key in options) {
+            params.push(
+                encodeURIComponent(key) +
+                '=' +
+                encodeURIComponent(options[key]));
+        }
+        return params.join('&');
+    }
+
+    function makeApiUrl(options) {
+        // Makes sure that each call generates a unique URL, otherwise
+        // the browser may not actually perform the request.
+        if (!('_juviaRequestCounter' in window)) {
+            window._juviaRequestCounter = 0;
+        }
+
+        var result =
+            '//j.stbuehler.de/api/show_topic.js' +
+            '?_c=' + window._juviaRequestCounter +
+            '&' + makeQueryString(options);
+        window._juviaRequestCounter++;
+        return result;
+    }
+
+    var s       = document.createElement('script');
+    s.async     = true;
+    s.type      = 'text/javascript';
+    s.className = 'juvia';
+    s.src       = makeApiUrl(options);
+    (document.getElementsByTagName('head')[0] ||
+     document.getElementsByTagName('body')[0]).appendChild(s);
+})();
+</script>
+
+
+<script src="/bolts/static/js/all.js?9bb454f9"></script>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/bolts/static/favicon.ico" />
+  
+  <link rel="stylesheet" href="/bolts/static/css/style.css?019e02bb" type="text/css" media="screen">
+  
+  <title>Blog</title>
+</head>
+<body>
+
+   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Navigationsmenü ausklappen</span>
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/bolts/de/index.html">Home</a></li>
+          <li><a href="/bolts/de/blog/index.html">Blog</a></li>
+          <li><a href="/bolts/de/parts/index.html">Teile</a></li>
+          <li><a href="/bolts/de/docs/index.html">Dokumentation</a></li>
+          <li><a href="/bolts/de/contribute.html">Mitmachen</a></li>
+          <li><a href="/bolts/de/downloads.html">Downloads</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">de<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/bolts/en/blog/2014/4/23/Beaming.html">Englisch</a></li>
+              <li><a href="/bolts/de/blog/2014/4/23/Beaming.html">Deutsch</a></li>
+              <li><a href="/bolts/fr/blog/2014/4/23/Beaming.html">Französisch</a></li>
+              <li><a href="/bolts/es/blog/2014/4/23/Beaming.html">Spanisch</a></li>
+              <li><a href="/bolts/sv/blog/2014/4/23/Beaming.html">Schwedisch</a></li>
+            </ul>
+          </li>
+          <li><a class="github" href="https://github.com/jreinhardt/BOLTS">Github</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+
+
+<div class="page-title-bar">
+  <div class="container">
+    <h2>Blog</h2>
+  </div>
+</div>
+
+<div class="container">
+  
+<div class="row">
+  <div class="col-sm-8 blog-main">
+    <div class="blog-post">
+      <h2 class="blog-post-title"><a href="/bolts/de/blog/2014/4/23/Beaming.html">Beaming happily</a></h2>
+      <p class="blog-post-meta">Veröffentlicht am 23.04.2014, 17:25:00 von Johannes</p>
+      <p>It has been very quiet on this blog in the last weeks, but BOLTS is not dead
+and should see more activity again. There is a stable release coming up very
+soon, but more about that in another post. This post is about the amazing work
+of Bernd from the <a href="http://forum.freecadweb.org/index.php">FreeCAD Forum</a>, who
+added a huge number of steel beam profiles to BOLTS.</p>
+
+<!-- more -->
+
+<p>FreeCAD has had a Architecture workbench for quite some time, and has actually
+a pretty active group of architects that constantly improve its already
+impressive <a href="http://forum.freecadweb.org/viewtopic.php?f=23&amp;t=5526">architectural
+capabilities</a>.</p>
+
+<p>The Arch workbench has a <a href="http://www.freecadweb.org/wiki/index.php?title=Arch%20Structure">part type specifically for structural
+elements</a> like
+beams, and also provides a few common profiles. The approach BOLTS takes for
+managing parts is also very well suited for the different kinds of profiles, so
+Bernd started to add a ton of them to BOLTS. And there are really a lot of
+different profiles. Most of them can be added both as a Arch structure or as a
+ordinary part.</p>
+
+<p><a href="/bolts/de/blog/static/profiles.png"><img alt="Some of the steel profiles" src="/bolts/de/blog/static/profiles.png" /></a></p>
+
+<p>During this effort we uncovered a fair amount of problems with BOLTS, like
+issues with names and standards and the BOLTS GUI in FreeCAD, that will have to
+be addressed. But that was somehow expected at this still quite early stage of
+develoment.</p>
+
+<p>If you want to testdrive this, you can grab the latest development snapshot
+from the <a href="http://jreinhardt.github.io/BOLTS/index.html">webpage</a>. This will
+turn into a stable release unless problems are uncovered, so every bit of
+testing is appreciated.</p>
+      <h2>Kommentare</h2>
+      <div id="comments"></div>
+    </div>
+  </div>
+</div>
+
+  
+  <hr>
+  <footer id="footer">
+    <p>© Johannes Reinhardt, Titelbild von <a href="https://www.flickr.com/photos/dkpphotography/9468970843">Dhruv Patel</a>, Design basierend auf einem <a href="https://github.com/Wolfr/cactus-jekyll-theme">Entwurf</a> von <a href="http://wolfslittlestore.be">Wolf's Little Store</a></p>
+  </footer>
+  
+</div>
+
+<script type="text/javascript" class="juvia">
+(function() {
+    var options = {
+        container    : '#comments',
+        site_key     : 'i2tzqcns7cm0alygsdvh9fhyfe2g0u1',
+        topic_key    : location.pathname,
+        topic_url    : location.href,
+        topic_title  : document.title || location.href,
+        comment_order: 'latest-first'
+    };
+
+    function makeQueryString(options) {
+        var key, params = [];
+        for (key in options) {
+            params.push(
+                encodeURIComponent(key) +
+                '=' +
+                encodeURIComponent(options[key]));
+        }
+        return params.join('&');
+    }
+
+    function makeApiUrl(options) {
+        // Makes sure that each call generates a unique URL, otherwise
+        // the browser may not actually perform the request.
+        if (!('_juviaRequestCounter' in window)) {
+            window._juviaRequestCounter = 0;
+        }
+
+        var result =
+            '//j.stbuehler.de/api/show_topic.js' +
+            '?_c=' + window._juviaRequestCounter +
+            '&' + makeQueryString(options);
+        window._juviaRequestCounter++;
+        return result;
+    }
+
+    var s       = document.createElement('script');
+    s.async     = true;
+    s.type      = 'text/javascript';
+    s.className = 'juvia';
+    s.src       = makeApiUrl(options);
+    (document.getElementsByTagName('head')[0] ||
+     document.getElementsByTagName('body')[0]).appendChild(s);
+})();
+</script>
+
+
+<script src="/bolts/static/js/all.js?9bb454f9"></script>
+
+</body>
+</html>

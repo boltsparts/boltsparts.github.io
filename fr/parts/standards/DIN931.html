@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/bolts/static/favicon.ico" />
+  
+  <link rel="stylesheet" href="/bolts/static/css/style.css?019e02bb" type="text/css" media="screen">
+  
+  <title>Part list</title>
+</head>
+<body>
+
+   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Changer la navigation</span>
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/bolts/fr/index.html">Page principale</a></li>
+          <li><a href="/bolts/fr/blog/index.html">Blogue</a></li>
+          <li><a href="/bolts/fr/parts/index.html">Pièces</a></li>
+          <li><a href="/bolts/fr/docs/index.html">Documentation</a></li>
+          <li><a href="/bolts/fr/contribute.html">Contribuer</a></li>
+          <li><a href="/bolts/fr/downloads.html">Téléchargements</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">fr<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/bolts/en/parts/standards/DIN931.html">Anglais</a></li>
+              <li><a href="/bolts/de/parts/standards/DIN931.html">Allemand</a></li>
+              <li><a href="/bolts/fr/parts/standards/DIN931.html">Français</a></li>
+              <li><a href="/bolts/es/parts/standards/DIN931.html">Espagnol</a></li>
+              <li><a href="/bolts/sv/parts/standards/DIN931.html">Suédois</a></li>
+            </ul>
+          </li>
+          <li><a class="github" href="https://github.com/jreinhardt/BOLTS">Github</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+
+
+<div class="page-title-bar">
+  <div class="container">
+    <h2>Parts list</h2>
+  </div>
+</div>
+
+<div class="container">
+  
+<h1>DIN 931</h1>
+<table class="table">
+<tr><th><strong>Auteur:</strong></th><td>Johannes Reinhardt</td></tr>
+<tr><th><strong>License:</strong></th><td><a href="http://www.gnu.org/licenses/lgpl-2.1">LGPL 2.1+</a></td></tr>
+<tr><th><strong>Collection:</strong></th><td><a href="/bolts/fr/parts/collections/hex.html">Hexagon fasteners</a></td></tr>
+<tr><th><strong>Identique à:</strong></th><td><a href="/bolts/fr/parts/names/hexagonHeadBolt.html">Tête de vis hexagonale</a></td></tr>
+<tr><th><strong>Status:</strong></th><td>withdrawn</td></tr>
+<tr><th><strong>corps standard:</strong></th><td><a href="/bolts/fr/parts/bodies/DIN.html">DIN</a></td></tr>
+<tr><th><strong>ID:</strong></th><td>DIN931</td></tr>
+<tr><th><strong>Source:</strong></th><td>http://almetal.nl/en/techinfo/hex/hd931.htm, common parameters from http://shop.zweygart.de/p29262.html</td></tr>
+</table>
+
+
+<h2>Plans</h2>
+<a href="/bolts/fr/parts/drawings/hex/hex2.png"><img class="img-responsive" src="/bolts/fr/parts/drawings/hex/hex2.png"></a>
+
+<table class="table">
+<tr><th>Nom du paramètre</th> <th>Description</th><tr>
+<tr><td>e</td> <td>Diamètre de la tête</td></tr>
+<tr><td>b2</td> <td>Longueur de la tige filetée pour 125 mm < l < 200 mm</td></tr>
+<tr><td>k</td> <td>Longueur de la tête</td></tr>
+<tr><td>l</td> <td>Longueur sans la tête</td></tr>
+<tr><td>s</td> <td>Largeur entre plats</td></tr>
+<tr><td>b1</td> <td>Longueur de l'arbre fileté pour l < 125 mm</td></tr>
+<tr><td>key</td> <td>Désignation du filetage</td></tr>
+<tr><td>b3</td> <td>Longueur de l'arbre fileté pour l < 200 mm</td></tr>
+<tr><td>d1</td> <td>threaded shaft diameter</td></tr>
+</table>
+
+<h2>Description</h2>
+<p>Hexagon head bolt according to DIN931</p>
+
+<h2>FreeCAD</h2>
+
+<table class="table">
+<tr><th><strong>Auteur:</strong></th><td>Johannes Reinhardt</td></tr>
+<tr><th><strong>License:</strong></th><td><a href="http://www.gnu.org/licenses/lgpl-2.1">LGPL 2.1+</a></td></tr>
+</table>
+
+
+<h2>OpenSCAD</h2>
+
+<table class="table">
+<tr><th><strong>Auteur:</strong></th><td>Johannes Reinhardt</td></tr>
+<tr><th><strong>License:</strong></th><td><a href="http://www.gnu.org/licenses/lgpl-2.1">LGPL 2.1+</a></td></tr>
+</table>
+<h3>Incantations</h3>
+  <pre><code>module DIN931(key=&#34;M3&#34;, l=20, part_mode=&#34;default&#34;)
+function DIN931_dims(key=&#34;M3&#34;, l=20, part_mode=&#34;default&#34;)
+function DIN931_conn(location,key=&#34;M3&#34;, l=20, part_mode=&#34;default&#34;)</code></pre>
+  <h3>connecteurs</h3>
+  <table class="table">
+<tr><th>Emplacement</th> <th>Plan</th><tr>
+<tr><td>root</td> <td><a href="/bolts/fr/parts/drawings/hex/hex2-root.png"><img src="/bolts/fr/parts/drawings/hex/hex2-root.png" width="200"></a></td></tr>
+<tr><td>tip</td> <td><a href="/bolts/fr/parts/drawings/hex/hex2-tip.png"><img src="/bolts/fr/parts/drawings/hex/hex2-tip.png" width="200"></a></td></tr>
+<tr><td>head</td> <td><a href="/bolts/fr/parts/drawings/hex/hex2-head.png"><img src="/bolts/fr/parts/drawings/hex/hex2-head.png" width="200"></a></td></tr>
+</table>
+
+
+<h2>Tables</h2>
+  
+  <table class="table">
+<tr><th>key</th> <th>d1 (mm)</th> <th>k (mm)</th> <th>s (mm)</th> <th>b1 (mm)</th> <th>b2 (mm)</th> <th>b3 (mm)</th> <th>e (mm)</th><tr>
+<tr><td>M3</td> <td>3.0</td> <td>2.0</td> <td>5.5</td> <td>12.0</td> <td>None</td> <td>None</td> <td>6.01</td></tr>
+<tr><td>M4</td> <td>4.0</td> <td>2.8</td> <td>7.0</td> <td>14.0</td> <td>None</td> <td>None</td> <td>7.66</td></tr>
+<tr><td>M5</td> <td>5.0</td> <td>3.5</td> <td>8.0</td> <td>16.0</td> <td>None</td> <td>None</td> <td>8.79</td></tr>
+<tr><td>M6</td> <td>6.0</td> <td>4.0</td> <td>10.0</td> <td>18.0</td> <td>24.0</td> <td>None</td> <td>11.05</td></tr>
+<tr><td>M7</td> <td>7.0</td> <td>4.8</td> <td>11.0</td> <td>20.0</td> <td>26.0</td> <td>None</td> <td>12.12</td></tr>
+<tr><td>M8</td> <td>8.0</td> <td>5.3</td> <td>13.0</td> <td>22.0</td> <td>28.0</td> <td>None</td> <td>14.38</td></tr>
+<tr><td>M10</td> <td>10.0</td> <td>6.4</td> <td>17.0</td> <td>26.0</td> <td>32.0</td> <td>45.0</td> <td>18.9</td></tr>
+<tr><td>M12</td> <td>12.0</td> <td>7.5</td> <td>19.0</td> <td>30.0</td> <td>36.0</td> <td>49.0</td> <td>21.1</td></tr>
+<tr><td>M14</td> <td>14.0</td> <td>8.8</td> <td>22.0</td> <td>34.0</td> <td>40.0</td> <td>53.0</td> <td>24.49</td></tr>
+<tr><td>M16</td> <td>16.0</td> <td>10.0</td> <td>24.0</td> <td>38.0</td> <td>44.0</td> <td>57.0</td> <td>26.75</td></tr>
+<tr><td>M18</td> <td>18.0</td> <td>11.5</td> <td>27.0</td> <td>42.0</td> <td>48.0</td> <td>61.0</td> <td>30.14</td></tr>
+<tr><td>M20</td> <td>20.0</td> <td>12.5</td> <td>30.0</td> <td>46.0</td> <td>52.0</td> <td>65.0</td> <td>33.53</td></tr>
+<tr><td>M22</td> <td>22.0</td> <td>14.0</td> <td>32.0</td> <td>50.0</td> <td>56.0</td> <td>69.0</td> <td>35.72</td></tr>
+<tr><td>M24</td> <td>24.0</td> <td>15.0</td> <td>36.0</td> <td>54.0</td> <td>60.0</td> <td>73.0</td> <td>39.98</td></tr>
+<tr><td>M27</td> <td>27.0</td> <td>17.0</td> <td>41.0</td> <td>60.0</td> <td>66.0</td> <td>79.0</td> <td>45.2</td></tr>
+<tr><td>M30</td> <td>30.0</td> <td>18.7</td> <td>46.0</td> <td>66.0</td> <td>72.0</td> <td>85.0</td> <td>50.85</td></tr>
+<tr><td>M33</td> <td>33.0</td> <td>21.0</td> <td>50.0</td> <td>72.0</td> <td>78.0</td> <td>91.0</td> <td>55.37</td></tr>
+<tr><td>M36</td> <td>36.0</td> <td>22.5</td> <td>55.0</td> <td>78.0</td> <td>84.0</td> <td>97.0</td> <td>60.79</td></tr>
+<tr><td>M39</td> <td>39.0</td> <td>25.0</td> <td>60.0</td> <td>84.0</td> <td>90.0</td> <td>103.0</td> <td>66.44</td></tr>
+<tr><td>M42</td> <td>42.0</td> <td>26.0</td> <td>65.0</td> <td>90.0</td> <td>96.0</td> <td>109.0</td> <td>71.3</td></tr>
+<tr><td>M45</td> <td>45.0</td> <td>28.0</td> <td>70.0</td> <td>96.0</td> <td>102.0</td> <td>115.0</td> <td>76.95</td></tr>
+<tr><td>M48</td> <td>48.0</td> <td>30.0</td> <td>75.0</td> <td>102.0</td> <td>108.0</td> <td>121.0</td> <td>82.6</td></tr>
+<tr><td>M52</td> <td>52.0</td> <td>33.0</td> <td>80.0</td> <td>None</td> <td>116.0</td> <td>129.0</td> <td>88.25</td></tr>
+<tr><td>M56</td> <td>56.0</td> <td>35.0</td> <td>85.0</td> <td>None</td> <td>124.0</td> <td>137.0</td> <td>93.56</td></tr>
+<tr><td>M60</td> <td>60.0</td> <td>38.0</td> <td>90.0</td> <td>None</td> <td>132.0</td> <td>145.0</td> <td>99.21</td></tr>
+<tr><td>M64</td> <td>64.0</td> <td>40.0</td> <td>95.0</td> <td>None</td> <td>140.0</td> <td>153.0</td> <td>104.86</td></tr>
+</table>
+  
+  
+
+<h2>Comments</h2>
+<div id="comments"></div>
+
+  
+  <hr>
+  <footer id="footer">
+    <p>© Johannes Reinhardt, Image de titre par <a href="https://www.flickr.com/photos/dkpphotography/9468970843">Dhruv Patel</a>, thème basé sur un <a href="https://github.com/Wolfr/cactus-jekyll-theme">design</a> par <a href="http://wolfslittlestore.be">Wolf's Little Store</a></p>
+  </footer>
+  
+</div>
+
+<script type="text/javascript" class="juvia">
+(function() {
+    var options = {
+        container    : '#comments',
+        site_key     : 'i2tzqcns7cm0alygsdvh9fhyfe2g0u1',
+        topic_key    : location.pathname,
+        topic_url    : location.href,
+        topic_title  : document.title || location.href,
+        comment_order: 'latest-first'
+    };
+
+    function makeQueryString(options) {
+        var key, params = [];
+        for (key in options) {
+            params.push(
+                encodeURIComponent(key) +
+                '=' +
+                encodeURIComponent(options[key]));
+        }
+        return params.join('&');
+    }
+
+    function makeApiUrl(options) {
+        // Makes sure that each call generates a unique URL, otherwise
+        // the browser may not actually perform the request.
+        if (!('_juviaRequestCounter' in window)) {
+            window._juviaRequestCounter = 0;
+        }
+
+        var result =
+            '//j.stbuehler.de/api/show_topic.js' +
+            '?_c=' + window._juviaRequestCounter +
+            '&' + makeQueryString(options);
+        window._juviaRequestCounter++;
+        return result;
+    }
+
+    var s       = document.createElement('script');
+    s.async     = true;
+    s.type      = 'text/javascript';
+    s.className = 'juvia';
+    s.src       = makeApiUrl(options);
+    (document.getElementsByTagName('head')[0] ||
+     document.getElementsByTagName('body')[0]).appendChild(s);
+})();
+</script>
+
+
+<script src="/bolts/static/js/all.js?9bb454f9"></script>
+
+</body>
+</html>

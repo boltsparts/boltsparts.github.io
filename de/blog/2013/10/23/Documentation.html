@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/bolts/static/favicon.ico" />
+  
+  <link rel="stylesheet" href="/bolts/static/css/style.css?019e02bb" type="text/css" media="screen">
+  
+  <title>Blog</title>
+</head>
+<body>
+
+   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Navigationsmenü ausklappen</span>
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/bolts/de/index.html">Home</a></li>
+          <li><a href="/bolts/de/blog/index.html">Blog</a></li>
+          <li><a href="/bolts/de/parts/index.html">Teile</a></li>
+          <li><a href="/bolts/de/docs/index.html">Dokumentation</a></li>
+          <li><a href="/bolts/de/contribute.html">Mitmachen</a></li>
+          <li><a href="/bolts/de/downloads.html">Downloads</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">de<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/bolts/en/blog/2013/10/23/Documentation.html">Englisch</a></li>
+              <li><a href="/bolts/de/blog/2013/10/23/Documentation.html">Deutsch</a></li>
+              <li><a href="/bolts/fr/blog/2013/10/23/Documentation.html">Französisch</a></li>
+              <li><a href="/bolts/es/blog/2013/10/23/Documentation.html">Spanisch</a></li>
+              <li><a href="/bolts/sv/blog/2013/10/23/Documentation.html">Schwedisch</a></li>
+            </ul>
+          </li>
+          <li><a class="github" href="https://github.com/jreinhardt/BOLTS">Github</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+
+
+<div class="page-title-bar">
+  <div class="container">
+    <h2>Blog</h2>
+  </div>
+</div>
+
+<div class="container">
+  
+<div class="row">
+  <div class="col-sm-8 blog-main">
+    <div class="blog-post">
+      <h2 class="blog-post-title"><a href="/bolts/de/blog/2013/10/23/Documentation.html">Writing Documentation</a></h2>
+      <p class="blog-post-meta">Veröffentlicht am 23.10.2013, 00:00:00 von Johannes</p>
+      <p>I consider most of BOLTS technical problems to be solved sufficiently well for
+now. The only thing that remains to be done until I can release a first beta
+version is to write documentation. Which proves to be more difficult than
+expected.</p>
+
+<!-- more -->
+
+<p>Together with this blog post I will push a polished version of the web page. It
+is pretty close to what I want, with the exception of the documentation
+section, which will be in flow for a bit.</p>
+
+<p>I want the documentation for BOLTS to serve one single purpose: To provide
+people willing to use and contribute to BOLTS with everything they need to do
+just that. But I struggle with that on several levels.</p>
+
+<p>When I write something (you can check out a few bits and pieces of what I have
+right now in the <a href="/bolts/en/docs/0.3/index.html">documentation hub</a>), I become aware of
+so many little things, that are self-evident for me, but probably are not for
+people that have a different background, a different way of working or a
+different way of thinking. Incorporating and explaining all these things leads
+to long and complicated texts, which is not what I want.</p>
+
+<p>The second problem is organisation. I roughly know, which topics I want to
+cover, and I have decided to do that in a tutorial style. But then I feel that
+some aspects do not fit in this format. It took me a while to figure out, that
+it feels right to divide everything in documentation for users and
+documentation for contributors.</p>
+
+<p>Related, but on a different level is that many of the task I want to describe
+share some of the steps (you should create a git topic branch both when adding
+a new collection and when creating a drawing), but on the other hand, these
+steps differ depending on other circumstances. I do not see clearly yet how to
+organize this complexity.</p>
+
+<p>I will work on this in the next days and hope to make some progress.</p>
+
+<p>To end on a positive note: I had the idea of using the <a href="/bolts/en/blog/2013/9/24/Comments.html">comment system of the
+blog</a> to add a comment section to
+each page of documentation. I hope this encourages people to ask questions,
+propose additions and to generally give feedback to enhance the documentation.</p>
+      <h2>Kommentare</h2>
+      <div id="comments"></div>
+    </div>
+  </div>
+</div>
+
+  
+  <hr>
+  <footer id="footer">
+    <p>© Johannes Reinhardt, Titelbild von <a href="https://www.flickr.com/photos/dkpphotography/9468970843">Dhruv Patel</a>, Design basierend auf einem <a href="https://github.com/Wolfr/cactus-jekyll-theme">Entwurf</a> von <a href="http://wolfslittlestore.be">Wolf's Little Store</a></p>
+  </footer>
+  
+</div>
+
+<script type="text/javascript" class="juvia">
+(function() {
+    var options = {
+        container    : '#comments',
+        site_key     : 'i2tzqcns7cm0alygsdvh9fhyfe2g0u1',
+        topic_key    : location.pathname,
+        topic_url    : location.href,
+        topic_title  : document.title || location.href,
+        comment_order: 'latest-first'
+    };
+
+    function makeQueryString(options) {
+        var key, params = [];
+        for (key in options) {
+            params.push(
+                encodeURIComponent(key) +
+                '=' +
+                encodeURIComponent(options[key]));
+        }
+        return params.join('&');
+    }
+
+    function makeApiUrl(options) {
+        // Makes sure that each call generates a unique URL, otherwise
+        // the browser may not actually perform the request.
+        if (!('_juviaRequestCounter' in window)) {
+            window._juviaRequestCounter = 0;
+        }
+
+        var result =
+            '//j.stbuehler.de/api/show_topic.js' +
+            '?_c=' + window._juviaRequestCounter +
+            '&' + makeQueryString(options);
+        window._juviaRequestCounter++;
+        return result;
+    }
+
+    var s       = document.createElement('script');
+    s.async     = true;
+    s.type      = 'text/javascript';
+    s.className = 'juvia';
+    s.src       = makeApiUrl(options);
+    (document.getElementsByTagName('head')[0] ||
+     document.getElementsByTagName('body')[0]).appendChild(s);
+})();
+</script>
+
+
+<script src="/bolts/static/js/all.js?9bb454f9"></script>
+
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/bolts/static/favicon.ico" />
+  
+  <link rel="stylesheet" href="/bolts/static/css/style.css?019e02bb" type="text/css" media="screen">
+  
+  <title>Documentation</title>
+</head>
+<body>
+
+   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/bolts/en/index.html">Home</a></li>
+          <li><a href="/bolts/en/blog/index.html">Blog</a></li>
+          <li><a href="/bolts/en/parts/index.html">Parts</a></li>
+          <li><a href="/bolts/en/docs/index.html">Documentation</a></li>
+          <li><a href="/bolts/en/contribute.html">Contribute</a></li>
+          <li><a href="/bolts/en/downloads.html">Downloads</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">en<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/bolts/en/docs/0.4/document/general/licensing.html">English</a></li>
+              <li><a href="/bolts/de/docs/0.4/document/general/licensing.html">German</a></li>
+              <li><a href="/bolts/fr/docs/0.4/document/general/licensing.html">French</a></li>
+              <li><a href="/bolts/es/docs/0.4/document/general/licensing.html">Spanish</a></li>
+              <li><a href="/bolts/sv/docs/0.4/document/general/licensing.html">Swedish</a></li>
+            </ul>
+          </li>
+          <li><a class="github" href="https://github.com/jreinhardt/BOLTS">Github</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+
+
+  <div class="page-title-bar">
+    <div class="container">
+      
+      <h2>Documentation for BOLTS 0.4 (development version)</h2>
+      <a href="/bolts/en/docs/0.3/index.html">stable</a>
+      <a class="active" href="/bolts/en/docs/0.4/index.html">dev</a>
+      
+    </div>
+  </div>
+
+<div class="container">
+  
+<div class="row">
+  <div class="col-sm-8 doc-main">
+    <div class="doc-page">
+      <h2 class="doc-page-title">What licenses can be used in BOLTS</a></h2>
+      <h3>The problem</h3>
+<p>BOLTS is intended as very contribution driven project. Is is also quite flexible from a technical point of view, which allows to incorporate content like OpenSCAD module, FreeCAD python functions, FreeCAD Models or STL files that were not specifically created for BOLTS with minimal changes.</p>
+<p>While this is great as it allows to reuse a lot of work already done, it creates another problem: One has to make sure that the licenses of the different parts are compatible with each other and that the use of parts from BOLTS in an assembly does not pose license restrictions on the result. Also we want to make sure that the resulting distribution of files can be distributed under a open source license.</p>
+<p>I did a bit of reading in the last few days, and now I want to describe how to handle these problems in BOLTS. As a disclaimer I want to add that I am not a lawyer, so everything that follows is given without any warranties and might be wrong. If in doubt, ask someone who is qualified to answer such questions.</p>
+<h3>The components of BOLTS and their licenses</h3>
+<p>BOLTS consists of a number of different parts that work together in different ways:</p>
+<ul>
+<li>
+<p><a href="https://github.com/jreinhardt/bolttools">bolttools</a> is a collection of python modules that handle various tasks and aspects of the processes in BOLTS: create HTML documentation, parse the blt and base files, perform consistency checks on the parts and assemble the different distributions (BOLTS for FreeCAD, BOLTS for OpenSCAD). bolttools is developed by me and licensed under the <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1">LGPL 2.1 or later</a>.</p>
+</li>
+<li>
+<p>the blt files are YAML files that contain not backend specific data and metadata about the part (more precisely about classes of parts, because there is often a large amount of redundancy). These files contain among other informations the tables with dimensions, and form the foundation of BOLTS. Its license is chosen by the creator.</p>
+</li>
+<li>
+<p>the backend specific data is specific to the CAD application (FreeCAD or OpenSCAD at the moment), and generally comes in form of code (OpenSCAD modules or FreeCAD python functions). Its license is chosen by the creator.</p>
+</li>
+</ul>
+<h3>Combined works and generated code</h3>
+<p>When we put together a distribution consisiting of all these files with different licenses, what license has the result? This is a difficult question, and in fact there are many licenses with conflicting terms, so that they can not be combined at all.</p>
+<p>We want to focus on open source licenses, and luckily someone who knows <a href="http://www.dwheeler.com/essays/floss-license-slide.html">explained the situation there very well</a>. In particular I like the graph on this page.</p>
+<p>And when we take some content with a certain license A and process it with a program with a certain license B, what license C has the result?</p>
+<p>This is much easier to answer, and again I reference <a href="http://www.gnu.org/licenses/gpl-faq.html#GPLOutput">people who know</a>. The result has license A, unless very specifc conditions apply.</p>
+<h3>Consequences for BOLTS distributions</h3>
+<p>In BOLTS we have both of these mechanisms, in combination that depends on the target CAD system:</p>
+<h4>FreeCAD</h4>
+<p>The BOLTS for FreeCAD distribution consists of the blt files, bolttools (for parsing them) and the FreeCAD backend specific files, so it represents a combined work consisting of these three parts.</p>
+<p>Focusing on the most popular OpenSource licenses (the one discussed <a href="http://www.dwheeler.com/essays/floss-license-slide.html">her</a>), that means that for the BOLTS for FreeCAD distribution we have to choose a license, that is reachable from every license of the components. As bolttools is one of the components, this means that this license can not be more liberal then LGPL 2.1+.</p>
+<p>If there are blt files of backend specific files that are licensed under a less liberal license (e.g. GPL 3), than the whole distribution must be licensed as GPL 3.</p>
+<p>Therefore BOLTS for FreeCAD provides LGPL and GPL distributions, where in the former all components incompatible with the LGPL are removed. This means that the GPL distribution contains more parts, but is only available under a less liberal license.</p>
+<p>If the FreeCAD people decided that they want to integrate BOLTS into FreeCAD (FreeCAD is licensed under LGPL), they would form a combined work of FreeCAD and BOLTS. There are two possibilities. Either they integrate the LGPL BOLTS distribution, which contains less parts, or they integrate the GPL BOLTS distribution and change the FreeCAD license to GPL.</p>
+<h4>OpenSCAD</h4>
+<p>The BOLTS for OpenSCAD distribution works a bit differently. It consists out of the OpenSCAD backend specific files, OpenSCAD code containing the tables and generated glue code.</p>
+<p>The table and glue code is generated by bolttools from the blt files, so this code has the same license as the blt files. The backend specific files have the license that their creator chose. And BOLTS for OpenSCAD is a combined work of all these parts, which tells us again what licenses we can choose for the result, or which components we have to leave out of the distribution to be able to license it under a specific license.</p>
+<p>Note that BOLTS for OpenSCAD does not contain bolttools, so in principle a BOLTS for OpenSCAD distribution with a license more liberal than LGPL is possible. However, there are some helper and utility modules that are always included, which are at the moment licensed under LGPL 2.1+. But (in contrast to bolttools) I could imagine to relicense these under a more liberal license, if there is a need for it (e.g. a lot of liberally licensed code being contributed).</p>
+<h3>Consequences for content created using BOLTS</h3>
+<p>But the same considerations have to be applied to the case, when someone uses BOLTS for OpenSCAD or FreeCAD to to create a nice design. This design is a combined work consisting of the content that the user created, and the parts provided by BOLTS. So does this pose restrictions on the license of the design?</p>
+<p>This would be rather drastic, as that would severely limit the choice of licenses the user could assign to its design. This would limit the audience and the usefulness of BOLTS massively, so this is something that should be avoided.</p>
+<h4>Backend specific data in form of code</h4>
+<p>In this case on can consider the part as the result of a program (BOLTS), which is not affected by the license of the programm. So parts created by code (FreeCAD python functions and OpenSCAD modules) cause no licensing related restrictions on the resulting design.</p>
+<h3>Consequences for BOLTS itself</h3>
+<p>I want to be able to consider the whole of BOLTS, i.e. all the content that is contained in the <a href="https://github.com/jreinhardt/BOLTS">BOLTS git repo</a> as a single combined work. I am not sure whether that is really necessary, but I could imagine that it might be necessary for things like a bolts-dev Debian package. At the moment BOLTS is licensed under GPL 3.0+, as this is the most restrictive license of all components.</p>
+<p>However this makes it necessary to exclude GPL 2.0 (without the or any later version clause) material, as this can not be combined with GPL 3.0+ material.</p>
+<h3>Realisation</h3>
+<p>These are a lot of complicated rules, and one is tempted to keep it simple and either require all contributions to be under a specific license, or to license BOLTS under the most restrictive license of all components.</p>
+<p>However, one would then ignore a lot of possibly useful content that is already existing and could be incorporated easily, or one ends up with a very restrictive license for BOLTS, which limits its audience by e.g. prohibiting the inclusion in FreeCAD.</p>
+<p>Therefore I tried to design BOLTS in such a way, that the work of assembling distributions that are compatible to a certain license can be automated. The license of each part is available in machine readable form in the .blt and .base files, which allows to decide programmatically whether something can be included in a distribution or not.</p>
+<p>This results in the following license policy for contributions:</p>
+<p>A contribution in form of a blt file or backend specific data in form of code can have one of the following licenses:</p>
+<ul>
+<li><a href="http://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a></li>
+<li><a href="/bolts/en/public_domain.html?version=0.4">Public Domain</a></li>
+<li><a href="http://opensource.org/licenses/MIT">MIT</a></li>
+<li><a href="http://opensource.org/licenses/BSD-3-Clause">BSD 3-clause</a></li>
+<li><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2.0</a></li>
+<li><a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1">LGPL 2.1</a></li>
+<li><a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1">LGPL 2.1+</a></li>
+<li><a href="http://opensource.org/licenses/LGPL-3.0">LGPL 3.0</a></li>
+<li><a href="http://opensource.org/licenses/LGPL-3.0">LGPL 3.0+</a></li>
+<li><a href="http://www.gnu.org/licenses/old-licenses/gpl-2.0">GPL 2.0+</a></li>
+<li><a href="http://www.gnu.org/licenses/gpl-3.0">GPL 3.0</a></li>
+<li><a href="http://www.gnu.org/licenses/gpl-3.0">GPL 3.0+</a></li>
+</ul>
+<p>A contribution in form of backend specific data in form of data must be in the public domain or <a href="http://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a>.</p>
+<p>From all available .blt files and backen specific data, distributions with specific licenses are created automatically.</p>
+      <h2>Comments</h2>
+      <div id="comments"></div>
+    </div>
+  </div>
+</div>
+
+  
+  <hr>
+  <footer id="footer">
+    <p>© Johannes Reinhardt, title image by <a href="https://www.flickr.com/photos/dkpphotography/9468970843">Dhruv Patel</a>, theme based on a <a href="https://github.com/Wolfr/cactus-jekyll-theme">design</a> by <a href="http://wolfslittlestore.be">Wolf's Little Store</a></p>
+  </footer>
+  
+</div>
+
+<script type="text/javascript" class="juvia">
+(function() {
+    var options = {
+        container    : '#comments',
+        site_key     : 'i2tzqcns7cm0alygsdvh9fhyfe2g0u1',
+        topic_key    : location.pathname,
+        topic_url    : location.href,
+        topic_title  : document.title || location.href,
+        comment_order: 'latest-first'
+    };
+
+    function makeQueryString(options) {
+        var key, params = [];
+        for (key in options) {
+            params.push(
+                encodeURIComponent(key) +
+                '=' +
+                encodeURIComponent(options[key]));
+        }
+        return params.join('&');
+    }
+
+    function makeApiUrl(options) {
+        // Makes sure that each call generates a unique URL, otherwise
+        // the browser may not actually perform the request.
+        if (!('_juviaRequestCounter' in window)) {
+            window._juviaRequestCounter = 0;
+        }
+
+        var result =
+            '//j.stbuehler.de/api/show_topic.js' +
+            '?_c=' + window._juviaRequestCounter +
+            '&' + makeQueryString(options);
+        window._juviaRequestCounter++;
+        return result;
+    }
+
+    var s       = document.createElement('script');
+    s.async     = true;
+    s.type      = 'text/javascript';
+    s.className = 'juvia';
+    s.src       = makeApiUrl(options);
+    (document.getElementsByTagName('head')[0] ||
+     document.getElementsByTagName('body')[0]).appendChild(s);
+})();
+</script>
+
+
+<script src="/bolts/static/js/all.js?9bb454f9"></script>
+
+</body>
+</html>

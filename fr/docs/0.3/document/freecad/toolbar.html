@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/bolts/static/favicon.ico" />
+  
+  <link rel="stylesheet" href="/bolts/static/css/style.css?019e02bb" type="text/css" media="screen">
+  
+  <title>Documentation</title>
+</head>
+<body>
+
+   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Changer la navigation</span>
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/bolts/fr/index.html">Page principale</a></li>
+          <li><a href="/bolts/fr/blog/index.html">Blogue</a></li>
+          <li><a href="/bolts/fr/parts/index.html">Pièces</a></li>
+          <li><a href="/bolts/fr/docs/index.html">Documentation</a></li>
+          <li><a href="/bolts/fr/contribute.html">Contribuer</a></li>
+          <li><a href="/bolts/fr/downloads.html">Téléchargements</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">fr<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/bolts/en/docs/0.3/document/freecad/toolbar.html">Anglais</a></li>
+              <li><a href="/bolts/de/docs/0.3/document/freecad/toolbar.html">Allemand</a></li>
+              <li><a href="/bolts/fr/docs/0.3/document/freecad/toolbar.html">Français</a></li>
+              <li><a href="/bolts/es/docs/0.3/document/freecad/toolbar.html">Espagnol</a></li>
+              <li><a href="/bolts/sv/docs/0.3/document/freecad/toolbar.html">Suédois</a></li>
+            </ul>
+          </li>
+          <li><a class="github" href="https://github.com/jreinhardt/BOLTS">Github</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+
+
+  <div class="page-title-bar">
+    <div class="container">
+      
+      <h2>Documentation for BOLTS 0.3 (current stable version)</h2>
+      <a class="active" href="/bolts/fr/docs/0.3/index.html">stable</a>
+      <a href="/bolts/fr/docs/0.4/index.html">dev</a>
+      
+    </div>
+  </div>
+
+<div class="container">
+  
+<div class="row">
+  <div class="col-sm-8 doc-main">
+    <div class="doc-page">
+      <h2 class="doc-page-title">Créer un bouton pour BOLTS dans la barre d&#39;outils</a></h2>
+      <p>Ceci est une version adapté et étendu de la <a href="http://freecadweb.org/wiki/index.php?title=Macros_recipes#How_to_use.3F">description du wiki de FreeCAD</a>.</p>
+<p>Vous avez besoin d'avoir <a href="/bolts/en/docs/0.3/document/freecad/installation.html">installé BOLTS pour FreeCAD</a>.</p>
+<h3>Ouvrir la boîte de dialogue Personnaliser</h3>
+<p>On peut la trouver dans Outils-&gt;Personnaliser. Sélectionner l'onglet Macros. Si vous obtenez un
+message d'erreur vérifier que vous avez <a href="/bolts/en/docs/0.3/document/freecad/installation.html">BOLTS pour FreeCAD installé</a>.</p>
+<h3>Sélectionnez la macro et remplir les champs</h3>
+<p>Sélectionner <code>start_bolts.FCMacro</code> depuis la liste du menu-déroulant . Les différents champs
+peuvent être remplis par <code>Démarrer BOLTS bibliothèque de pièces standard</code> ou quelque chose de similaire.</p>
+<p>Puis cliquer sur les trois points a coté de Pixmap, choisir Dossier d'icônes et ajouter 
+le dossier de BOLTS situé dans votre répertoire de macro (ceci peut s’avérer compliqué étant donné que le dossier de macro 
+est caché). Ajouter les icônes du dossier en cliquant sur <code>Ouvrir</code>. Enfin choisissez
+l'icône doré en forme de boulon nommée <code>bolts32.png</code>.</p>
+<p>Lorsque vous avez terminé, ça devrait ressembler à ceci :</p>
+<p><a href="/bolts/fr/docs/static/0.3/toolbarbutton1.png"><img alt="Boîte de dialogue personnaliser remplie" src="/bolts/fr/docs/static/0.3/toolbarbutton1.png" /></a></p>
+<h3>Confirmez la macro personnalisée</h3>
+<p>Vous faites cela en cliquant sur le bouton <code>Add</code>.</p>
+<p>Si vous souhaitez changer quelque chose à posteriori, vous pouvez sélectionner la macro personnalisé dans
+la liste sur la gauche en double-cliquant, faîte vos changement, puis confirmer en
+cliquant sur le bouton <code>Replace</code>.</p>
+<h3>Créer une nouvelle barre d'outils et ajouter le bouton</h3>
+<p>Dans la boîte de dialogue Personnaliser sélectionner l'onglet Barre d'outils. Dans la liste du menu déroulant de gauche
+sélectionner Macro, sur la droite sélectionner l'Atelier dans lequel vous souhaitez créer
+le bouton de la barre d'outils.</p>
+<p>Puis créer une nouvelle barre d'outils en cliquant 'Nouveau...' et la nommer BOLTS. La macro
+de démarrage peut être ajouté en la sélectionnant dans la liste de gauche puis en cliquant sur
+la flèche vers la droite.</p>
+<p>Lorsque vous avez terminé, ça devrait ressembler à ceci :</p>
+<p><a href="/bolts/fr/docs/static/0.3/toolbarbutton2.png"><img alt="Nouvelle barre d'outil créer et macro ajoutée" src="/bolts/fr/docs/static/0.3/toolbarbutton2.png" /></a></p>
+<p>Puis fermer la boîte de dialogue Personnaliser.</p>
+<h3>Essaye-le</h3>
+<p>Passez à l'Atelier auquel vous avez ajouté la barre d'outils à l'étape précédente. Ou
+changer puis revenir si cette barre d'outils est actuellement active.</p>
+<p>Vous devriez maintenant avoir une nouvelle barre d'outils, et un clic sur l'icône jaune en forme de boulon doit
+ouvrir le sélecteur de pièces standard BOLTS.</p>
+<h3>Étape suivante</h3>
+<p>Vous pouvez maintenant apprendre <a href="/bolts/en/docs/0.3/document/freecad/usage.html">comment utiliser BOLTS pour FreeCAD</a>.</p>
+      <h2>Commentaires</h2>
+      <div id="comments"></div>
+    </div>
+  </div>
+</div>
+
+  
+  <hr>
+  <footer id="footer">
+    <p>© Johannes Reinhardt, Image de titre par <a href="https://www.flickr.com/photos/dkpphotography/9468970843">Dhruv Patel</a>, thème basé sur un <a href="https://github.com/Wolfr/cactus-jekyll-theme">design</a> par <a href="http://wolfslittlestore.be">Wolf's Little Store</a></p>
+  </footer>
+  
+</div>
+
+<script type="text/javascript" class="juvia">
+(function() {
+    var options = {
+        container    : '#comments',
+        site_key     : 'i2tzqcns7cm0alygsdvh9fhyfe2g0u1',
+        topic_key    : location.pathname,
+        topic_url    : location.href,
+        topic_title  : document.title || location.href,
+        comment_order: 'latest-first'
+    };
+
+    function makeQueryString(options) {
+        var key, params = [];
+        for (key in options) {
+            params.push(
+                encodeURIComponent(key) +
+                '=' +
+                encodeURIComponent(options[key]));
+        }
+        return params.join('&');
+    }
+
+    function makeApiUrl(options) {
+        // Makes sure that each call generates a unique URL, otherwise
+        // the browser may not actually perform the request.
+        if (!('_juviaRequestCounter' in window)) {
+            window._juviaRequestCounter = 0;
+        }
+
+        var result =
+            '//j.stbuehler.de/api/show_topic.js' +
+            '?_c=' + window._juviaRequestCounter +
+            '&' + makeQueryString(options);
+        window._juviaRequestCounter++;
+        return result;
+    }
+
+    var s       = document.createElement('script');
+    s.async     = true;
+    s.type      = 'text/javascript';
+    s.className = 'juvia';
+    s.src       = makeApiUrl(options);
+    (document.getElementsByTagName('head')[0] ||
+     document.getElementsByTagName('body')[0]).appendChild(s);
+})();
+</script>
+
+
+<script src="/bolts/static/js/all.js?9bb454f9"></script>
+
+</body>
+</html>

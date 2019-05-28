@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/bolts/static/favicon.ico" />
+  
+  <link rel="stylesheet" href="/bolts/static/css/style.css?019e02bb" type="text/css" media="screen">
+  
+  <title>Documentation</title>
+</head>
+<body>
+
+   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/bolts/en/index.html">Home</a></li>
+          <li><a href="/bolts/en/blog/index.html">Blog</a></li>
+          <li><a href="/bolts/en/parts/index.html">Parts</a></li>
+          <li><a href="/bolts/en/docs/index.html">Documentation</a></li>
+          <li><a href="/bolts/en/contribute.html">Contribute</a></li>
+          <li><a href="/bolts/en/downloads.html">Downloads</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">en<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/bolts/en/docs/0.3/document/general/development.html">English</a></li>
+              <li><a href="/bolts/de/docs/0.3/document/general/development.html">German</a></li>
+              <li><a href="/bolts/fr/docs/0.3/document/general/development.html">French</a></li>
+              <li><a href="/bolts/es/docs/0.3/document/general/development.html">Spanish</a></li>
+              <li><a href="/bolts/sv/docs/0.3/document/general/development.html">Swedish</a></li>
+            </ul>
+          </li>
+          <li><a class="github" href="https://github.com/jreinhardt/BOLTS">Github</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+
+
+  <div class="page-title-bar">
+    <div class="container">
+      
+      <h2>Documentation for BOLTS 0.3 (current stable version)</h2>
+      <a class="active" href="/bolts/en/docs/0.3/index.html">stable</a>
+      <a href="/bolts/en/docs/0.4/index.html">dev</a>
+      
+    </div>
+  </div>
+
+<div class="container">
+  
+<div class="row">
+  <div class="col-sm-8 doc-main">
+    <div class="doc-page">
+      <h2 class="doc-page-title">BOLTS development with git</a></h2>
+      <p>BOLTS consists of quite a lot of code and data and to manage this code and data
+and the changes made to it, <a href="http://www.git-scm.com">git</a> is used. Git is a
+distributed version control system and this allows everybody who wants to work
+with git to obtain a version of BOLTS (called a fork), that is separate from
+the main version, so that it is possible to play around, add parts and develop
+new features without breaking the master branch. git then makes it very easy to
+move the changes made in one branch to the master branch.</p>
+<p>There exist many different workflows and ways how to develop software with git.
+I will present three different ways that I consider useful for the purpose of
+contributing to BOLTS. For more information see the <a href="http://www.git-scm.com">git
+documentation</a> or the <a href="https://help.github.com/">GitHub
+documentation</a>.</p>
+<h3>Using the GitHub web interface</h3>
+<p>For this way you need a <a href="https://github.com/">GitHub</a> account. It is probably
+the easiest way to make small corrections and additions, and works well for all
+tasks that involve editing and creating text files.</p>
+<p>Go to the <a href="https://github.com/jreinhardt/BOLTS">BOLTS repository page</a>, there
+you see a list of all files and directories and you can navigate around by
+clicking on them.</p>
+<p>To edit a file just click on it, and then use the <code>Edit</code> button to open the web
+based editor. You can now make your changes. When you are done, scroll to the
+bottom of the page and add a short description, and a longer explanation about
+what you changed if necessary. Try to use precise language and avoid having
+unrelated changes in one commit (like fixing a typo and adding a new class).</p>
+<p>Alternatively you can add a new file by clicking on the small <code>+</code> next to the
+repository name. A editor page opens, and you can give a filename and start
+typing contents.</p>
+<p>Finally hit the <code>Commit Changes</code> button at the bottom of the page. GitHub will
+now automatically fork the BOLTS and create a new commit with the changes you
+just made.</p>
+<p>On the next page you are asked whether you want to offer your changes to the
+BOLTS maintainer, this is called a pull request. If your changes are more
+substantial, you should add a short explanation, why you think these changes
+should go into the main branch. You can then send the pull request.</p>
+<p>The maintainer can now look at your changes, decide whether he wants them in
+the main branch, give you feedback and ask for further modifications.</p>
+<h3>Checking out a GitHub fork</h3>
+<p>For this way you also need a <a href="https://github.com/">GitHub</a> account. It allows
+you also to work offline. This way requires you to work with the commandline.</p>
+<p>This way will also create a fork of BOLTS on the GitHub server, but
+additionally you will also obtain a fork on your own computer. You make changes
+to the one on your own computer and then communicate these changes back to the
+GitHub fork. This way you can work offline, you only need to be online to push
+your changes.</p>
+<p>Before you start you should 
+<a href="https://help.github.com/articles/set-up-git">install and set up git</a>
+supplying it with your name and email address, so that your contributions can
+be attributed to you.</p>
+<p>There is a 
+<a href="https://help.github.com/articles/fork-a-repo">pretty good tutorial how to fork a repository</a>
+on the <a href="https://help.github.com/">GitHub help pages</a>,
+ where you can also find more informations about working with git and GitHub.</p>
+<p>The next steps are explained in the section about <code>Creating topic branches and
+commiting your work</code>.</p>
+<h3>Checking out a local copy of BOLTS</h3>
+<p>For this way you do not need a GitHub account, and it allows you to work
+offline. In contrast to working with a GitHub fork, your proposed changes are
+not published online, but sent to the maintainer by email.</p>
+<p>Before you start you should 
+<a href="https://help.github.com/articles/set-up-git">install and set up git</a>
+supplying it with your name and email address, so that your contributions can
+be attributed to you.</p>
+<p>To obtain a local version of the BOLTS git repository fire up the commandline,
+change to the directory where you want to store the BOLTS repository and type</p>
+<p>git clone git@github.com:jreinhardt/BOLTS.git</p>
+<p>a new directory named <code>BOLTS</code> will be created that contains the current
+development state.</p>
+<p>The next steps are explained in the section about <code>Creating topic branches and
+commiting your work</code>.</p>
+<h3>Creating topic branches and commiting your work</h3>
+<p>You now should have a local copy of BOLTS. Before you start making changes, you
+should create a new branch. There is a quite detailed description about
+branches on the 
+<a href="http://git-scm.com/book/en/Git-Branching">git-scm website</a>.
+In short, a branch is like a parallel universe of the source code. This allows
+you to work on independent changes (like adding a new collection and writing
+base modules for another one) in parallel, by storing them in separate
+branches. But if you do not want to work in parallel, it boils down to a few
+commands that you use before and after you did your changes.</p>
+<p>To create a new branch type on the commandline</p>
+<pre><code>git checkout -b "branchname"
+</code></pre>
+<p>and replace branchname by a short descriptive name like
+"steppermotorcollection", if you want to add a new collection for stepper
+motors or "hexsocketbases" if you want to add base geometries for the hexsocket
+collection. A branch that is used to work on a certain feature is called a
+topic branch.</p>
+<p>If you now type</p>
+<pre><code>git status
+</code></pre>
+<p>it tells you which branch you are on</p>
+<pre><code># On branch steppermotorcollection
+...
+</code></pre>
+<p>To switch branches you can use</p>
+<pre><code>git checkout branchname
+</code></pre>
+<p>Before you edit files, make sure you are in your topic branch. To record a set
+of changes, you first "add" the changed or new files that you want to include
+in the commit by</p>
+<pre><code>git add filename
+git add filename2
+git add filename3 filename4
+</code></pre>
+<p>with</p>
+<pre><code>git status
+</code></pre>
+<p>you can get a list of changed files that will be commited and those that will
+not be commited. Finally, to commit the added changes use</p>
+<pre><code>git commit
+</code></pre>
+<p>A editor opens and you can enter a description of the changes. The first line
+is a short description. If the changes deserve a more detailes explanation, one
+can be added after a empty line.</p>
+<p>Usually one structures the work on one feature into a series of commits that do
+simple changes each. A rule of thumb is: If you cannot precisely describe the
+changes in one line, you should consider to split it into smaller commits.</p>
+<p>If you have finished the work on your feature you submit the changes  either by
+fire off a pull request, or by creating a bundle and send it by mail to the
+maintainer.</p>
+<h3>Sending a pull request</h3>
+<p>To push your topic branch to GitHub, you use</p>
+<pre><code>git checkout branchname
+git push -u origin branchname
+</code></pre>
+<p>This creates a new branch called branchname on your BOLTS fork on GitHub. If you make more changes on this topic branch (maybe on request of the maintainer), you can use just</p>
+<pre><code>git push origin branchname
+</code></pre>
+<p>The initiation of a pull request on GitHub is covered very well by 
+<a href="https://help.github.com/articles/using-pull-requests">this tutorial</a>.</p>
+<h3>Creating a bundle</h3>
+<p>Another possibility to contribute your changes is to create a bundle file
+containing all the commits you added.</p>
+<p>To create the bundle use</p>
+<pre><code>git bundle create branchname.bundle origin/master..branchname
+</code></pre>
+<p>but replace branchname by the name of your branch.</p>
+<p>The resulting file can be attached to an email with a description what this
+does and then send it to
+<a href="mailto:BOLTS@ist-dein-freund.de">BOLTS@ist-dein-freund.de</a>.</p>
+      <h2>Comments</h2>
+      <div id="comments"></div>
+    </div>
+  </div>
+</div>
+
+  
+  <hr>
+  <footer id="footer">
+    <p>© Johannes Reinhardt, title image by <a href="https://www.flickr.com/photos/dkpphotography/9468970843">Dhruv Patel</a>, theme based on a <a href="https://github.com/Wolfr/cactus-jekyll-theme">design</a> by <a href="http://wolfslittlestore.be">Wolf's Little Store</a></p>
+  </footer>
+  
+</div>
+
+<script type="text/javascript" class="juvia">
+(function() {
+    var options = {
+        container    : '#comments',
+        site_key     : 'i2tzqcns7cm0alygsdvh9fhyfe2g0u1',
+        topic_key    : location.pathname,
+        topic_url    : location.href,
+        topic_title  : document.title || location.href,
+        comment_order: 'latest-first'
+    };
+
+    function makeQueryString(options) {
+        var key, params = [];
+        for (key in options) {
+            params.push(
+                encodeURIComponent(key) +
+                '=' +
+                encodeURIComponent(options[key]));
+        }
+        return params.join('&');
+    }
+
+    function makeApiUrl(options) {
+        // Makes sure that each call generates a unique URL, otherwise
+        // the browser may not actually perform the request.
+        if (!('_juviaRequestCounter' in window)) {
+            window._juviaRequestCounter = 0;
+        }
+
+        var result =
+            '//j.stbuehler.de/api/show_topic.js' +
+            '?_c=' + window._juviaRequestCounter +
+            '&' + makeQueryString(options);
+        window._juviaRequestCounter++;
+        return result;
+    }
+
+    var s       = document.createElement('script');
+    s.async     = true;
+    s.type      = 'text/javascript';
+    s.className = 'juvia';
+    s.src       = makeApiUrl(options);
+    (document.getElementsByTagName('head')[0] ||
+     document.getElementsByTagName('body')[0]).appendChild(s);
+})();
+</script>
+
+
+<script src="/bolts/static/js/all.js?9bb454f9"></script>
+
+</body>
+</html>

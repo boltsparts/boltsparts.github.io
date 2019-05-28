@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/bolts/static/favicon.ico" />
+  
+  <link rel="stylesheet" href="/bolts/static/css/style.css?019e02bb" type="text/css" media="screen">
+  
+  <title>Documentation</title>
+</head>
+<body>
+
+   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/bolts/sv/index.html">Home</a></li>
+          <li><a href="/bolts/sv/blog/index.html">Blog</a></li>
+          <li><a href="/bolts/sv/parts/index.html">Parts</a></li>
+          <li><a href="/bolts/sv/docs/index.html">Documentation</a></li>
+          <li><a href="/bolts/sv/contribute.html">Contribute</a></li>
+          <li><a href="/bolts/sv/downloads.html">Downloads</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">sv<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/bolts/en/docs/0.3/document/general/utility-script.html">English</a></li>
+              <li><a href="/bolts/de/docs/0.3/document/general/utility-script.html">German</a></li>
+              <li><a href="/bolts/fr/docs/0.3/document/general/utility-script.html">French</a></li>
+              <li><a href="/bolts/es/docs/0.3/document/general/utility-script.html">Spanish</a></li>
+              <li><a href="/bolts/sv/docs/0.3/document/general/utility-script.html">Swedish</a></li>
+            </ul>
+          </li>
+          <li><a class="github" href="https://github.com/jreinhardt/BOLTS">Github</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+
+
+  <div class="page-title-bar">
+    <div class="container">
+      
+      <h2>Documentation for BOLTS 0.3 (current stable version)</h2>
+      <a class="active" href="/bolts/sv/docs/0.3/index.html">stable</a>
+      <a href="/bolts/sv/docs/0.4/index.html">dev</a>
+      
+    </div>
+  </div>
+
+<div class="container">
+  
+<div class="row">
+  <div class="col-sm-8 doc-main">
+    <div class="doc-page">
+      <h2 class="doc-page-title">How to use a development checkout</a></h2>
+      <p>This assumes that you have obtained a git checkout by cloning either the
+official BOLTS git or a fork. You need to have python, pyYAML and optionally
+FreeCAD and OpenSCAD installed. This tutorial makes heavy use of the
+commandline.</p>
+<p>There are several tasks that are so common in BOLTS development that they have
+been put into a script called bolts.py. This tutorial describes how to use this
+script to perform these tasks. Some information about the available subcommands
+and options is available by typing</p>
+<pre><code>./bolts.py --help
+</code></pre>
+<h3>Exporting backends</h3>
+<p>After making some changes, one might want to rebuild the output of a backend,
+so that one can inspect it. This can be done using the <code>export</code> subcommand. The
+results of this operation can be found in the respective subdirectory of the
+output directory.</p>
+<p>For example to regenerate the OpenSCAD distribution one uses</p>
+<pre><code>./bolts.py export openscad
+</code></pre>
+<p>To build a OpenSCAD library that is restricted to content compatible with a
+certain license, one can supply an additional argument:</p>
+<pre><code>./bolts.py export openscad --license lgpl2.1+
+</code></pre>
+<p>One can also regenerate the HTML output, which is useful when creating drawings
+or adding new collections</p>
+<pre><code>./bolts.py export html
+</code></pre>
+<h3>Running automatic checks</h3>
+<p>BOLTS can run some automatic checks and detect a few common errors, problems
+and inconsistencies.</p>
+<p>To do so, execute</p>
+<pre><code>./bolts.py check
+</code></pre>
+<p>A report is displayed with all the problems found and a short explanation.</p>
+<h3>Listing tasks</h3>
+<p>BOLTS can also look for missing bits and pieces and other small jobs that make
+BOLTS more complete or consistent.</p>
+<p>To show a list of such tasks use</p>
+<pre><code>./bolts.py tasks
+</code></pre>
+<p>If there are tasks available, they are displayed together with a short
+explanation.</p>
+<h3>Testing CAD applications</h3>
+<p>Manual inspection and automatic checks are good, but some errors can only be
+found when working in the CAD application. The utility script allows to fire up
+instances of OpenSCAD or FreeCAD with all necessary paths setup such that one
+can test freshly exported distributions.</p>
+<p>This is done with the <code>test</code> subcommand. To test for FreeCAD type</p>
+<pre><code>./bolts.py export freecad
+./bolts.py test freecad
+</code></pre>
+<p>This exports a FreeCAD distribution and starts an instance of FreeCAD with the
+module search paths set up correctly. You can now start BOLTS by typing</p>
+<pre><code>import BOLTS
+</code></pre>
+<p>into the FreeCAD Python console and then test your changes.</p>
+<p>To test for OpenSCAD type</p>
+<pre><code>./bolts.py export openscad
+./bolts.py test openscad
+</code></pre>
+<p>This exports a OpenSCAD distribution and starts an instance of OpenSCAD so that
+it finds the exported distribution. You can now include BOLTS by entering</p>
+<pre><code>include &lt;BOLTS.scad&gt;;
+</code></pre>
+<p>in the editor. It should now be possible to invoke BOLTS modules to test
+whether everything works.</p>
+<h3>Creating releases</h3>
+<p>The utility script also automates the process of preparing archives of released
+versions of BOLTS, by using the <code>release</code> subcommand. This is usually only used
+by the maintainer.</p>
+      <h2>Comments</h2>
+      <div id="comments"></div>
+    </div>
+  </div>
+</div>
+
+  
+  <hr>
+  <footer id="footer">
+    <p>© Johannes Reinhardt, title image by <a href="https://www.flickr.com/photos/dkpphotography/9468970843">Dhruv Patel</a>, theme based on a <a href="https://github.com/Wolfr/cactus-jekyll-theme">design</a> by <a href="http://wolfslittlestore.be">Wolf's Little Store</a></p>
+  </footer>
+  
+</div>
+
+<script type="text/javascript" class="juvia">
+(function() {
+    var options = {
+        container    : '#comments',
+        site_key     : 'i2tzqcns7cm0alygsdvh9fhyfe2g0u1',
+        topic_key    : location.pathname,
+        topic_url    : location.href,
+        topic_title  : document.title || location.href,
+        comment_order: 'latest-first'
+    };
+
+    function makeQueryString(options) {
+        var key, params = [];
+        for (key in options) {
+            params.push(
+                encodeURIComponent(key) +
+                '=' +
+                encodeURIComponent(options[key]));
+        }
+        return params.join('&');
+    }
+
+    function makeApiUrl(options) {
+        // Makes sure that each call generates a unique URL, otherwise
+        // the browser may not actually perform the request.
+        if (!('_juviaRequestCounter' in window)) {
+            window._juviaRequestCounter = 0;
+        }
+
+        var result =
+            '//j.stbuehler.de/api/show_topic.js' +
+            '?_c=' + window._juviaRequestCounter +
+            '&' + makeQueryString(options);
+        window._juviaRequestCounter++;
+        return result;
+    }
+
+    var s       = document.createElement('script');
+    s.async     = true;
+    s.type      = 'text/javascript';
+    s.className = 'juvia';
+    s.src       = makeApiUrl(options);
+    (document.getElementsByTagName('head')[0] ||
+     document.getElementsByTagName('body')[0]).appendChild(s);
+})();
+</script>
+
+
+<script src="/bolts/static/js/all.js?9bb454f9"></script>
+
+</body>
+</html>

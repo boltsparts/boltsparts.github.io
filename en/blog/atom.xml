@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">Recent Blog Entries</title>
+  <id>https://ist-dein-freund.de/bolts/en/blog/atom.xml</id>
+  <updated>2019-05-17T14:00:00Z</updated>
+  <link href="https://ist-dein-freund.de/bolts/" />
+  <link href="https://ist-dein-freund.de/bolts/en/blog/atom.xml" rel="self" />
+  <generator>Werkzeug</generator>
+  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+    <title type="text">BOLTS revival</title>
+    <id>https://ist-dein-freund.de/bolts/en/blog/2019/5/17/Revival.html</id>
+    <updated>2019-05-17T14:00:00Z</updated>
+    <published>2019-05-17T14:00:00Z</published>
+    <link href="https://ist-dein-freund.de/bolts/en/blog/2019/5/17/Revival.html" />
+    <author>
+      <name>Johannes</name>
+    </author>
+    <summary type="html"><p>During a long period of inactivity from my side BOLTS has degraded. Bugs and Problems were noticed, but not fixed, the website went down at some point, and also the integrations had their share of bit-rot.</p>
+<p>However Bernd Hahnebach kept the FreeCAD macro alive and from now on, we will together maintain this project. A number of activities have started</p></summary>
+    <content type="html">&lt;p&gt;During a long period of inactivity from my side BOLTS has degraded. Bugs and Problems were noticed, but not fixed, the website went down at some point, and also the integrations had their share of bit-rot.&lt;/p&gt;
+&lt;p&gt;However Bernd Hahnebach kept the FreeCAD macro alive and from now on, we will together maintain this project. A number of activities have started&lt;/p&gt;
+&lt;!-- more --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The &lt;a href=&quot;https://github.com/boltsparts/BOLTS&quot;&gt;BOLTS&lt;/a&gt; and &lt;a href=&quot;https://github.com/boltsparts/BOLTSFC&quot;&gt;BOLTSFC&lt;/a&gt; (FreeCAD package) repositories have been moved from my personal space to a newly created GitHub organisation.&lt;/li&gt;
+&lt;li&gt;A number of bugfixes and improvements has already be merged, more will follow.&lt;/li&gt;
+&lt;li&gt;The Website (which was a Flask application that was hosted on the old version OpenShift, which broke when the old version was discontinued) is statically generated, which simplifies hosting a lot. Because of this change a number of things change
+&lt;strong&gt; I didn't spent effort to get the &lt;a href=&quot;{{ blog(2014/06/04/Thingtracker-Network) }}&quot;&gt;thingtracker&lt;/a&gt; for BOLTS up and running again. The ThingTracker Network seems dead anyway.
+&lt;/strong&gt; The file distribution for the releases now happens via &lt;a href=&quot;https://github.com/boltsparts/BOLTS/releases&quot;&gt;GitHub&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
+  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+    <title type="text">Happy new year, miscellany</title>
+    <id>https://ist-dein-freund.de/bolts/en/blog/2016/1/3/Happy-New-Year-2016.html</id>
+    <updated>2016-01-03T23:30:00Z</updated>
+    <published>2016-01-03T23:30:00Z</published>
+    <link href="https://ist-dein-freund.de/bolts/en/blog/2016/1/3/Happy-New-Year-2016.html" />
+    <author>
+      <name>Johannes</name>
+    </author>
+    <summary type="html"><p>I wish everybody a happy new year 2016. I wrote such a post <a href="/bolts/en/blog/2015/1/1/Happy-New-Year.html">last year</a> as well, and expressed my hope that 2015 would be a good year for BOLTS. However 2015 turned out to be a very slow year for BOLTS, as I did not have a lot of time and energy to spend on BOLTS. And I can not promise that this year will be better.</p>
+<p>However, other people did advance the project:</p></summary>
+    <content type="html">&lt;p&gt;I wish everybody a happy new year 2016. I wrote such a post &lt;a href=&quot;{{ blog(2015/01/01/Happy-New-Year) }}&quot;&gt;last year&lt;/a&gt; as well, and expressed my hope that 2015 would be a good year for BOLTS. However 2015 turned out to be a very slow year for BOLTS, as I did not have a lot of time and energy to spend on BOLTS. And I can not promise that this year will be better.&lt;/p&gt;
+&lt;p&gt;However, other people did advance the project:&lt;/p&gt;
+&lt;!-- more --&gt;
+
+&lt;p&gt;Translations, Bug Reports&lt;/p&gt;
+&lt;p&gt;Packaged in &lt;a href=&quot;https://launchpad.net/~freecad-community/+archive/ubuntu/ppa&quot;&gt;FreeCAD community PPA&lt;/a&gt;, thanks abdullah from the FreeCAD Forums.&lt;/p&gt;
+&lt;p&gt;Nice &lt;a href=&quot;https://www.youtube.com/watch?v=FhEo7F3W9K0&quot;&gt;Video Tutorial&lt;/a&gt; by cad1919, which shows the use of BOLTS, the fasteners workbench and the assembly2 workbench for creating a quite complex assembly. BOLTS is used for the ball bearings, but not for the fasteners, as the fastener workbench seems to be much easier to use in this case. So there is something to learn for BOLTS.&lt;/p&gt;</content>
+  </entry>
+  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+    <title type="text">New development snapshots</title>
+    <id>https://ist-dein-freund.de/bolts/en/blog/2015/6/28/new-Snapshots.html</id>
+    <updated>2015-06-28T13:00:00Z</updated>
+    <published>2015-06-28T13:00:00Z</published>
+    <link href="https://ist-dein-freund.de/bolts/en/blog/2015/6/28/new-Snapshots.html" />
+    <author>
+      <name>Johannes</name>
+    </author>
+    <summary type="html"><p>I put new development snapshots <a href="/bolts/en/downloads.html?version=0.3">online</a> for both
+OpenSCAD and FreeCAD. There is not much new functionality, but a few bugfixes
+that were contributed.</p></summary>
+    <content type="html">&lt;p&gt;I put new development snapshots &lt;a href=&quot;{{ url(main.downloads) }}&quot;&gt;online&lt;/a&gt; for both
+OpenSCAD and FreeCAD. There is not much new functionality, but a few bugfixes
+that were contributed.
+&lt;!-- more --&gt;&lt;/p&gt;
+&lt;p&gt;Main improvements:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;some fixes for using BOLTS for FreeCAD on Arch Linux (contributed by Jon Nordby)&lt;/li&gt;
+&lt;li&gt;a fix that caused bearings come out too thick in FreeCAD (contributed by kkoksvik)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There was also a small but steady influx of suggestions for French translations
+in &lt;a href=&quot;https://weblate.stbuehler.de/projects/BOLTS/&quot;&gt;weblate&lt;/a&gt;, that I have
+continuously  integrated. The translations are not yet used for the FreeCAD and
+OpenSCAD backends, but only show up on the website.&lt;/p&gt;</content>
+  </entry>
+  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+    <title type="text">Updates</title>
+    <id>https://ist-dein-freund.de/bolts/en/blog/2015/4/19/Updates.html</id>
+    <updated>2015-04-19T16:00:00Z</updated>
+    <published>2015-04-19T16:00:00Z</published>
+    <link href="https://ist-dein-freund.de/bolts/en/blog/2015/4/19/Updates.html" />
+    <author>
+      <name>Johannes</name>
+    </author>
+    <summary type="html"><p>This is a news updates that discusses the lack of updates, an important update and many small updates.</p></summary>
+    <content type="html">&lt;p&gt;This is a news updates that discusses the lack of updates, an important update and many small updates.
+&lt;!-- more --&gt;&lt;/p&gt;
+&lt;p&gt;There have been no updates on BOLTS itself, as I have not much time at the
+moment. I hope to be able to get back soon, and finish a large change in the
+way BOLTS handles data, which should pave the way for a few new features. And I
+hope to finally tackle a better integration of BOLTS into FreeCAD.&lt;/p&gt;
+&lt;p&gt;Speaking of FreeCAD, recently version 0.15 of FreeCAD &lt;a href=&quot;http://freecadweb.org/wiki/index.php?title=Release_notes_015&quot;&gt;was
+released&lt;/a&gt;. The
+exciting change from the point of view of BOLTS is that the FreeCAD libpack now
+contains the python dependencies of BOLTS. This should solve most of the
+difficulties windows users have experienced when trying to install BOLTS on
+Windows.&lt;/p&gt;
+&lt;p&gt;And even though not much is happening on the development side of BOLTS, its popularity is rising steadily. The webpage has more than 1000 visitors every month and a few brave anonymous contributors continue to improve the state of &lt;a href=&quot;https://weblate.stbuehler.de/projects/BOLTS/&quot;&gt;the translations&lt;/a&gt; for part descriptions, webpage and documentation. Thanks a lot, whoever you are!&lt;/p&gt;</content>
+  </entry>
+  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+    <title type="text">Website fixed</title>
+    <id>https://ist-dein-freund.de/bolts/en/blog/2015/1/29/Website-fixed.html</id>
+    <updated>2015-01-29T11:00:00Z</updated>
+    <published>2015-01-29T11:00:00Z</published>
+    <link href="https://ist-dein-freund.de/bolts/en/blog/2015/1/29/Website-fixed.html" />
+    <author>
+      <name>Johannes</name>
+    </author>
+    <summary type="html"><p>An OpenShift update on 27 Jan 2015 broke something with the website. This should be fixed now.</p></summary>
+    <content type="html">&lt;p&gt;An OpenShift update on 27 Jan 2015 broke something with the website. This should be fixed now.&lt;/p&gt;
+&lt;!-- more --&gt;
+
+&lt;p&gt;I just noticed that the BOLTS website was broken. Looking at the logs it seemed
+like a AppArmor adjustment lead to relative imports in the python code not
+working anymore. I guess that this is a security fix, so I prefer that to break
+instead of being vulnerable. Changing the relative imports to import relative
+to the package seems to fix the problem.&lt;/p&gt;</content>
+  </entry>
+  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+    <title type="text">Happy new year, miscellany</title>
+    <id>https://ist-dein-freund.de/bolts/en/blog/2015/1/1/Happy-New-Year.html</id>
+    <updated>2015-01-01T23:30:00Z</updated>
+    <published>2015-01-01T23:30:00Z</published>
+    <link href="https://ist-dein-freund.de/bolts/en/blog/2015/1/1/Happy-New-Year.html" />
+    <author>
+      <name>Johannes</name>
+    </author>
+    <summary type="html"><p>I wish everybody a happy new year 2015. I hope it will be a good year for BOLTS, I have a lot of ideas and hope to find a bit of time to work on it.</p></summary>
+    <content type="html">&lt;p&gt;I wish everybody a happy new year 2015. I hope it will be a good year for BOLTS, I have a lot of ideas and hope to find a bit of time to work on it.&lt;/p&gt;
+&lt;!-- more --&gt;
+
+&lt;p&gt;As a followup to last post, the lightning talk at &lt;a href=&quot;https://events.ccc.de/congress/2014/wiki/Main_Page&quot;&gt;31C3&lt;/a&gt; went well (apart from the previous speaker hiding the clicker to advance the slides). There was a big peak in website traffic during and after the talk, so I hope a few people learned about BOLTS in this way.&lt;/p&gt;
+&lt;p&gt;As someone asked me about more languages for &lt;a href=&quot;https://weblate.stbuehler.de/projects/BOLTS/&quot;&gt;translations&lt;/a&gt;, I tried to add swedish and noticed that I had forgotten how to do this. After I reconstructed that knowledge, I added a script that does that for me, so adding more languages is now easy. So if you want to help with translating BOLTS to another language, drop a comment.&lt;/p&gt;
+&lt;p&gt;As a bit of an outlook, I took on a redesign of the parameter handling code of BOLTS, and I believe I have figured out a very nice design that is much more powerful and flexible than the current code (which is in hindsight actually not so good). The new design will allow for an elegant solution to many new and old features.&lt;/p&gt;</content>
+  </entry>
+  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+    <title type="text">BOLTS Lightning Talk at 31C3</title>
+    <id>https://ist-dein-freund.de/bolts/en/blog/2014/12/18/31C3.html</id>
+    <updated>2014-12-18T09:30:00Z</updated>
+    <published>2014-12-18T09:30:00Z</published>
+    <link href="https://ist-dein-freund.de/bolts/en/blog/2014/12/18/31C3.html" />
+    <author>
+      <name>Johannes</name>
+    </author>
+    <summary type="html"><p>I will be giving a <a href="https://events.ccc.de/congress/2014/wiki/Static:Lightning_Talks">lightning
+talk</a> about
+BOLTS at the <a href="https://events.ccc.de/congress/2014/wiki/Main_Page">31st Chaos Communication
+Congress</a> in Hamburg in one
+and a half weeks. It will be 5 minutes long and the talks will be live streamed
+and recorded.</p>
+<p>If you are also there and interested in meeting up and discussing, just drop me
+a note.</p></summary>
+    <content type="html">&lt;p&gt;I will be giving a &lt;a href=&quot;https://events.ccc.de/congress/2014/wiki/Static:Lightning_Talks&quot;&gt;lightning
+talk&lt;/a&gt; about
+BOLTS at the &lt;a href=&quot;https://events.ccc.de/congress/2014/wiki/Main_Page&quot;&gt;31st Chaos Communication
+Congress&lt;/a&gt; in Hamburg in one
+and a half weeks. It will be 5 minutes long and the talks will be live streamed
+and recorded.&lt;/p&gt;
+&lt;p&gt;If you are also there and interested in meeting up and discussing, just drop me
+a note.&lt;/p&gt;</content>
+  </entry>
+  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+    <title type="text">BOLTS for FreeCAD should work again tomorrow</title>
+    <id>https://ist-dein-freund.de/bolts/en/blog/2014/11/4/Bug-Fix.html</id>
+    <updated>2014-11-04T16:15:00Z</updated>
+    <published>2014-11-04T16:15:00Z</published>
+    <link href="https://ist-dein-freund.de/bolts/en/blog/2014/11/4/Bug-Fix.html" />
+    <author>
+      <name>Johannes</name>
+    </author>
+    <summary type="html"><p>In the last few revisions there was a
+<a href="http://www.freecadweb.org/tracker/view.php?id=1816">bug</a> in FreeCAD that
+prevented BOLTS from working properly. It was fixed very quickly, so for those
+of you that use daily builds of FreeCAD, tomorrow everything should work again.
+Everyone else was not affected.</p></summary>
+    <content type="html">&lt;p&gt;In the last few revisions there was a
+&lt;a href=&quot;http://www.freecadweb.org/tracker/view.php?id=1816&quot;&gt;bug&lt;/a&gt; in FreeCAD that
+prevented BOLTS from working properly. It was fixed very quickly, so for those
+of you that use daily builds of FreeCAD, tomorrow everything should work again.
+Everyone else was not affected.&lt;/p&gt;</content>
+  </entry>
+  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+    <title type="text">New and better website for BOLTS</title>
+    <id>https://ist-dein-freund.de/bolts/en/blog/2014/9/10/New-Webpage.html</id>
+    <updated>2014-09-10T13:30:00Z</updated>
+    <published>2014-09-10T13:30:00Z</published>
+    <link href="https://ist-dein-freund.de/bolts/en/blog/2014/9/10/New-Webpage.html" />
+    <author>
+      <name>Johannes</name>
+    </author>
+    <summary type="html"><p>You are currently visiting the shiny new website of BOLTS that I have worked on
+in the last few weeks. The old homepage was becoming more and more
+unmaintainable, as it developed into a tangled mess of generated and manually
+written content that was piped through Jekyll to be hosted as static html on
+GitHub pages. The new page improves on that in several respects, and this is
+what this post is about.</p></summary>
+    <content type="html">&lt;p&gt;You are currently visiting the shiny new website of BOLTS that I have worked on
+in the last few weeks. The old homepage was becoming more and more
+unmaintainable, as it developed into a tangled mess of generated and manually
+written content that was piped through Jekyll to be hosted as static html on
+GitHub pages. The new page improves on that in several respects, and this is
+what this post is about.&lt;/p&gt;
+&lt;!-- more --&gt;
+
+&lt;h2&gt;New url&lt;/h2&gt;
+&lt;p&gt;BOLTS now has a proper and more memorable domain at
+&lt;a href=&quot;http://bolts-library.org&quot;&gt;bolts-library.org&lt;/a&gt;, instead of a relatively
+complicated github.io url. I had to take a domain with a additional suffix, as
+bolts alone was already taken in every useful top level domain. Thats the
+disadvantage if you choose an acronyme for a project that is also a real word.&lt;/p&gt;
+&lt;h2&gt;Responsive Design&lt;/h2&gt;
+&lt;p&gt;The &lt;a href=&quot;https://github.com/Wolfr/cactus-jekyll-theme&quot;&gt;original Jekyll Theme&lt;/a&gt; that
+I based the design of the BOLTS page on was responsive to a certain extent, but
+I never spent the time to truly understand all the details, which resulted in a
+very bad visual appearance on small devices. When it comes to web design, I am
+most comfortable with &lt;a href=&quot;http://getbootstrap.com&quot;&gt;Bootstrap&lt;/a&gt;, so I decided to
+rebuild the homepage in Bootstrap. It looks a bit different now, but works much
+better on tablets and phones.&lt;/p&gt;
+&lt;h2&gt;Translations&lt;/h2&gt;
+&lt;p&gt;One of the main reason for the rebuild of the website was that I wanted to be
+able to provide a localized user experience for people not so comfortable with
+the english language. To manage translations I chose gettext (because it is a
+very common format for this kind of tasks and is well supported by many tools)
+and weblate (because it supports gettext and ties in very well with my work
+flow).&lt;/p&gt;
+&lt;p&gt;All the translateable strings in BOLTS are collected in three different domains:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;messages&lt;/code&gt; contains all the strings of the webpage, mainly link labels
+  for navigation, but also longer bits of text from the front page or other
+  pages.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docs&lt;/code&gt; contains all the documentation. I split up the big chunks of text
+  in paragraphs to make it easier to translate and deal with changes in the
+  content.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;parts&lt;/code&gt; contains all strings harvested from the parts data, mostly labels
+  and descriptions intended for human consumption. This data will also be used
+  to provide a localised experience for e.g. BOLTS for FreeCAD.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Translating all these strings (at the time of writing there are almost 1000
+source strings with nearly 15000 words marked for translation) is something
+that does not require as much technical knowledge as some of the other ways to
+contribute to BOLTS. But it helps a lot, by making it easier for people from
+all over the world to use BOLTS.&lt;/p&gt;
+&lt;p&gt;So I ask you to go over to our
+&lt;a href=&quot;https://weblate.stbuehler.de/projects/BOLTS/&quot;&gt;Weblate instance&lt;/a&gt; and start
+translating. You can choose which of the three domains (called subprojects in
+weblate) you want to work on and which language you want to translate into.
+Finally you can select a subset of strings to display, to translate hitherto
+untranslated stuff choose &lt;code&gt;untranslated strings&lt;/code&gt;, if you want to check existing
+translations, choose &lt;code&gt;All strings&lt;/code&gt; or another filter.&lt;/p&gt;
+&lt;p&gt;You can then suggest translations without being logged in or registered.
+Suggestions need to be approved by a logged in translator, and can not be
+attributed to you. To save translations and have them properly attributed in
+the commit message, you can register an account for free, or if you have a
+google or github account you can log in from these.&lt;/p&gt;
+&lt;p&gt;At the moment translations are set up for the four most popular languages of the
+visitors of the old website, namely English, German, French and Spanish. If you
+want to work on another language, just get in touch, e.g. by leaving a comment.&lt;/p&gt;
+&lt;p&gt;You can change the language with the language selector on the left of the
+menubar. Untranslated content will still be displayed in english.&lt;/p&gt;
+&lt;h2&gt;Full Text Search&lt;/h2&gt;
+&lt;p&gt;Another functionality that I wanted to have and that was just not possible with
+the old setup is a search feature. The search is accessible from the top menu
+bar. It is language sensitive, i.e. will only search the localised version of
+the website for your current language, so at the moment a lot of untranslated
+content will still be found in english.&lt;/p&gt;
+&lt;p&gt;The results are clustered in two categories, parts and documentation, so that
+you can easily select the result that you are interested in.&lt;/p&gt;
+&lt;h2&gt;Versioned Documentation&lt;/h2&gt;
+&lt;p&gt;Now the documentaion for multiple versions of BOLTS can be accessed separately.
+With the old setup, a common problem was, that the documentation was updated
+for the current development version of BOLTS, and therefore differed
+significantly from what people actually had installed, which was confusing. Now
+the documentation for the stable relaease and the development version can be
+accessed separately&lt;/p&gt;
+&lt;p&gt;At the moment however, the documentation for the development version is not
+fully up to date.&lt;/p&gt;
+&lt;h2&gt;Better Technology&lt;/h2&gt;
+&lt;p&gt;All these improvements are possible because the new website is written in
+&lt;a href=&quot;https://www.python.org/&quot;&gt;Python&lt;/a&gt; and the &lt;a href=&quot;http://flask.pocoo.org/&quot;&gt;Flask Micro Framework&lt;/a&gt;, 
+making use of libraries like &lt;a href=&quot;http://babel.pocoo.org/&quot;&gt;Babel&lt;/a&gt;,
+&lt;a href=&quot;https://pythonhosted.org/Whoosh/index.html&quot;&gt;Whoosh&lt;/a&gt; and
+&lt;a href=&quot;http://webassets.readthedocs.org/en/latest&quot;&gt;Webassets&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The resulting web application is hosted on
+&lt;a href=&quot;https://www.openshift.com/&quot;&gt;OpenShift&lt;/a&gt; a Platform as a Service (PaaS) built by
+RedHat, which integrates very well with the git based workflow that emerged for
+the development of BOLTS.&lt;/p&gt;
+&lt;p&gt;This stack will also allow for further experiments, improvements and
+extensions. For example it will be very easy to expose a REST API to all the
+data BOLTS nows about, to allow other application to easily obtain informations
+about standard parts.&lt;/p&gt;
+&lt;h2&gt;Better Workflow&lt;/h2&gt;
+&lt;p&gt;For me the new site results in a much more comfortable workflow. The old site
+lived in a separate and highly diverged &lt;code&gt;gh-pages&lt;/code&gt; branch, and updating the
+page with data from the master branch required a fragile construction of helper
+scripts and resulted in a bloated repository and many extra commits.&lt;/p&gt;
+&lt;p&gt;The new website lives in the master branch and is therefore much easier to
+manage. Also no generated content (apart from downloads) is committed, which
+reduces the growth of the repository. I probably should at some point clean up
+the history of the repo, to cut down the size.&lt;/p&gt;
+&lt;h2&gt;Disadvantages&lt;/h2&gt;
+&lt;p&gt;There are a few small disadvantages though. Due to the migration all the Google
+credit that the old page had accumulated is lost, so at the moment it is a bit
+more difficult to find the new website by googling.&lt;/p&gt;
+&lt;p&gt;And everytime I push an update to the homepage, there is roughly half a minute
+downtime. It is possible to avoid this, but this requires a few changes to the
+app, and I have not yet tackled that.&lt;/p&gt;</content>
+  </entry>
+  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+    <title type="text">FreeCAD 0.14 released</title>
+    <id>https://ist-dein-freund.de/bolts/en/blog/2014/7/1/FreeCAD-0-14.html</id>
+    <updated>2014-07-01T22:00:00Z</updated>
+    <published>2014-07-01T22:00:00Z</published>
+    <link href="https://ist-dein-freund.de/bolts/en/blog/2014/7/1/FreeCAD-0-14.html" />
+    <author>
+      <name>Johannes</name>
+    </author>
+    <summary type="html"><p>Just a quick note: <a href="http://freecadweb.org/">FreeCAD</a>, one of the CAD systems
+that are supported by BOLTS at the moment, recently released version 0.14. This
+version contains a huge number of new features, improvements and bug fixes. For
+details see the
+<a href="http://www.freecadweb.org/wiki/index.php?title=Release_notes_0.14">Release Notes</a>.</p>
+<p>And although it has been rather quiet on this blog for quite some time, I am
+still working behind the scenes on a major rewrite of large portions of BOLTS,
+which will allow a lot of improvements. Stay tuned.</p></summary>
+    <content type="html">&lt;p&gt;Just a quick note: &lt;a href=&quot;http://freecadweb.org/&quot;&gt;FreeCAD&lt;/a&gt;, one of the CAD systems
+that are supported by BOLTS at the moment, recently released version 0.14. This
+version contains a huge number of new features, improvements and bug fixes. For
+details see the
+&lt;a href=&quot;http://www.freecadweb.org/wiki/index.php?title=Release_notes_0.14&quot;&gt;Release Notes&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;And although it has been rather quiet on this blog for quite some time, I am
+still working behind the scenes on a major rewrite of large portions of BOLTS,
+which will allow a lot of improvements. Stay tuned.&lt;/p&gt;</content>
+  </entry>
+  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+    <title type="text">BOLTS in Thing Tracker Network - Postscriptum</title>
+    <id>https://ist-dein-freund.de/bolts/en/blog/2014/6/12/Thingtracker-postscriptum.html</id>
+    <updated>2014-06-12T16:00:00Z</updated>
+    <published>2014-06-12T16:00:00Z</published>
+    <link href="https://ist-dein-freund.de/bolts/en/blog/2014/6/12/Thingtracker-postscriptum.html" />
+    <author>
+      <name>Johannes</name>
+    </author>
+    <summary type="html"><p>I recently wrote about the <a href="http://thingtracker.net/">Thing Tracker Network</a>, but was very brief in my argumentation, why it is so important. Now I feel a bit bad about that, but unfortunately I stumbled again upon two articles that are the foundation for my opinion on this.</p></summary>
+    <content type="html">&lt;p&gt;I recently wrote about the &lt;a href=&quot;http://thingtracker.net/&quot;&gt;Thing Tracker Network&lt;/a&gt;, but was very brief in my argumentation, why it is so important. Now I feel a bit bad about that, but unfortunately I stumbled again upon two articles that are the foundation for my opinion on this.&lt;/p&gt;
+&lt;!-- more --&gt;
+
+&lt;p&gt;The articles were written by &lt;a href=&quot;http://potentialinfo.blogspot.com&quot;&gt;Christopher Lee&lt;/a&gt; (I guess it is not &lt;em&gt;the&lt;/em&gt; Christopher Lee), and were published on the blog of &lt;a href=&quot;https://johncarlosbaez.wordpress.com/&quot;&gt;John Baez&lt;/a&gt; (that I can recommend a lot, if you like Math and Computing). They are writing not about 3D printing and the TTN, but about a similar approach to a similar problem, where things are already in a very advanced stage of walledness, namely Scientific Publishing. There the system degenerated so much, that today Scientists do the work that is necessary to do the research, to write it up and help the Journals with peer review, all without compensation, but in the end the universities have to pay (sometimes a lot) to get access to these results. The situation and the arising problems are very similar to the publication of models for 3D printing, and many of the arguments apply. So without further ado:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://johncarlosbaez.wordpress.com/2013/07/12/the-selected-papers-network-part-3/&quot;&gt;Why walled gardens are dangerous&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://johncarlosbaez.wordpress.com/2013/07/29/the-selected-papers-network-part-4/&quot;&gt;What needs to be done to prevent walled gardens&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
+  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+    <title type="text">BOLTS in Thing Tracker Network</title>
+    <id>https://ist-dein-freund.de/bolts/en/blog/2014/6/4/Thingtracker-Network.html</id>
+    <updated>2014-06-04T13:00:00Z</updated>
+    <published>2014-06-04T13:00:00Z</published>
+    <link href="https://ist-dein-freund.de/bolts/en/blog/2014/6/4/Thingtracker-Network.html" />
+    <author>
+      <name>Johannes</name>
+    </author>
+    <summary type="html"><p>I just played around a bit with automatically publishing all the parts in BOLTS
+in the <a href="http://thingtracker.net/">Thing Tracker Network</a>. The Thing Tracker
+Network is an awesome and very important idea, although it is still in the
+early stages of development.</p></summary>
+    <content type="html">&lt;p&gt;I just played around a bit with automatically publishing all the parts in BOLTS
+in the &lt;a href=&quot;http://thingtracker.net/&quot;&gt;Thing Tracker Network&lt;/a&gt;. The Thing Tracker
+Network is an awesome and very important idea, although it is still in the
+early stages of development.&lt;/p&gt;
+&lt;!-- more --&gt;
+
+&lt;p&gt;Edit (May 2019): During the efforts to revive the website, the thingtracker network feature was removed.&lt;/p&gt;
+&lt;p&gt;The Thing  Tracker Network specifies a way to publish your 3D designs in a way
+that is independent from any particular website, and thus opens the possibility
+for a world without 
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Walled_garden_%28technology%29&quot;&gt;walled gardens&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I will not go into details why walled gardens are bad for an ecosystem. But I
+believe that there is still a chance to steer towards a world without walled
+gardens for 3D designs for 3D printers. There are some big places around that
+have a huge market share, but I think that the community that uses these
+platforms is still flexible and open enough to make an unwalled solution a success.
+This time slot closes though, the walls are getting higher, the users more lazy
+and unwilling to change anything.&lt;/p&gt;
+&lt;p&gt;But the fundamental discussions aside, what I did is that I added an automatic
+export of a TTN tracker for all the parts in BOLTS. It is available here (not
+for humans to read). That turned out to be very easy to do, as all of the
+information necessary is already available in computer readable and structured
+form. All it took were 50 lines of code.&lt;/p&gt;
+&lt;p&gt;As a user one can not do very much with it, apart from viewing the contents of
+the tracker.  The only way in which this is or might be useful is to raise
+awareness and activity for TTN and to help with the development of the TTN and
+of tools using it.&lt;/p&gt;</content>
+  </entry>
+  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+    <title type="text">BOLTS release 0.3</title>
+    <id>https://ist-dein-freund.de/bolts/en/blog/2014/4/24/BOLT-0_3-released.html</id>
+    <updated>2014-04-24T22:00:00Z</updated>
+    <published>2014-04-24T22:00:00Z</published>
+    <link href="https://ist-dein-freund.de/bolts/en/blog/2014/4/24/BOLT-0_3-released.html" />
+    <author>
+      <name>Johannes</name>
+    </author>
+    <summary type="html"><p>I am happy to announce a new release for <a href="/bolts/en/index.html?version=0.3">BOLTS</a>,
+the Open Library of Technical Specifications. The distributions for
+<a href="http://www.openscad.org/">OpenSCAD</a>, <a href="http://freecadweb.org/">FreeCAD</a> and as
+a collection of IGES files can be found on the <a href="/bolts/en/downloads.html?version=0.3">Download
+page</a>.</p></summary>
+    <content type="html">&lt;p&gt;I am happy to announce a new release for &lt;a href=&quot;{{ url(main.index) }}&quot;&gt;BOLTS&lt;/a&gt;,
+the Open Library of Technical Specifications. The distributions for
+&lt;a href=&quot;http://www.openscad.org/&quot;&gt;OpenSCAD&lt;/a&gt;, &lt;a href=&quot;http://freecadweb.org/&quot;&gt;FreeCAD&lt;/a&gt; and as
+a collection of IGES files can be found on the &lt;a href=&quot;{{ url(main.downloads) }}&quot;&gt;Download
+page&lt;/a&gt;.&lt;/p&gt;
+&lt;!-- more --&gt;
+
+&lt;p&gt;There have been a lot of changes. git tells me, that (excluding changes in
+generated files and drawings) 171 files changed, 16313 insertions and 1085
+deletions happened. This still seems a bit high to me, probably due to binary
+files and copies.&lt;/p&gt;
+&lt;p&gt;I tried to assemble a list of changes from the last release, and this is what I
+came up with. It turns out I even managed to blog about most of it.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;{{ blog(2013/11/11/Python-2.6) }}&quot;&gt;Python 2.6 compatibility&lt;/a&gt; for the FreeCAD backend&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;{{ blog(2013/11/29/BLT-file-progress) }}&quot;&gt;Common Parameters&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;More and better automatic checks&lt;/li&gt;
+&lt;li&gt;Many small and bigger improvements to the &lt;a href=&quot;{{ url(main.index) }}&quot;&gt;webpage&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Improved structure of code, resulting in smaller distribution files&lt;/li&gt;
+&lt;li&gt;Improvements for the &lt;a href=&quot;{{ doc_version(0.3,general,utility-script) }}&quot;&gt;utility script&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;{{ blog(2013/12/28/OpenSCAD-positioning) }}&quot;&gt;Connectors for OpenSCAD&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;{{ blog(2014/01/07/IGES-backend) }}&quot;&gt;An IGES backend and distribution&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;{{ blog(2014/01/13/PySide-and-Tables) }}&quot;&gt;PySide compatibility&lt;/a&gt; for newer versions of FreeCAD&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;{{ blog(2014/01/13/PySide-and-Tables) }}&quot;&gt;2D tables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;{{ blog(2014/02/03/News-Digest) }}&quot;&gt;Colored threaded faces&lt;/a&gt; in FreeCAD and OpenSCAD&lt;/li&gt;
+&lt;li&gt;More parts, the automatic counter claims 56 classes in 12 collection covering more than 2200 different parts (but this number is a bit inflated)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;What makes me very happy, is that people started to contribute parts, the
+automatic counter lists 6 individuals that contributed parts data or
+geometries. I also received quite a bit of positive feedback, which is really
+encouraging. I think BOLTS is a good idea that deserves to be explored, and I
+am glad that I am not the only one to think so.&lt;/p&gt;
+&lt;p&gt;There remains &lt;a href=&quot;https://github.com/jreinhardt/BOLTS/issues?state=open&quot;&gt;a lot to be done&lt;/a&gt;.
+I have many ideas, and there are plenty of issues, where the current structure
+and architecture of BOLTS is not adequate. After attacking the structural
+issues that I am aware of right now, I want to add more parts for the next
+release, making BOLTS more useful and uncovering problems that have not yet
+been found.  This is something that you can help with, and I encourage you and
+try to support you with that as good as I can.&lt;/p&gt;</content>
+  </entry>
+  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+    <title type="text">Beaming happily</title>
+    <id>https://ist-dein-freund.de/bolts/en/blog/2014/4/23/Beaming.html</id>
+    <updated>2014-04-23T17:25:00Z</updated>
+    <published>2014-04-23T17:25:00Z</published>
+    <link href="https://ist-dein-freund.de/bolts/en/blog/2014/4/23/Beaming.html" />
+    <author>
+      <name>Johannes</name>
+    </author>
+    <summary type="html"><p>It has been very quiet on this blog in the last weeks, but BOLTS is not dead
+and should see more activity again. There is a stable release coming up very
+soon, but more about that in another post. This post is about the amazing work
+of Bernd from the <a href="http://forum.freecadweb.org/index.php">FreeCAD Forum</a>, who
+added a huge number of steel beam profiles to BOLTS.</p></summary>
+    <content type="html">&lt;p&gt;It has been very quiet on this blog in the last weeks, but BOLTS is not dead
+and should see more activity again. There is a stable release coming up very
+soon, but more about that in another post. This post is about the amazing work
+of Bernd from the &lt;a href=&quot;http://forum.freecadweb.org/index.php&quot;&gt;FreeCAD Forum&lt;/a&gt;, who
+added a huge number of steel beam profiles to BOLTS.&lt;/p&gt;
+&lt;!-- more --&gt;
+
+&lt;p&gt;FreeCAD has had a Architecture workbench for quite some time, and has actually
+a pretty active group of architects that constantly improve its already
+impressive &lt;a href=&quot;http://forum.freecadweb.org/viewtopic.php?f=23&amp;amp;t=5526&quot;&gt;architectural
+capabilities&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The Arch workbench has a &lt;a href=&quot;http://www.freecadweb.org/wiki/index.php?title=Arch%20Structure&quot;&gt;part type specifically for structural
+elements&lt;/a&gt; like
+beams, and also provides a few common profiles. The approach BOLTS takes for
+managing parts is also very well suited for the different kinds of profiles, so
+Bernd started to add a ton of them to BOLTS. And there are really a lot of
+different profiles. Most of them can be added both as a Arch structure or as a
+ordinary part.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;{{ static(profiles.png) }}&quot;&gt;&lt;img alt=&quot;Some of the steel profiles&quot; src=&quot;{{ static(profiles.png) }}&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;During this effort we uncovered a fair amount of problems with BOLTS, like
+issues with names and standards and the BOLTS GUI in FreeCAD, that will have to
+be addressed. But that was somehow expected at this still quite early stage of
+develoment.&lt;/p&gt;
+&lt;p&gt;If you want to testdrive this, you can grab the latest development snapshot
+from the &lt;a href=&quot;http://jreinhardt.github.io/BOLTS/index.html&quot;&gt;webpage&lt;/a&gt;. This will
+turn into a stable release unless problems are uncovered, so every bit of
+testing is appreciated.&lt;/p&gt;</content>
+  </entry>
+  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+    <title type="text">News Digest</title>
+    <id>https://ist-dein-freund.de/bolts/en/blog/2014/2/2/News-Digest.html</id>
+    <updated>2014-02-02T23:15:00Z</updated>
+    <published>2014-02-02T23:15:00Z</published>
+    <link href="https://ist-dein-freund.de/bolts/en/blog/2014/2/2/News-Digest.html" />
+    <author>
+      <name>Johannes</name>
+    </author>
+    <summary type="html"><p>Since the last post a bunch of fixes, additions and smaller improvements happened.</p></summary>
+    <content type="html">&lt;p&gt;Since the last post a bunch of fixes, additions and smaller improvements happened.&lt;/p&gt;
+&lt;!-- more --&gt;
+
+&lt;p&gt;None of these changes are spectacular enough to justify a own blog post. But I
+have been so quiet on this blog and wanted to show a sign of life, so I decided
+to write a post with a recap of the last weeks developments. I will just list
+them with short explanations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I reintegrated bolttools in the BOLTS git repo. This avoids submodules and all the problems and confusions they cause.&lt;/li&gt;
+&lt;li&gt;Types for parameters in blt files files are now mandatory. I got bitten too often by strange errors that were caused by forgotten types. blt files get a bit more verbose by that, though.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;{{ blog(2013/12/28/OpenSCAD-positioning) }}&quot;&gt;OpenSCAD connectors&lt;/a&gt; are now documented on the specification pages, see for example &lt;a href=&quot;{{ standard_url(ISO4017) }}&quot;&gt;here&lt;/a&gt;. For every connector a picture is shown that shows the position and orientation of the connector with respect to the part. I also created a bit of infrastructure to semi-automate the creation of these pictures.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;{{ static(openscad-connectors-documentation.png) }}&quot;&gt;&lt;img alt=&quot;Connector position documentation&quot; src=&quot;{{ static(openscad-connectors-documentation.png) }}&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fabrizio Pollastri started a collection for &lt;a href=&quot;{{ collection_url(connecting_bars) }}&quot;&gt;connecting bars&lt;/a&gt;. He also uncovered a problem with FreeCAD drawings module, so drawings are still missing for this collection.&lt;/li&gt;
+&lt;li&gt;Some users had problems connected with the &lt;a href=&quot;{{ blog(2014/01/13/PySide-and-Tables) }}&quot;&gt;PySide Migration&lt;/a&gt;, that I could not reproduce. In the &lt;a href=&quot;http://forum.freecadweb.org/viewtopic.php?f=8&amp;amp;t=4549&quot;&gt;development thread&lt;/a&gt; on the FreeCAD forum, arcol found the solution. One needs to have the pyside-tools package installed, otherwise BOLTS would fail with a cryptic error message. Now the error message should be more informative.&lt;/li&gt;
+&lt;li&gt;In the same thread the idea of coloring faces of parts to indicate threads was discussed, and I implemented it&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;{{ static(freecad-color-threads.png) }}&quot;&gt;&lt;img alt=&quot;Color coded threads&quot; src=&quot;{{ static(freecad-color-threads.png) }}&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I added a new parameter type for angles specified in degrees. This allows to have more checks and better output for the online documentation. I also refactored the code that is responsible for that and simplified it a lot.&lt;/li&gt;
+&lt;li&gt;In FreeCAD, parts now set the label instead of the object name. This makes BOLTS parts in the treeview nicer, as spapces are not converted to underscores.&lt;/li&gt;
+&lt;li&gt;The Python functions that create the parts for FreeCAD can now throw ValueErrors to indicate invalid parameter combinations. The user is presented with a ErrorDialog with details about the problem.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All these improvements are available in the most current &lt;a href=&quot;{{ url(main.downloads) }}&quot;&gt;development snapshot&lt;/a&gt;.&lt;/p&gt;</content>
+  </entry>
+  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+    <title type="text">PySide and 2D tables</title>
+    <id>https://ist-dein-freund.de/bolts/en/blog/2014/1/13/PySide-and-Tables.html</id>
+    <updated>2014-01-13T17:25:00Z</updated>
+    <published>2014-01-13T17:25:00Z</published>
+    <link href="https://ist-dein-freund.de/bolts/en/blog/2014/1/13/PySide-and-Tables.html" />
+    <author>
+      <name>Johannes</name>
+    </author>
+    <summary type="html"><p>BOLTS has transitioned to PySide as Qt bindings and has support for 2D tables.</p></summary>
+    <content type="html">&lt;p&gt;BOLTS has transitioned to PySide as Qt bindings and has support for 2D tables.&lt;/p&gt;
+&lt;!-- more --&gt;
+
+&lt;h3&gt;PySide&lt;/h3&gt;
+&lt;p&gt;Because of license considerations, &lt;a href=&quot;http://freecadweb.org&quot;&gt;FreeCAD&lt;/a&gt; migrates
+from &lt;a href=&quot;http://www.riverbankcomputing.com/software/pyqt/intro&quot;&gt;PyQt&lt;/a&gt; to
+&lt;a href=&quot;http://qt-project.org/wiki/PySide&quot;&gt;PySide&lt;/a&gt; as Python bindings for Qt.&lt;/p&gt;
+&lt;p&gt;There is a &lt;a href=&quot;http://forum.freecadweb.org/viewtopic.php?f=10&amp;amp;t=5303&amp;amp;start=50&quot;&gt;long thread&lt;/a&gt;
+on the details of the transition in the &lt;a href=&quot;http://forum.freecadweb.org&quot;&gt;FreeCAD Forums&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For BOLTS this was a bit difficult, because I want it to be compatible with all
+Versions of FreeCAD on all systems, but in the end it worked out. At least I
+hope. I do not have access to a Windows Computer, so I could not test that. If
+you do and run FreeCAD 0.13 or 0.14, it would be great if you could test
+whether the latest &lt;a href=&quot;{{ url(main.downloads) }}&quot;&gt;development snapshot&lt;/a&gt; works for you.&lt;/p&gt;
+&lt;h3&gt;2D Tables&lt;/h3&gt;
+&lt;p&gt;BOLTS needs to provide a way to express the relationship between the parameters
+of parts. As an example, the dimensions of the head of a
+&lt;a href=&quot;{{ standard_url(ISO4017) }}&quot;&gt;hexagon head screw&lt;/a&gt; are determined by the
+diameter of the shaft.&lt;/p&gt;
+&lt;p&gt;These relationships are usually expressed by tables. For most parameters these
+tables are 1D, i.e. they only depend only on one other quantity. BOLTS can
+handle tables of this type for a long time.&lt;/p&gt;
+&lt;p&gt;However, sometimes a parameter depends on two other quantities at once. For
+example, the wall thickness of 
+&lt;a href=&quot;http://www.engineersedge.com/pipe_schedules.htm&quot;&gt;NPS Pipes&lt;/a&gt;
+depends both on the diameter and the schedule.&lt;/p&gt;
+&lt;p&gt;Since today, BOLTS can also handle this kind of tables. I used NPS pipes as
+test case while developing this feature, so they are now also contained in
+BOLTS.&lt;/p&gt;
+&lt;h3&gt;Next steps&lt;/h3&gt;
+&lt;p&gt;There are a few things left that I want to do before releasing BOLTS 0.3:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I want to add the possibility to share parameter relations between several classes to avoids duplication.&lt;/li&gt;
+&lt;li&gt;BOLTS for SolidWorks is progressing thanks to the help of Dale Dunn.&lt;/li&gt;
+&lt;li&gt;I need to write and improve documentation for a few features.&lt;/li&gt;
+&lt;li&gt;I want to add more parts to BOLTS.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So stay tuned&lt;/p&gt;</content>
+  </entry>
+  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+    <title type="text">Parameter description</title>
+    <id>https://ist-dein-freund.de/bolts/en/blog/2014/1/8/Parameter-descriptions.html</id>
+    <updated>2014-01-08T16:15:00Z</updated>
+    <published>2014-01-08T16:15:00Z</published>
+    <link href="https://ist-dein-freund.de/bolts/en/blog/2014/1/8/Parameter-descriptions.html" />
+    <author>
+      <name>Johannes</name>
+    </author>
+    <summary type="html"><p>blt files now contain a human readable description of the various  parameters
+of a part.</p></summary>
+    <content type="html">&lt;p&gt;blt files now contain a human readable description of the various  parameters
+of a part.&lt;/p&gt;
+&lt;!-- more --&gt;
+
+&lt;p&gt;I just merged some code that extends the blt file format to allow for short
+descriptions of the parameters. The way this is specified is best shown with a
+real world example (taken from
+&lt;a href=&quot;https://github.com/jreinhardt/BOLTS/blob/master/data/nut.blt&quot;&gt;here&lt;/a&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;- id: hexagonthinnut1
+  naming:
+    template: Hexagon thin nut %s - %s
+    substitute: [standard, key]
+  description: hexagon thin nuts
+  standard: [ISO4035, DINENISO4035]
+  replaces: DIN439B
+  parameters:
+      free: [key]
+      types: {key: Table Index}
+      defaults: {key: M3}
+      description:
+        key: Thread designation
+        d1: hole diameter
+        s: width across flats
+        e_min: head diameter
+        m_max: thickness
+      tables:
+          index: key
+          columns: [d1, s, m_max, e_min]
+          data:
+              #key    [  d1    s     m_max   e_min   ]
+              M1.6:   [  1.6,  3.2,  1,      3.48,   ]
+              M1.7:   [  1.7,  3.2,  1,      3.48,   ]
+              M2:     [  2,    4,    1.2,    4.32,   ]
+              M2.3:   [  2.3,  4.5,  1.2,    5.2,    ]
+              M2.5:   [  2.5,  5,    1.6,    5.45,   ]
+...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The description field of the parameters element is a YAML associative array
+that maps each parameter name to its description. If a part contains only few
+parameters, the compact notation for associative arrays can be used (like in
+the the types and defaults fields).&lt;/p&gt;
+&lt;p&gt;BOLTS has a check to encourage complete coverage of all parameters and
+complains if unknown parameters are described.&lt;/p&gt;
+&lt;p&gt;This information is used in the &lt;a href=&quot;{{ standard_url(ISO4035) }}&quot;&gt;html documentation&lt;/a&gt;
+for each part, just below the drawing, to give it more context.&lt;/p&gt;
+&lt;p&gt;It is also shown as a tooltip in the FreeCAD widget, when hovering above the
+widget for the free parameters:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;{{ static(freecad_tooltip.png) }}&quot;&gt;&lt;img alt=&quot;Descriptive Tooltips&quot; src=&quot;{{ static(freecad_tooltip.png) }}&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This feature (along with a few more improvements and fixes) is available in the
+latest development snapshot from the &lt;a href=&quot;{{ url(main.downloads) }}&quot;&gt;download section&lt;/a&gt;.&lt;/p&gt;</content>
+  </entry>
+  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+    <title type="text">IGES Backend</title>
+    <id>https://ist-dein-freund.de/bolts/en/blog/2014/1/7/IGES-backend.html</id>
+    <updated>2014-01-07T12:30:00Z</updated>
+    <published>2014-01-07T12:30:00Z</published>
+    <link href="https://ist-dein-freund.de/bolts/en/blog/2014/1/7/IGES-backend.html" />
+    <author>
+      <name>Johannes</name>
+    </author>
+    <summary type="html"><p>I recently merged a bit of code that allows to export all the parts available
+in BOLTS for FreeCAD to <a href="http://en.wikipedia.org/wiki/IGES">IGES</a>. IGES is a
+standardized file format for CAD data that is widely supported. Now BOLTS can
+be used by users of CAD applications besides FreeCAD and OpenSCAD.</p></summary>
+    <content type="html">&lt;p&gt;I recently merged a bit of code that allows to export all the parts available
+in BOLTS for FreeCAD to &lt;a href=&quot;http://en.wikipedia.org/wiki/IGES&quot;&gt;IGES&lt;/a&gt;. IGES is a
+standardized file format for CAD data that is widely supported. Now BOLTS can
+be used by users of CAD applications besides FreeCAD and OpenSCAD.&lt;/p&gt;
+&lt;!-- more --&gt;
+
+&lt;p&gt;In contrast to BOLTS for FreeCAD and OpenSCAD, where a certain size or
+variation of a part is created from a parametric model, the IGES distribution
+contains one file for each size and variation of a part. This results in a lot
+of files (about 1000), and forces us to choose which sizes should be included
+at export time.&lt;/p&gt;
+&lt;p&gt;This choice is codified in the blt files in form of common parameter
+combinations, I have &lt;a href=&quot;{{ blog(2013/11/29/BLT-file-progress) }}&quot;&gt;blogged about this&lt;/a&gt;
+a while ago. I have not yet specified common parameters for all classes of
+parts, and BOLTS can not guess them in some cases. These parts are then ignored
+and not exported to IGES. A list of parts that miss common parameter
+information can be found on the &lt;a href=&quot;{{ url(main.tasks) }}&quot;&gt;tasks page&lt;/a&gt;. One
+only has to lookup a few vendor sites on the internet and find the most common
+sizes and variations of parameters for the part and enter them into the blt
+file.&lt;/p&gt;
+&lt;h3&gt;What about STEP?&lt;/h3&gt;
+&lt;p&gt;STEP is a more recent and more powerful exchange format for CAD data. It is
+also widely supported by CAD applications. However, FreeCAD has a few issues
+with STEP, which cause problems when exporting the BOLTS parts. There is a bit
+of discussion around these issues and how to resolve them in the
+&lt;a href=&quot;https://github.com/jreinhardt/BOLTS/issues/4&quot;&gt;BOLTS github issue&lt;/a&gt;
+ and in the &lt;a href=&quot;http://forum.freecadweb.org/viewtopic.php?f=10&amp;amp;t=5086&quot;&gt;FreeCAD forum&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I decided to postpone export to STEP, and go with IGES instead, as this works
+without problems.&lt;/p&gt;
+&lt;h3&gt;File size and compression&lt;/h3&gt;
+&lt;p&gt;As mentioned earlier, the IGES distribution consists of a lot of files, many of
+which are very similar. It currently has around 1600 files with a total size of
+around 120 MByte. These files are compressed into a single file which can then
+be downloaded from the &lt;a href=&quot;{{ url(main.downloads) }}&quot;&gt;download section&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In contrast to the FreeCAD and OpenSCAD distributions of BOLTS, which are
+available both as zip and tar.gz, the IGES distribution is only available as
+tar.xz, because this format achieves significantly better compression for this
+kind of content. The 120 MByte of IGES files result in a 12 MByte zip file, but
+only in a 2 MByte tar.xz file.&lt;/p&gt;
+&lt;p&gt;On Windows, tar.xz files can be decompressed using the &lt;a href=&quot;http://www.7-zip.org/&quot;&gt;7z tool&lt;/a&gt;. 
+On most Linux distributions the common tools to work with compressed data can
+handle tar.xz, or at least packages are available for xz-tools.&lt;/p&gt;</content>
+  </entry>
+  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+    <title type="text">Improvements for BOLTS for OpenSCAD</title>
+    <id>https://ist-dein-freund.de/bolts/en/blog/2013/12/28/OpenSCAD-positioning.html</id>
+    <updated>2013-12-27T23:15:00Z</updated>
+    <published>2013-12-27T23:15:00Z</published>
+    <link href="https://ist-dein-freund.de/bolts/en/blog/2013/12/28/OpenSCAD-positioning.html" />
+    <author>
+      <name>Johannes</name>
+    </author>
+    <summary type="html"><p>I am looking for ways to make it easier to use parts from
+<a href="/bolts/en/index.html?version=0.3">BOLTS</a>) in OpenSCAD. At the moment it is a bit awkward
+because one has to know precisely how the BOLTS part is positioned and oriented
+and then has to translate and rotate it around. This often requires the
+knowledge of some dimensions of the part, so one has to query BOLTS about it,
+and suddenly it is a lot of code that is difficult to read and annoying to
+write.</p></summary>
+    <content type="html">&lt;p&gt;I am looking for ways to make it easier to use parts from
+&lt;a href=&quot;{{ url(main.index) }}&quot;&gt;BOLTS&lt;/a&gt;) in OpenSCAD. At the moment it is a bit awkward
+because one has to know precisely how the BOLTS part is positioned and oriented
+and then has to translate and rotate it around. This often requires the
+knowledge of some dimensions of the part, so one has to query BOLTS about it,
+and suddenly it is a lot of code that is difficult to read and annoying to
+write.&lt;/p&gt;
+&lt;!-- more --&gt;
+
+&lt;p&gt;OpenSCAD code in general quickly becomes big and difficult, because it usually
+describes several solids with dimensions and positions that depend on each
+other, so everything is quite entangled on a global scale. The module concept
+allows for a certain degree of reuse, but I still often find myself in the
+situation that I get stuck with understanding a piece of massively nested
+OpenSCAD code that I wrote only a while ago. Things like 
+translate([h-2*l,40-k,a+b+f-c]) rotate([0,90,0]) translate(...).&lt;/p&gt;
+&lt;h3&gt;Scope&lt;/h3&gt;
+&lt;p&gt;I believe that scope is a fundamental ingredient to clarity and brevity
+in programming. Allowing the programmer to think only about the current
+problem he is attacking, while moving everything else out of sight,
+results in clean and readable code.&lt;/p&gt;
+&lt;p&gt;I had bookmarked obijuans
+&lt;a href=&quot;https://github.com/Obijuan/obiscad&quot;&gt;attach library&lt;/a&gt;(or on
+&lt;a href=&quot;http://www.thingiverse.com/thing:30136&quot;&gt;Thingiverse&lt;/a&gt;) already quite a while
+ago, because I had hoped, that the connector concept could allow for cleaner,
+less entangled code. When playing around with it, I realized that a connector
+is basically a local coordinate system with a origin, one axis to fix the
+direction and another axis to fix the rotation around the first axis.&lt;/p&gt;
+&lt;p&gt;I like the idea of local coordinate systems, because it is a local
+scope that can be convenient to think in. It also seems a promising
+approach to avoid or at least reduce the cumbersome and
+difficult nested transformations or complicated arguments that I often
+end up with.&lt;/p&gt;
+&lt;p&gt;I hacked together &lt;a href=&quot;https://github.com/jreinhardt/local-scad&quot;&gt;a bit of code&lt;/a&gt;
+to do that, heavily inspired by the attach library, but working around some
+issues. At the moment it allows to do three things:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create and display coordinate systems (lists of lists with origin and
+  x,y,z axes, but the user should not need to know this)&lt;/li&gt;
+&lt;li&gt;move and rotate an object (or a whole tree) from the global coordinate
+  system into a local one.&lt;/li&gt;
+&lt;li&gt;align a coordinate system and a object (or a tree) with
+  another coordinate system.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The first and the last operation are slightly improved variations of
+the functionality of the attach library.&lt;/p&gt;
+&lt;h3&gt;Positioning in BOLTS for OpenSCAD&lt;/h3&gt;
+&lt;p&gt;To make use of this method of positioning in BOLTS, each part provides
+a few connectors located at strategic positions of the part. Then the align
+operation can be used to position and orient the part. This way things like
+&quot;put that bolt the so that its tip is here&quot; or &quot;the head of that bolt should
+be at this point&quot; can be expressed in a compact and readable way.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;{{ static(openscad-connectors.png) }}&quot;&gt;&lt;img alt=&quot;Connector positions&quot; src=&quot;{{ static(openscad-connectors.png) }}&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Example: Bolted connection&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;include &amp;lt;BOLTS.scad&amp;gt;
+
+$fn=50;
+
+% cube([10,40,50]);
+
+//connectors
+cube_cs = new_cs(origin = [10,20,20], axes = [[-1,0,0],[0,-1,0]]);
+washer_cs = ISO7089_conn(&quot;top&quot;,&quot;M4&quot;);
+bolt_cs = ISO4017_conn(&quot;root&quot;,&quot;M4&quot;,20);
+nut_cs = ISO4035_conn(&quot;bottom&quot;,&quot;M4&quot;);
+
+//connectors can be displayed with
+//show_cs(cube_cs);
+
+//thickness of washer
+s = get_dim(ISO7089_dims(&quot;M4&quot;),&quot;s&quot;);
+
+//position washer and bolt at the location specified by cube_cs
+align(washer_cs,cube_cs) ISO7089(&quot;M4&quot;);
+align(bolt_cs,cube_cs,[-s,0,0]) ISO4017(&quot;M4&quot;,20);
+align(washer_cs,cube_cs,[10+s,0,0]) ISO7089(&quot;M4&quot;);
+align(nut_cs,cube_cs,[10+s,0,0]) ISO4035(&quot;M4&quot;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;which is readable, compact and flexible. To change the position or
+orientation of the bolted connection, one just has to change cube_cs.
+Changing the size of the bolts and washers change M4 is also easy.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;{{ static(openscad-positioningexample.png) }}&quot;&gt;&lt;img alt=&quot;Bolted connection example&quot; src=&quot;{{ static(openscad-positioningexample.png) }}&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Try it&lt;/h3&gt;
+&lt;p&gt;You can try this functionality with the most recent development snapshot from
+the &lt;a href=&quot;{{ url(main.downloads) }}&quot;&gt;BOLTS page&lt;/a&gt;. Either place the contents of the
+archive in the same directory as the .scad files that use BOLTS, or follow the
+instructions on 
+&lt;a href=&quot;{{ doc_version(0.4, openscad,installation) }}&quot;&gt;how to install BOLTS for OpenSCAD&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Not all parts have connectors yet, but nuts, washers, hex bolts and
+batteries do. The names of the connectors are listed in the OpenSCAD section of the
+&lt;a href=&quot;{{ url(parts.index) }}&quot;&gt;part page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;There is no documentation for this feature (apart from this blog post), because
+I might still change the way things work.&lt;/p&gt;</content>
+  </entry>
+  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+    <title type="text">BLT file progress</title>
+    <id>https://ist-dein-freund.de/bolts/en/blog/2013/11/29/BLT-file-progress.html</id>
+    <updated>2013-11-29T00:00:00Z</updated>
+    <published>2013-11-29T00:00:00Z</published>
+    <link href="https://ist-dein-freund.de/bolts/en/blog/2013/11/29/BLT-file-progress.html" />
+    <author>
+      <name>Johannes</name>
+    </author>
+    <summary type="html"><p>This post should now appear on <a href="http://planet.arcol.hu/">Planet RepRap</a>, hi everybody reading this from there. This is the development blog for <a href="/bolts/en/index.html?version=0.3">BOLTS</a>. BOLTS tries to build an open standard parts library for a number of CAD applications.</p>
+<p>BOLTS is a rather young project, but is already useable with <a href="http://www.openscad.org/">OpenSCAD</a> and <a href="http://freecadweb.org/">FreeCAD</a>. Its youth is noticeable by the still relatively <a href="/bolts/en/parts/index.html?version=0.3">small number of parts</a>), though. It is not difficult to add more parts and <a href="/bolts/en/docs/0.3/index.html">well documented</a>, so if you are missing a part in BOLTS, or just think BOLTS is a good idea, <a href="/bolts/en/contribute.html?version=0.3">please help out with improving it</a>.</p>
+<p>If you want to try out BOLTS or learn more about it, you should head to its <a href="/bolts/en/index.html?version=0.3">webpage</a>.</p>
+<p>The rest of this post reports on recent developments of one of the important components</p></summary>
+    <content type="html">&lt;p&gt;This post should now appear on &lt;a href=&quot;http://planet.arcol.hu/&quot;&gt;Planet RepRap&lt;/a&gt;, hi everybody reading this from there. This is the development blog for &lt;a href=&quot;{{ url(main.index) }}&quot;&gt;BOLTS&lt;/a&gt;. BOLTS tries to build an open standard parts library for a number of CAD applications.&lt;/p&gt;
+&lt;p&gt;BOLTS is a rather young project, but is already useable with &lt;a href=&quot;http://www.openscad.org/&quot;&gt;OpenSCAD&lt;/a&gt; and &lt;a href=&quot;http://freecadweb.org/&quot;&gt;FreeCAD&lt;/a&gt;. Its youth is noticeable by the still relatively &lt;a href=&quot;{{ url(parts.index) }}&quot;&gt;small number of parts&lt;/a&gt;), though. It is not difficult to add more parts and &lt;a href=&quot;{{ url(docs.index) }}&quot;&gt;well documented&lt;/a&gt;, so if you are missing a part in BOLTS, or just think BOLTS is a good idea, &lt;a href=&quot;{{ url(main.contribute) }}&quot;&gt;please help out with improving it&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you want to try out BOLTS or learn more about it, you should head to its &lt;a href=&quot;{{ url(main.index) }}&quot;&gt;webpage&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The rest of this post reports on recent developments of one of the important components&lt;/p&gt;
+&lt;!-- more --&gt;
+
+&lt;h3&gt;Improvements to the blt file format&lt;/h3&gt;
+&lt;p&gt;Most of the data for parts (dimensions, naming schemas, metadata, ...) is stored in human- and machine-readable plain text files called blt files. This data is shared between all target CAD tools and is the basis for the generation of the standard libraries. The files are marked up in &lt;a href=&quot;http://yaml.org/&quot;&gt;YAML&lt;/a&gt; which not only looks and feels nice, but also allows to automate many processes. The plain text nature of these files makes it easy to keep them under version control.&lt;/p&gt;
+&lt;p&gt;The user usually does not get in contact with these files, but to add new parts, blt files have to be created or edited. An example for such a blt file can be found &lt;a href=&quot;https://github.com/jreinhardt/BOLTS/blob/master/data/nut.blt&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;At the moment, the format of these files is the area where most of the developments happen. On one hand the format must be flexible and expressive enough to be able to describe all the aspects of the different kinds of parts that might end up in BOLTS. On the other hand, it should be structured and consistent enough to be processable by humans and computers without being annoying. There are quite a few things left that I want to incorporate &lt;a href=&quot;https://github.com/jreinhardt/BOLTS/issues?milestone=3&amp;amp;state=open&quot;&gt;before the next release&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;One thing that I already implemented is the possibility to markup common parameter combinations. During the work on what will become &lt;a href=&quot;{{ blog(2013/11/14/Marketing) }}&quot;&gt;BOLTS for SolidWorks&lt;/a&gt;, it became evident that the current format was not able to express all the things that are necessary to automatically generate a standard library for SolidWorks.&lt;/p&gt;
+&lt;p&gt;A part can have parameters that are discrete choices (like the thread for a bolt: M3, M4, ...) or continuous (like the length of the bolt). For FreeCAD and OpenSCAD BOLTS handles the continuous parameters by letting the user specify the value, and then constructing the part. But for SolidWorks (and also for a future STEP backend), one is restricted to a discrete set of combinations.&lt;/p&gt;
+&lt;p&gt;These sets can be quite big, for a single kind hex bolt there are hundreds of combinations of thread size and length that are available (here only for sizes M3 up to M6):&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[M3,8],  [M3,10], [M3,12], [M3,14], [M3,16], [M3,18], [M3,20], [M3,22],
+[M3,25], [M4,6],  [M4,8],  [M4,10], [M4,12], [M4,14], [M4,16], [M4,18],
+[M4,20], [M4,22], [M4,25], [M4,30], [M4,35], [M4,40], [M4,45], [M4,50],
+[M4,55], [M4,60], [M5,6],  [M5,8],  [M5,10], [M5,12], [M5,14], [M5,16],
+[M5,18], [M5,20], [M5,22], [M5,25], [M5,30], [M5,35], [M5,40], [M6,8],
+[M6,10], [M6,12], [M6,14], [M6,16], [M6,18], [M6,20], [M6,22], [M6,25],
+[M6,30], [M6,35], [M6,40], [M6,45], [M6,50], [M6,55], [M6,60], [M6,65],
+[M6,70]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Instead of writing out a list of tuples with possible combinations of lengths and thread size I chose to represent the set of combinations by a union of cartesian products of parameter values:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;- [[M3,M6], [8,10,12,14,16,18,20,22,25]]
+- [[M4, M5], [6,8,10,12,14,16,18,20,22,25,30,35,40]]
+- [[M4], [45,50,55,60]]
+- [[M6], [30,35,40,45,50,55,60,65,70]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Each line represents all combinations of values in the first list with values of the second list. This is usually much more compact and readable. It is easy to express that no combinations of parameters should be considered:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;- [[],[]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Also the case when the possible choices for the parameters are independent of each other, like for the size and material of a nut, is covered elegantly:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;- [[list of sizes],[list of materials]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;While this aspect is finished, there are other parts of the SolidWorks backend that are not ready yet, so for now there are no development snapshots. If you are interested in testing unfinished stuff, discussions and helping out with the development of BOLTS for Solidworks, you should head over to &lt;a href=&quot;http://forums.reprap.org/read.php?80,264283&quot;&gt;this thread&lt;/a&gt; in the RepRap Forums.&lt;/p&gt;</content>
+  </entry>
+</feed>

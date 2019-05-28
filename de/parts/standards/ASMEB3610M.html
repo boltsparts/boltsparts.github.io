@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/bolts/static/favicon.ico" />
+  
+  <link rel="stylesheet" href="/bolts/static/css/style.css?019e02bb" type="text/css" media="screen">
+  
+  <title>Part list</title>
+</head>
+<body>
+
+   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Navigationsmenü ausklappen</span>
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/bolts/de/index.html">Home</a></li>
+          <li><a href="/bolts/de/blog/index.html">Blog</a></li>
+          <li><a href="/bolts/de/parts/index.html">Teile</a></li>
+          <li><a href="/bolts/de/docs/index.html">Dokumentation</a></li>
+          <li><a href="/bolts/de/contribute.html">Mitmachen</a></li>
+          <li><a href="/bolts/de/downloads.html">Downloads</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">de<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/bolts/en/parts/standards/ASMEB3610M.html">Englisch</a></li>
+              <li><a href="/bolts/de/parts/standards/ASMEB3610M.html">Deutsch</a></li>
+              <li><a href="/bolts/fr/parts/standards/ASMEB3610M.html">Französisch</a></li>
+              <li><a href="/bolts/es/parts/standards/ASMEB3610M.html">Spanisch</a></li>
+              <li><a href="/bolts/sv/parts/standards/ASMEB3610M.html">Schwedisch</a></li>
+            </ul>
+          </li>
+          <li><a class="github" href="https://github.com/jreinhardt/BOLTS">Github</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+
+
+<div class="page-title-bar">
+  <div class="container">
+    <h2>Parts list</h2>
+  </div>
+</div>
+
+<div class="container">
+  
+<h1>ASME B36.10M</h1>
+<table class="table">
+<tr><th><strong>Autor:</strong></th><td>Johannes Reinhardt</td></tr>
+<tr><th><strong>Lizenz:</strong></th><td><a href="http://opensource.org/licenses/MIT">MIT</a></td></tr>
+<tr><th><strong>Kollektion:</strong></th><td><a href="/bolts/de/parts/collections/pipes.html">Pipes</a></td></tr>
+<tr><th><strong>Identisch mit:</strong></th><td><a href="/bolts/de/parts/standards/ANSIB3610M.html">ANSI B36.10M</a>, <a href="/bolts/de/parts/standards/API5L.html">API 5L</a></td></tr>
+<tr><th><strong>Status:</strong></th><td>active</td></tr>
+<tr><th><strong>Standardisierungsbehörde:</strong></th><td><a href="/bolts/de/parts/bodies/ASME.html">ASME</a></td></tr>
+<tr><th><strong>ID:</strong></th><td>ASMEB3610M</td></tr>
+<tr><th><strong>Quellen:</strong></th><td>http://www.engineersedge.com/pipe_schedules.htm</td></tr>
+</table>
+
+
+<h2>Zeichnungen</h2>
+<a href="/bolts/de/parts/drawings/pipes/pipe_wall.png"><img class="img-responsive" src="/bolts/de/parts/drawings/pipes/pipe_wall.png"></a>
+
+<table class="table">
+<tr><th>Parametername</th> <th>Beschreibung</th><tr>
+<tr><td>wall</td> <td>Wanddicke</td></tr>
+<tr><td>od</td> <td>Aussendurchmesser</td></tr>
+<tr><td>sched</td> <td>Rohrnennweite</td></tr>
+<tr><td>l</td> <td>Länge</td></tr>
+<tr><td>nps</td> <td>Nenndurchmesser</td></tr>
+</table>
+
+<h2>Beschreibung</h2>
+<p>Welded and seamless wrought steel pipe for high or low temperatures and pressures</p>
+
+<h2>FreeCAD</h2>
+
+<table class="table">
+<tr><th><strong>Autor:</strong></th><td>Johannes Reinhardt</td></tr>
+<tr><th><strong>Lizenz:</strong></th><td><a href="http://www.gnu.org/licenses/lgpl-2.1">LGPL 2.1+</a></td></tr>
+</table>
+
+
+<h2>OpenSCAD</h2>
+
+<table class="table">
+<tr><th><strong>Autor:</strong></th><td>Johannes Reinhardt</td></tr>
+<tr><th><strong>Lizenz:</strong></th><td><a href="http://www.gnu.org/licenses/lgpl-2.1">LGPL 2.1+</a></td></tr>
+</table>
+<h3>Aufruf</h3>
+  <pre><code>module ASMEB3610M(nps=&#34;NPS 0.5&#34;, sched=&#34;40&#34;, l=50, part_mode=&#34;default&#34;)
+function ASMEB3610M_dims(nps=&#34;NPS 0.5&#34;, sched=&#34;40&#34;, l=50, part_mode=&#34;default&#34;)
+function ASMEB3610M_conn(location,nps=&#34;NPS 0.5&#34;, sched=&#34;40&#34;, l=50, part_mode=&#34;default&#34;)</code></pre>
+  <h3>Konnektoren</h3>
+  <table class="table">
+<tr><th>Ort</th> <th>Zeichnung</th><tr>
+<tr><td>front-in</td> <td><a href="/bolts/de/parts/drawings/pipes/pipe-front-in.png"><img src="/bolts/de/parts/drawings/pipes/pipe-front-in.png" width="200"></a></td></tr>
+<tr><td>front-out</td> <td><a href="/bolts/de/parts/drawings/pipes/pipe-front-out.png"><img src="/bolts/de/parts/drawings/pipes/pipe-front-out.png" width="200"></a></td></tr>
+<tr><td>back-in</td> <td><a href="/bolts/de/parts/drawings/pipes/pipe-back-in.png"><img src="/bolts/de/parts/drawings/pipes/pipe-back-in.png" width="200"></a></td></tr>
+<tr><td>back-out</td> <td><a href="/bolts/de/parts/drawings/pipes/pipe-back-out.png"><img src="/bolts/de/parts/drawings/pipes/pipe-back-out.png" width="200"></a></td></tr>
+</table>
+
+
+<h2>Tabellen</h2>
+  
+  <table class="table">
+<tr><th>nps</th> <th>od (in)</th><tr>
+<tr><td>NPS 0.125</td> <td>0.405</td></tr>
+<tr><td>NPS 0.25</td> <td>0.54</td></tr>
+<tr><td>NPS 0.375</td> <td>0.675</td></tr>
+<tr><td>NPS 0.5</td> <td>0.84</td></tr>
+<tr><td>NPS 0.75</td> <td>1.05</td></tr>
+<tr><td>NPS 1</td> <td>1.315</td></tr>
+<tr><td>NPS 1.25</td> <td>1.66</td></tr>
+<tr><td>NPS 1.5</td> <td>1.9</td></tr>
+<tr><td>NPS 2</td> <td>2.375</td></tr>
+<tr><td>NPS 2.5</td> <td>2.875</td></tr>
+<tr><td>NPS 3</td> <td>3.5</td></tr>
+<tr><td>NPS 3.5</td> <td>4.0</td></tr>
+<tr><td>NPS 4</td> <td>4.5</td></tr>
+<tr><td>NPS 4.5</td> <td>5.0</td></tr>
+<tr><td>NPS 5</td> <td>5.563</td></tr>
+<tr><td>NPS 6</td> <td>6.625</td></tr>
+<tr><td>NPS 7</td> <td>7.625</td></tr>
+<tr><td>NPS 8</td> <td>8.625</td></tr>
+<tr><td>NPS 9</td> <td>9.625</td></tr>
+<tr><td>NPS 10</td> <td>10.75</td></tr>
+<tr><td>NPS 11</td> <td>11.75</td></tr>
+<tr><td>NPS 12</td> <td>12.75</td></tr>
+<tr><td>NPS 14</td> <td>14.0</td></tr>
+<tr><td>NPS 16</td> <td>16.0</td></tr>
+<tr><td>NPS 18</td> <td>18.0</td></tr>
+<tr><td>NPS 20</td> <td>20.0</td></tr>
+<tr><td>NPS 24</td> <td>24.0</td></tr>
+<tr><td>NPS 26</td> <td>26.0</td></tr>
+<tr><td>NPS 28</td> <td>28.0</td></tr>
+<tr><td>NPS 30</td> <td>30.0</td></tr>
+<tr><td>NPS 32</td> <td>32.0</td></tr>
+<tr><td>NPS 34</td> <td>34.0</td></tr>
+<tr><td>NPS 36</td> <td>36.0</td></tr>
+<tr><td>NPS 42</td> <td>42.0</td></tr>
+<tr><td>NPS 48</td> <td>48.0</td></tr>
+</table>
+  
+  
+  <table class="table">
+<tr><td>wall (in)</td><th>5s</th> <th>5</th> <th>10s</th> <th>10</th> <th>20</th> <th>30</th> <th>40s</th> <th>40</th> <th>60</th> <th>80s</th> <th>80</th> <th>100</th> <th>120</th> <th>140</th> <th>160</th><tr>
+<tr><th>NPS 0.125</th><td>None</td> <td>0.035</td> <td>0.049</td> <td>0.049</td> <td>None</td> <td>None</td> <td>0.068</td> <td>0.068</td> <td>None</td> <td>0.095</td> <td>0.095</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td></tr>
+<tr><th>NPS 0.25</th><td>None</td> <td>0.049</td> <td>0.065</td> <td>0.065</td> <td>None</td> <td>None</td> <td>0.088</td> <td>0.088</td> <td>None</td> <td>0.119</td> <td>0.119</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td></tr>
+<tr><th>NPS 0.375</th><td>None</td> <td>0.049</td> <td>0.065</td> <td>0.065</td> <td>None</td> <td>None</td> <td>0.091</td> <td>0.091</td> <td>None</td> <td>0.126</td> <td>0.126</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td></tr>
+<tr><th>NPS 0.5</th><td>0.065</td> <td>0.065</td> <td>0.083</td> <td>0.083</td> <td>None</td> <td>None</td> <td>0.109</td> <td>0.109</td> <td>None</td> <td>0.147</td> <td>0.147</td> <td>None</td> <td>None</td> <td>None</td> <td>0.187</td></tr>
+<tr><th>NPS 0.75</th><td>0.065</td> <td>0.065</td> <td>0.083</td> <td>0.083</td> <td>None</td> <td>None</td> <td>0.113</td> <td>0.113</td> <td>None</td> <td>0.154</td> <td>0.154</td> <td>None</td> <td>None</td> <td>None</td> <td>0.218</td></tr>
+<tr><th>NPS 1</th><td>0.065</td> <td>0.065</td> <td>0.109</td> <td>0.109</td> <td>None</td> <td>None</td> <td>0.133</td> <td>0.133</td> <td>None</td> <td>0.179</td> <td>0.179</td> <td>None</td> <td>None</td> <td>None</td> <td>0.25</td></tr>
+<tr><th>NPS 1.25</th><td>0.065</td> <td>0.065</td> <td>0.109</td> <td>0.109</td> <td>None</td> <td>None</td> <td>0.14</td> <td>0.14</td> <td>None</td> <td>0.191</td> <td>0.191</td> <td>None</td> <td>None</td> <td>None</td> <td>0.25</td></tr>
+<tr><th>NPS 1.5</th><td>0.065</td> <td>0.065</td> <td>0.109</td> <td>0.109</td> <td>None</td> <td>None</td> <td>0.145</td> <td>0.145</td> <td>None</td> <td>0.2</td> <td>0.2</td> <td>None</td> <td>None</td> <td>None</td> <td>0.281</td></tr>
+<tr><th>NPS 2</th><td>0.065</td> <td>0.065</td> <td>0.109</td> <td>0.109</td> <td>None</td> <td>None</td> <td>0.154</td> <td>0.154</td> <td>None</td> <td>0.218</td> <td>0.218</td> <td>None</td> <td>None</td> <td>None</td> <td>0.343</td></tr>
+<tr><th>NPS 2.5</th><td>0.083</td> <td>0.083</td> <td>0.12</td> <td>0.12</td> <td>None</td> <td>None</td> <td>0.203</td> <td>0.203</td> <td>None</td> <td>0.276</td> <td>0.276</td> <td>None</td> <td>None</td> <td>None</td> <td>0.375</td></tr>
+<tr><th>NPS 3</th><td>0.083</td> <td>0.083</td> <td>0.12</td> <td>0.12</td> <td>None</td> <td>None</td> <td>0.216</td> <td>0.216</td> <td>None</td> <td>0.3</td> <td>0.3</td> <td>None</td> <td>None</td> <td>None</td> <td>0.437</td></tr>
+<tr><th>NPS 3.5</th><td>0.083</td> <td>0.083</td> <td>0.12</td> <td>0.12</td> <td>None</td> <td>None</td> <td>0.226</td> <td>0.226</td> <td>None</td> <td>0.318</td> <td>0.318</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td></tr>
+<tr><th>NPS 4</th><td>0.083</td> <td>0.083</td> <td>0.12</td> <td>0.12</td> <td>None</td> <td>None</td> <td>0.237</td> <td>0.237</td> <td>0.281</td> <td>0.337</td> <td>0.337</td> <td>None</td> <td>0.437</td> <td>None</td> <td>0.531</td></tr>
+<tr><th>NPS 4.5</th><td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>0.247</td> <td>None</td> <td>None</td> <td>0.355</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td></tr>
+<tr><th>NPS 5</th><td>0.109</td> <td>0.109</td> <td>0.134</td> <td>0.134</td> <td>None</td> <td>None</td> <td>0.258</td> <td>0.258</td> <td>None</td> <td>0.375</td> <td>0.375</td> <td>None</td> <td>0.5</td> <td>None</td> <td>0.625</td></tr>
+<tr><th>NPS 6</th><td>0.109</td> <td>0.109</td> <td>0.134</td> <td>0.134</td> <td>None</td> <td>None</td> <td>0.28</td> <td>0.28</td> <td>None</td> <td>0.432</td> <td>0.432</td> <td>None</td> <td>0.562</td> <td>None</td> <td>0.718</td></tr>
+<tr><th>NPS 7</th><td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>0.301</td> <td>None</td> <td>None</td> <td>0.5</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td></tr>
+<tr><th>NPS 8</th><td>0.109</td> <td>0.109</td> <td>0.148</td> <td>0.148</td> <td>0.25</td> <td>0.277</td> <td>0.322</td> <td>0.322</td> <td>0.406</td> <td>0.5</td> <td>0.5</td> <td>0.593</td> <td>0.718</td> <td>0.812</td> <td>0.906</td></tr>
+<tr><th>NPS 9</th><td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>0.342</td> <td>None</td> <td>None</td> <td>0.5</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td></tr>
+<tr><th>NPS 10</th><td>0.134</td> <td>0.134</td> <td>0.165</td> <td>0.165</td> <td>0.25</td> <td>0.307</td> <td>0.365</td> <td>0.365</td> <td>0.5</td> <td>0.5</td> <td>0.593</td> <td>0.718</td> <td>0.843</td> <td>1.0</td> <td>1.125</td></tr>
+<tr><th>NPS 11</th><td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>0.375</td> <td>None</td> <td>None</td> <td>0.5</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td></tr>
+<tr><th>NPS 12</th><td>0.156</td> <td>0.165</td> <td>0.18</td> <td>0.18</td> <td>0.25</td> <td>0.33</td> <td>0.375</td> <td>0.406</td> <td>0.562</td> <td>0.5</td> <td>0.687</td> <td>0.843</td> <td>1.0</td> <td>1.125</td> <td>1.312</td></tr>
+<tr><th>NPS 14</th><td>0.156</td> <td>None</td> <td>0.188</td> <td>0.25</td> <td>0.312</td> <td>0.375</td> <td>0.375</td> <td>0.437</td> <td>0.593</td> <td>0.5</td> <td>0.75</td> <td>0.937</td> <td>1.093</td> <td>1.25</td> <td>1.406</td></tr>
+<tr><th>NPS 16</th><td>0.165</td> <td>None</td> <td>0.188</td> <td>0.25</td> <td>0.312</td> <td>0.375</td> <td>0.375</td> <td>0.5</td> <td>0.656</td> <td>0.5</td> <td>0.843</td> <td>1.031</td> <td>1.218</td> <td>1.437</td> <td>1.593</td></tr>
+<tr><th>NPS 18</th><td>0.165</td> <td>None</td> <td>0.188</td> <td>0.25</td> <td>0.312</td> <td>0.437</td> <td>0.375</td> <td>0.562</td> <td>0.75</td> <td>0.5</td> <td>0.937</td> <td>1.156</td> <td>1.375</td> <td>1.562</td> <td>1.781</td></tr>
+<tr><th>NPS 20</th><td>0.188</td> <td>None</td> <td>0.218</td> <td>0.25</td> <td>0.375</td> <td>0.5</td> <td>0.375</td> <td>0.593</td> <td>0.812</td> <td>0.5</td> <td>1.031</td> <td>1.28</td> <td>1.5</td> <td>1.75</td> <td>1.968</td></tr>
+<tr><th>NPS 24</th><td>0.218</td> <td>None</td> <td>0.25</td> <td>0.25</td> <td>0.375</td> <td>0.562</td> <td>0.375</td> <td>0.687</td> <td>0.968</td> <td>0.5</td> <td>1.218</td> <td>1.531</td> <td>1.812</td> <td>2.062</td> <td>2.343</td></tr>
+<tr><th>NPS 26</th><td>None</td> <td>None</td> <td>None</td> <td>0.312</td> <td>0.5</td> <td>None</td> <td>0.375</td> <td>None</td> <td>None</td> <td>0.5</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td></tr>
+<tr><th>NPS 28</th><td>None</td> <td>None</td> <td>None</td> <td>0.312</td> <td>0.5</td> <td>0.625</td> <td>0.375</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td></tr>
+<tr><th>NPS 30</th><td>0.25</td> <td>None</td> <td>0.312</td> <td>0.312</td> <td>0.5</td> <td>0.625</td> <td>0.375</td> <td>None</td> <td>None</td> <td>0.5</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td></tr>
+<tr><th>NPS 32</th><td>None</td> <td>None</td> <td>None</td> <td>0.312</td> <td>0.5</td> <td>0.625</td> <td>0.375</td> <td>0.688</td> <td>None</td> <td>0.5</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td></tr>
+<tr><th>NPS 34</th><td>None</td> <td>None</td> <td>None</td> <td>0.312</td> <td>0.5</td> <td>0.625</td> <td>0.375</td> <td>0.688</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td></tr>
+<tr><th>NPS 36</th><td>None</td> <td>None</td> <td>None</td> <td>0.312</td> <td>0.5</td> <td>0.625</td> <td>0.375</td> <td>0.75</td> <td>None</td> <td>0.5</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td></tr>
+<tr><th>NPS 42</th><td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>0.375</td> <td>None</td> <td>None</td> <td>0.5</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td></tr>
+<tr><th>NPS 48</th><td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>0.375</td> <td>None</td> <td>None</td> <td>0.5</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td> <td>None</td></tr>
+</table>
+  
+
+<h2>Comments</h2>
+<div id="comments"></div>
+
+  
+  <hr>
+  <footer id="footer">
+    <p>© Johannes Reinhardt, Titelbild von <a href="https://www.flickr.com/photos/dkpphotography/9468970843">Dhruv Patel</a>, Design basierend auf einem <a href="https://github.com/Wolfr/cactus-jekyll-theme">Entwurf</a> von <a href="http://wolfslittlestore.be">Wolf's Little Store</a></p>
+  </footer>
+  
+</div>
+
+<script type="text/javascript" class="juvia">
+(function() {
+    var options = {
+        container    : '#comments',
+        site_key     : 'i2tzqcns7cm0alygsdvh9fhyfe2g0u1',
+        topic_key    : location.pathname,
+        topic_url    : location.href,
+        topic_title  : document.title || location.href,
+        comment_order: 'latest-first'
+    };
+
+    function makeQueryString(options) {
+        var key, params = [];
+        for (key in options) {
+            params.push(
+                encodeURIComponent(key) +
+                '=' +
+                encodeURIComponent(options[key]));
+        }
+        return params.join('&');
+    }
+
+    function makeApiUrl(options) {
+        // Makes sure that each call generates a unique URL, otherwise
+        // the browser may not actually perform the request.
+        if (!('_juviaRequestCounter' in window)) {
+            window._juviaRequestCounter = 0;
+        }
+
+        var result =
+            '//j.stbuehler.de/api/show_topic.js' +
+            '?_c=' + window._juviaRequestCounter +
+            '&' + makeQueryString(options);
+        window._juviaRequestCounter++;
+        return result;
+    }
+
+    var s       = document.createElement('script');
+    s.async     = true;
+    s.type      = 'text/javascript';
+    s.className = 'juvia';
+    s.src       = makeApiUrl(options);
+    (document.getElementsByTagName('head')[0] ||
+     document.getElementsByTagName('body')[0]).appendChild(s);
+})();
+</script>
+
+
+<script src="/bolts/static/js/all.js?9bb454f9"></script>
+
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/bolts/static/favicon.ico" />
+  
+  <link rel="stylesheet" href="/bolts/static/css/style.css?019e02bb" type="text/css" media="screen">
+  
+  <title>Part list</title>
+</head>
+<body>
+
+   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/bolts/sv/index.html">Home</a></li>
+          <li><a href="/bolts/sv/blog/index.html">Blog</a></li>
+          <li><a href="/bolts/sv/parts/index.html">Parts</a></li>
+          <li><a href="/bolts/sv/docs/index.html">Documentation</a></li>
+          <li><a href="/bolts/sv/contribute.html">Contribute</a></li>
+          <li><a href="/bolts/sv/downloads.html">Downloads</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">sv<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/bolts/en/parts/standards/DIN11850Range2.html">English</a></li>
+              <li><a href="/bolts/de/parts/standards/DIN11850Range2.html">German</a></li>
+              <li><a href="/bolts/fr/parts/standards/DIN11850Range2.html">French</a></li>
+              <li><a href="/bolts/es/parts/standards/DIN11850Range2.html">Spanish</a></li>
+              <li><a href="/bolts/sv/parts/standards/DIN11850Range2.html">Swedish</a></li>
+            </ul>
+          </li>
+          <li><a class="github" href="https://github.com/jreinhardt/BOLTS">Github</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+
+
+<div class="page-title-bar">
+  <div class="container">
+    <h2>Parts list</h2>
+  </div>
+</div>
+
+<div class="container">
+  
+<h1>DIN 11850 Range 2</h1>
+<table class="table">
+<tr><th><strong>Author:</strong></th><td>Johannes Reinhardt</td></tr>
+<tr><th><strong>License:</strong></th><td><a href="http://opensource.org/licenses/MIT">MIT</a></td></tr>
+<tr><th><strong>Collection:</strong></th><td><a href="/bolts/sv/parts/collections/pipes.html">Pipes</a></td></tr>
+<tr><th><strong>Status:</strong></th><td>active</td></tr>
+<tr><th><strong>Standard body:</strong></th><td><a href="/bolts/sv/parts/bodies/DIN.html">DIN</a></td></tr>
+<tr><th><strong>ID:</strong></th><td>DIN11850Range2</td></tr>
+<tr><th><strong>Source:</strong></th><td>de.wikipedia.org/wiki/Rohr_(Technik)#Abmessungen</td></tr>
+</table>
+
+
+<h2>Drawings</h2>
+<a href="/bolts/sv/parts/drawings/pipes/pipe.png"><img class="img-responsive" src="/bolts/sv/parts/drawings/pipes/pipe.png"></a>
+
+<table class="table">
+<tr><th>Parameter Name</th> <th>Description</th><tr>
+<tr><td>dn</td> <td>nominal diameter</td></tr>
+<tr><td>od</td> <td>outer diameter</td></tr>
+<tr><td>l</td> <td>length</td></tr>
+<tr><td>id</td> <td>inner diameter</td></tr>
+</table>
+
+<h2>Description</h2>
+<p>Pipe according to DIN11850 Range 2</p>
+
+<h2>FreeCAD</h2>
+
+<table class="table">
+<tr><th><strong>Author:</strong></th><td>Johannes Reinhardt</td></tr>
+<tr><th><strong>License:</strong></th><td><a href="http://www.gnu.org/licenses/lgpl-2.1">LGPL 2.1+</a></td></tr>
+</table>
+
+
+<h2>OpenSCAD</h2>
+
+<table class="table">
+<tr><th><strong>Author:</strong></th><td>Johannes Reinhardt</td></tr>
+<tr><th><strong>License:</strong></th><td><a href="http://www.gnu.org/licenses/lgpl-2.1">LGPL 2.1+</a></td></tr>
+</table>
+<h3>Incantations</h3>
+  <pre><code>module DIN11850Range2(dn=&#34;10&#34;, l=1000, part_mode=&#34;default&#34;)
+function DIN11850Range2_dims(dn=&#34;10&#34;, l=1000, part_mode=&#34;default&#34;)
+function DIN11850Range2_conn(location,dn=&#34;10&#34;, l=1000, part_mode=&#34;default&#34;)</code></pre>
+  <h3>Connectors</h3>
+  <table class="table">
+<tr><th>Location</th> <th>Drawing</th><tr>
+<tr><td>front-in</td> <td><a href="/bolts/sv/parts/drawings/pipes/pipe-front-in.png"><img src="/bolts/sv/parts/drawings/pipes/pipe-front-in.png" width="200"></a></td></tr>
+<tr><td>front-out</td> <td><a href="/bolts/sv/parts/drawings/pipes/pipe-front-out.png"><img src="/bolts/sv/parts/drawings/pipes/pipe-front-out.png" width="200"></a></td></tr>
+<tr><td>back-in</td> <td><a href="/bolts/sv/parts/drawings/pipes/pipe-back-in.png"><img src="/bolts/sv/parts/drawings/pipes/pipe-back-in.png" width="200"></a></td></tr>
+<tr><td>back-out</td> <td><a href="/bolts/sv/parts/drawings/pipes/pipe-back-out.png"><img src="/bolts/sv/parts/drawings/pipes/pipe-back-out.png" width="200"></a></td></tr>
+</table>
+
+
+<h2>Tables</h2>
+  
+  <table class="table">
+<tr><th>dn</th> <th>id (mm)</th> <th>od (mm)</th><tr>
+<tr><td>6</td> <td>6.0</td> <td>8.0</td></tr>
+<tr><td>8</td> <td>8.0</td> <td>10.0</td></tr>
+<tr><td>10</td> <td>10.0</td> <td>13.0</td></tr>
+<tr><td>15</td> <td>16.0</td> <td>19.0</td></tr>
+<tr><td>20</td> <td>20.0</td> <td>23.0</td></tr>
+<tr><td>25</td> <td>26.0</td> <td>29.0</td></tr>
+<tr><td>32</td> <td>32.0</td> <td>35.0</td></tr>
+<tr><td>40</td> <td>38.0</td> <td>41.0</td></tr>
+<tr><td>50</td> <td>50.0</td> <td>53.0</td></tr>
+<tr><td>65</td> <td>66.0</td> <td>70.0</td></tr>
+<tr><td>80</td> <td>81.0</td> <td>85.0</td></tr>
+<tr><td>100</td> <td>100.0</td> <td>104.0</td></tr>
+<tr><td>125</td> <td>125.0</td> <td>129.0</td></tr>
+<tr><td>150</td> <td>150.0</td> <td>154.0</td></tr>
+<tr><td>200</td> <td>200.0</td> <td>204.0</td></tr>
+</table>
+  
+  
+
+<h2>Comments</h2>
+<div id="comments"></div>
+
+  
+  <hr>
+  <footer id="footer">
+    <p>© Johannes Reinhardt, title image by <a href="https://www.flickr.com/photos/dkpphotography/9468970843">Dhruv Patel</a>, theme based on a <a href="https://github.com/Wolfr/cactus-jekyll-theme">design</a> by <a href="http://wolfslittlestore.be">Wolf's Little Store</a></p>
+  </footer>
+  
+</div>
+
+<script type="text/javascript" class="juvia">
+(function() {
+    var options = {
+        container    : '#comments',
+        site_key     : 'i2tzqcns7cm0alygsdvh9fhyfe2g0u1',
+        topic_key    : location.pathname,
+        topic_url    : location.href,
+        topic_title  : document.title || location.href,
+        comment_order: 'latest-first'
+    };
+
+    function makeQueryString(options) {
+        var key, params = [];
+        for (key in options) {
+            params.push(
+                encodeURIComponent(key) +
+                '=' +
+                encodeURIComponent(options[key]));
+        }
+        return params.join('&');
+    }
+
+    function makeApiUrl(options) {
+        // Makes sure that each call generates a unique URL, otherwise
+        // the browser may not actually perform the request.
+        if (!('_juviaRequestCounter' in window)) {
+            window._juviaRequestCounter = 0;
+        }
+
+        var result =
+            '//j.stbuehler.de/api/show_topic.js' +
+            '?_c=' + window._juviaRequestCounter +
+            '&' + makeQueryString(options);
+        window._juviaRequestCounter++;
+        return result;
+    }
+
+    var s       = document.createElement('script');
+    s.async     = true;
+    s.type      = 'text/javascript';
+    s.className = 'juvia';
+    s.src       = makeApiUrl(options);
+    (document.getElementsByTagName('head')[0] ||
+     document.getElementsByTagName('body')[0]).appendChild(s);
+})();
+</script>
+
+
+<script src="/bolts/static/js/all.js?9bb454f9"></script>
+
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/bolts/static/favicon.ico" />
+  
+  <link rel="stylesheet" href="/bolts/static/css/style.css?019e02bb" type="text/css" media="screen">
+  
+  <title>Documentation</title>
+</head>
+<body>
+
+   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/bolts/en/index.html">Home</a></li>
+          <li><a href="/bolts/en/blog/index.html">Blog</a></li>
+          <li><a href="/bolts/en/parts/index.html">Parts</a></li>
+          <li><a href="/bolts/en/docs/index.html">Documentation</a></li>
+          <li><a href="/bolts/en/contribute.html">Contribute</a></li>
+          <li><a href="/bolts/en/downloads.html">Downloads</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">en<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/bolts/en/docs/0.4/document/openscad/basemodule.html">English</a></li>
+              <li><a href="/bolts/de/docs/0.4/document/openscad/basemodule.html">German</a></li>
+              <li><a href="/bolts/fr/docs/0.4/document/openscad/basemodule.html">French</a></li>
+              <li><a href="/bolts/es/docs/0.4/document/openscad/basemodule.html">Spanish</a></li>
+              <li><a href="/bolts/sv/docs/0.4/document/openscad/basemodule.html">Swedish</a></li>
+            </ul>
+          </li>
+          <li><a class="github" href="https://github.com/jreinhardt/BOLTS">Github</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+
+
+  <div class="page-title-bar">
+    <div class="container">
+      
+      <h2>Documentation for BOLTS 0.4 (development version)</h2>
+      <a href="/bolts/en/docs/0.3/index.html">stable</a>
+      <a class="active" href="/bolts/en/docs/0.4/index.html">dev</a>
+      
+    </div>
+  </div>
+
+<div class="container">
+  
+<div class="row">
+  <div class="col-sm-8 doc-main">
+    <div class="doc-page">
+      <h2 class="doc-page-title">How to create a base module</a></h2>
+      <p>This tutorial shows you the preferred way to make a class from a
+<a href="/bolts/en/docs/0.4/document/general/blt-files.html">collection</a> available in OpenSCAD.</p>
+<p>This assumes that you have already a module available that takes a number of
+parameters as input and builds the part that the class describes.</p>
+<p>If not you have two options. Either you learn
+<a href="http://www.openscad.org/documentation.html">OpenSCAD</a> and write such a module
+yourself.</p>
+<p>Or you try to find out if someone else has done this already. There are a number of sites where a lot of scad code is published:</p>
+<ul>
+<li><a href="http://www.thingiverse.com/">Thingiverse</a></li>
+<li><a href="https://www.youmagine.com/">Youmagine</a></li>
+<li><a href="https://cubehero.com/">Cubehero</a></li>
+<li><a href="https://github.com/">GitHub</a></li>
+<li><a href="http://www.bld3r.com/">Bld3r</a></li>
+<li><a href="http://reprap.org/wiki/Printable_part_sources">list with many more</a></li>
+</ul>
+<p>However, to use code written by someone else, you need to make sure that there
+are no licensing problems. I wrote about licensing in BOLTS
+<a href="/bolts/en/docs/0.4/document/general/licensing.html">here</a>. If the code has no licensing
+information or is published under a incompatible license, you can try to
+contact the author and ask him to dual-license with a license that allows
+inclusion in BOLTS.</p>
+<p>This tutorial will illustrate the process using the example of the pipe
+collection with a pipe module that lives in a file called <code>pipe.scad</code>:</p>
+<pre><code>/* Pipe module for OpenSCAD
+ * Copyright (C) 2013 Johannes Reinhardt &lt;jreinhardt@ist-dein-freund.de&gt;
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+ */
+
+module pipe(id,od,l){
+    difference(){
+        cylinder(r=od/2,h=l,center=true);
+        cylinder(r=id/2,h=l+1,center=true);
+    }
+}
+</code></pre>
+<h3>Putting the scad file to the right place</h3>
+<p>The file with the module should be moved to a subdirectory of the openscad
+directory which is named after the collection id to which the part belongs. If
+this directory does not exist, create it.</p>
+<p>So in the case of the pipes collection <code>pipe.scad</code> is now in the directory
+<code>openscad/pipes</code> relative to the BOLTS root folder.</p>
+<h3>Write the base file</h3>
+<p>This collection directory must also contain the base file for this directory.
+The base file provides BOLTS with all the informations it needs to know about
+the files in a collection directory, it is a kind of manifest file. It
+contains a list of sections 
+(more precisely <a href="/bolts/en/docs/0.4/specification.html#base-file-element">base file elements</a>),
+each describing one file.</p>
+<p>For the pipes collection the base file is <code>openscad/pipes/pipes.base</code> and has
+the following content:</p>
+<pre><code>---
+- filename: pipe.scad
+  type: module
+  author: Johannes Reinhardt &lt;jreinhardt@ist-dein-freund.de&gt;
+  license: LGPL 2.1+ &lt;http://www.gnu.org/licenses/lgpl-2.1&gt;
+  modules:
+    - name: pipe
+      arguments: [id, od, l]
+      classids: [genericpipe, din11850range2]
+  source: own work
+...
+</code></pre>
+<p>The type field indicates, that this file contains one or more OpenSCAD
+modules. The author field gives the author of <code>pipe.scad</code> and contact
+information. In the license field the license of pipe.scad is indicated and
+then follows the list of modules that are contained in the file.</p>
+<p>In the case of <code>pipe.scad</code> there is only one module called <code>pipe</code>. The
+arguments field gives the parameters that need to be supplied to the module.
+The parameters must be a subset of the parameters of the class as it is
+defined in the <a href="/bolts/en/docs/0.4/document/general/blt-files.html">blt file</a>.</p>
+<p>The <code>classids</code> field contains a list of classids which this module can
+represent. Be careful, that the parameter names and meanings for all classes
+in this list must be the same, otherwise the some parameters can not be found
+for some classes.</p>
+<p>There is the possibility to add an optional <code>source</code> field which allows to give
+informations about the origin of the file. If there is a URL from which this
+file was downloaded, this can be included here.</p>
+<h3>Testing</h3>
+<p>Now it should be tested that the newly added part really works. This is most
+conveniently done using the 
+<a href="/bolts/en/docs/0.4/document/general/utility-script.html">utility script</a>:</p>
+<pre><code>./bolts.py export openscad
+./bolts.py test openscad
+</code></pre>
+<p>This will fire up a OpenSCAD instance with the module search path set
+appropriately, so that typing</p>
+<pre><code>include &lt;BOLTS.scad&gt;
+
+DIN11850_Range_2("10",1000);
+</code></pre>
+<p>should give you a pipe with nominal diameter 10 and 1m length.</p>
+<h3>Next steps</h3>
+<p>You might want to <a href="/bolts/en/docs/0.4/document/openscad/connectors.html">add connectors</a> to simplify
+the positioning of the part in OpenSCAD and/or
+<a href="/bolts/en/docs/0.4/document/general/development.html">contribute</a> this part to BOLTS, so that every
+user can profit from your efforts.</p>
+      <h2>Comments</h2>
+      <div id="comments"></div>
+    </div>
+  </div>
+</div>
+
+  
+  <hr>
+  <footer id="footer">
+    <p>© Johannes Reinhardt, title image by <a href="https://www.flickr.com/photos/dkpphotography/9468970843">Dhruv Patel</a>, theme based on a <a href="https://github.com/Wolfr/cactus-jekyll-theme">design</a> by <a href="http://wolfslittlestore.be">Wolf's Little Store</a></p>
+  </footer>
+  
+</div>
+
+<script type="text/javascript" class="juvia">
+(function() {
+    var options = {
+        container    : '#comments',
+        site_key     : 'i2tzqcns7cm0alygsdvh9fhyfe2g0u1',
+        topic_key    : location.pathname,
+        topic_url    : location.href,
+        topic_title  : document.title || location.href,
+        comment_order: 'latest-first'
+    };
+
+    function makeQueryString(options) {
+        var key, params = [];
+        for (key in options) {
+            params.push(
+                encodeURIComponent(key) +
+                '=' +
+                encodeURIComponent(options[key]));
+        }
+        return params.join('&');
+    }
+
+    function makeApiUrl(options) {
+        // Makes sure that each call generates a unique URL, otherwise
+        // the browser may not actually perform the request.
+        if (!('_juviaRequestCounter' in window)) {
+            window._juviaRequestCounter = 0;
+        }
+
+        var result =
+            '//j.stbuehler.de/api/show_topic.js' +
+            '?_c=' + window._juviaRequestCounter +
+            '&' + makeQueryString(options);
+        window._juviaRequestCounter++;
+        return result;
+    }
+
+    var s       = document.createElement('script');
+    s.async     = true;
+    s.type      = 'text/javascript';
+    s.className = 'juvia';
+    s.src       = makeApiUrl(options);
+    (document.getElementsByTagName('head')[0] ||
+     document.getElementsByTagName('body')[0]).appendChild(s);
+})();
+</script>
+
+
+<script src="/bolts/static/js/all.js?9bb454f9"></script>
+
+</body>
+</html>

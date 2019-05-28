@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/bolts/static/favicon.ico" />
+  
+  <link rel="stylesheet" href="/bolts/static/css/style.css?019e02bb" type="text/css" media="screen">
+  
+  <title>Documentation</title>
+</head>
+<body>
+
+   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Changer la navigation</span>
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/bolts/fr/index.html">Page principale</a></li>
+          <li><a href="/bolts/fr/blog/index.html">Blogue</a></li>
+          <li><a href="/bolts/fr/parts/index.html">Pièces</a></li>
+          <li><a href="/bolts/fr/docs/index.html">Documentation</a></li>
+          <li><a href="/bolts/fr/contribute.html">Contribuer</a></li>
+          <li><a href="/bolts/fr/downloads.html">Téléchargements</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">fr<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/bolts/en/docs/0.3/document/freecad/installation.html">Anglais</a></li>
+              <li><a href="/bolts/de/docs/0.3/document/freecad/installation.html">Allemand</a></li>
+              <li><a href="/bolts/fr/docs/0.3/document/freecad/installation.html">Français</a></li>
+              <li><a href="/bolts/es/docs/0.3/document/freecad/installation.html">Espagnol</a></li>
+              <li><a href="/bolts/sv/docs/0.3/document/freecad/installation.html">Suédois</a></li>
+            </ul>
+          </li>
+          <li><a class="github" href="https://github.com/jreinhardt/BOLTS">Github</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+
+
+  <div class="page-title-bar">
+    <div class="container">
+      
+      <h2>Documentation for BOLTS 0.3 (current stable version)</h2>
+      <a class="active" href="/bolts/fr/docs/0.3/index.html">stable</a>
+      <a href="/bolts/fr/docs/0.4/index.html">dev</a>
+      
+    </div>
+  </div>
+
+<div class="container">
+  
+<div class="row">
+  <div class="col-sm-8 doc-main">
+    <div class="doc-page">
+      <h2 class="doc-page-title">Installer BOLTS pour FreeCAD</a></h2>
+      <h3>Télécharger BOLTS pour FreeCAD dernière version</h3>
+<p>On peut trouver la dernière version de BOLTS pour FreeCAD sur la <a href="/bolts/en/downloads.html?version=0.3">Page de téléchargement</a>.</p>
+<p>Différentes types d'archives sont disponibles. Si vous ne savez pas lequel choisir, prendre le zip.</p>
+<h3>Extraire l'archive dans le dossier des macros</h3>
+<p>On peut voir la localisation du dossier des macros dans les préférences: Choisir
+Édition-&gt;Préférences, dans la fenêtre sélectionner l'onglet macro. Le chemin vers le dossier des macro y est indiqué. Sous linux le dossier des macros est souvent situé à <code>~/.FreeCAD</code>.</p>
+<p>Une fois fait le dossier macro devrait contenir un sous-répertoire nommé BOLTS et un fichier nommé start_bolts.FCMacro</p>
+<p>L'installation est maintenant terminé.</p>
+<h3>Essaye-le</h3>
+<p>Démarrer FreeCAD et choisir <code>Macros</code> dans le menu <code>Macro</code>.
+Dans la fenêtre qui apparaît sélectionner <code>start_bolts.FCMacro</code> et cliquer sur
+exécuter.</p>
+<h3>Troubleshooting</h3>
+<p>Si vous avez un erreur disant quelque chose comme ceci :</p>
+<pre><code>Pas de module nommé yaml
+</code></pre>
+<p>alors c'est que la bibliothèque yaml pour python n'est pas installé. si vous
+utilisez linux, vous pouvez souvent l'obtenir a partir du gestionnaire de paquet. si vous↵
+utilisez windows vous pouvez récupérer l'installateur <a href="http://pyyaml.org/wiki/PyYAML">ici</a>; vous↵
+devez installer YAML pour la version de Python (les deux premier chiffres) qui est↵
+distribué avec FreeCAD. Vous pouvez retrouver quelle version est utilisé à la première↵
+ligne de la console python de FreeCAD. Si elle n'est pas ouverte, vous pouvez↵
+la faire apparaître en la cochant dans le Menu Affichage dans Vues.</p>
+<p>Si vous avez un erreur disant quelque chose comme ceci :</p>
+<pre><code>Pas de module nommé importlib
+</code></pre>
+<p>C'est parce que vous utilisez une ancienne version de python ne comportant pas
+la bibliothèque importlib. Vous pouvez la récupérer <a href="https://pypi.python.org/pypi/importlib/1.0.2">ici</a>.
+Il n'y a pas d'installateur d'importlib disponible spécialement pour windows. Les instructions↵
+pour installer un module python qui ne possède pas d’installateur est donné↵
+<a href="http://docs.python.org/2/install/index.html">ici</a>. Encore une fois vous devez utiliser
+la même version de python que celle distribué avec FreeCAD.</p>
+<p>Si vous obtenez un message disant</p>
+<pre><code>uic import failed. Make sure that the pyside tools are installed
+</code></pre>
+<p>or an error message that says</p>
+<pre><code>ImportError: No module named pysideuic
+</code></pre>
+<p>alors c'est qu'il manque un élément de PySide pour la liaison Qt. Pour Debian et Ubuntu↵
+il est contenu dans le paquet pyside-tools.</p>
+<h3>Windows</h3>
+<p>On Windows it is sometimes necessary to copy the python dependencies to</p>
+<pre><code>&lt;path to FreeCAD installation&gt;\bin\Lib\site-packages
+</code></pre>
+<p>so that they are picked up by the python version shipped with FreeCAD. See also
+<a href="http://forum.freecadweb.org/viewtopic.php?f=8&amp;t=4549&amp;start=240#p80010">this
+thread</a>
+in the FreeCAD forums.</p>
+<p>If you get different errors, than please try the latest development snapshot.
+If it still does not work, please report that problem, and help me figure it
+out. The simplest way to do so is to use the comments below, but there is a
+number of of other places where you can report problems, a list can be found
+<a href="/bolts/en/contribute.html?version=0.3">on the contribute page</a>.</p>
+<h3>Étape suivante</h3>
+<p>Si vous le souhaitez, vous pouvez <a href="/bolts/en/docs/0.3/document/freecad/toolbar.html">definir un bouton dans la barre d'outils</a>, ou
+vous pouvez lire <a href="/bolts/en/docs/0.3/document/freecad/usage.html">comment utiliser BOLTS pour FreeCAD</a>.</p>
+      <h2>Commentaires</h2>
+      <div id="comments"></div>
+    </div>
+  </div>
+</div>
+
+  
+  <hr>
+  <footer id="footer">
+    <p>© Johannes Reinhardt, Image de titre par <a href="https://www.flickr.com/photos/dkpphotography/9468970843">Dhruv Patel</a>, thème basé sur un <a href="https://github.com/Wolfr/cactus-jekyll-theme">design</a> par <a href="http://wolfslittlestore.be">Wolf's Little Store</a></p>
+  </footer>
+  
+</div>
+
+<script type="text/javascript" class="juvia">
+(function() {
+    var options = {
+        container    : '#comments',
+        site_key     : 'i2tzqcns7cm0alygsdvh9fhyfe2g0u1',
+        topic_key    : location.pathname,
+        topic_url    : location.href,
+        topic_title  : document.title || location.href,
+        comment_order: 'latest-first'
+    };
+
+    function makeQueryString(options) {
+        var key, params = [];
+        for (key in options) {
+            params.push(
+                encodeURIComponent(key) +
+                '=' +
+                encodeURIComponent(options[key]));
+        }
+        return params.join('&');
+    }
+
+    function makeApiUrl(options) {
+        // Makes sure that each call generates a unique URL, otherwise
+        // the browser may not actually perform the request.
+        if (!('_juviaRequestCounter' in window)) {
+            window._juviaRequestCounter = 0;
+        }
+
+        var result =
+            '//j.stbuehler.de/api/show_topic.js' +
+            '?_c=' + window._juviaRequestCounter +
+            '&' + makeQueryString(options);
+        window._juviaRequestCounter++;
+        return result;
+    }
+
+    var s       = document.createElement('script');
+    s.async     = true;
+    s.type      = 'text/javascript';
+    s.className = 'juvia';
+    s.src       = makeApiUrl(options);
+    (document.getElementsByTagName('head')[0] ||
+     document.getElementsByTagName('body')[0]).appendChild(s);
+})();
+</script>
+
+
+<script src="/bolts/static/js/all.js?9bb454f9"></script>
+
+</body>
+</html>

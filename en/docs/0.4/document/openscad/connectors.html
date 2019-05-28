@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/bolts/static/favicon.ico" />
+  
+  <link rel="stylesheet" href="/bolts/static/css/style.css?019e02bb" type="text/css" media="screen">
+  
+  <title>Documentation</title>
+</head>
+<body>
+
+   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/bolts/en/index.html">Home</a></li>
+          <li><a href="/bolts/en/blog/index.html">Blog</a></li>
+          <li><a href="/bolts/en/parts/index.html">Parts</a></li>
+          <li><a href="/bolts/en/docs/index.html">Documentation</a></li>
+          <li><a href="/bolts/en/contribute.html">Contribute</a></li>
+          <li><a href="/bolts/en/downloads.html">Downloads</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">en<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/bolts/en/docs/0.4/document/openscad/connectors.html">English</a></li>
+              <li><a href="/bolts/de/docs/0.4/document/openscad/connectors.html">German</a></li>
+              <li><a href="/bolts/fr/docs/0.4/document/openscad/connectors.html">French</a></li>
+              <li><a href="/bolts/es/docs/0.4/document/openscad/connectors.html">Spanish</a></li>
+              <li><a href="/bolts/sv/docs/0.4/document/openscad/connectors.html">Swedish</a></li>
+            </ul>
+          </li>
+          <li><a class="github" href="https://github.com/jreinhardt/BOLTS">Github</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+
+
+  <div class="page-title-bar">
+    <div class="container">
+      
+      <h2>Documentation for BOLTS 0.4 (development version)</h2>
+      <a href="/bolts/en/docs/0.3/index.html">stable</a>
+      <a class="active" href="/bolts/en/docs/0.4/index.html">dev</a>
+      
+    </div>
+  </div>
+
+<div class="container">
+  
+<div class="row">
+  <div class="col-sm-8 doc-main">
+    <div class="doc-page">
+      <h2 class="doc-page-title">How to add connectors</a></h2>
+      <p>This page shows you how to add connectors for a part, for which a OpenSCAD
+<a href="/bolts/en/docs/0.4/document/openscad/basemodule.html">basemodule</a> exists. It continues the example
+from the <a href="/bolts/en/docs/0.4/document/openscad/basemodule.html">basemodule guide</a></p>
+<p><a href="/bolts/en/docs/0.4/document/openscad/usage.html">Connectors</a>
+simplify the positioning of parts in OpenSCAD, but require a bit of
+preparation. Three things need to be added: </p>
+<ul>
+<li>a function for the connectors in the scad file</li>
+<li>a entry in the base file</li>
+<li>drawings for the documentation.</li>
+</ul>
+<h3>Adding a connector function in the scad file</h3>
+<p>The function is added to the <code>.scad</code> file, and calculates the position and
+orientation for the various connector locations from the parameters of the
+model. It returns a list containing as first element the origin of the
+coordinate system in terms of global coordinates, as second element a list with
+two directions for the first and second direction of the connector. In case the
+direction is unknown, the function should return "Error".</p>
+<p>For the pipes ths function could look like this:</p>
+<pre><code>function pipeConn(l,location) =
+    (location == "front-in")  ? [[0,0,-l/2],[[0,0,1],[1,0,0]]] :
+    (location == "front-out") ? [[0,0,-l/2],[[0,0,-1],[-1,0,0]]] :
+    (location == "back-in")   ? [[0,0,+l/2],[[0,0,-1],[-1,0,0]]] :
+    (location == "back-out")  ? [[0,0,+l/2],[[0,0,1],[1,0,0]]] :
+    "Error";
+</code></pre>
+<p>Here only the origin of the connector depends on the length of the pipe, but
+for other locations other parameters might be required. The function can make
+use of all parameters that are available to the geometry modules in addition to
+the location, and the order in which these are passed to the function is not
+relevant.</p>
+<h3>Add an entry in the base file</h3>
+<p>To tell BOLTS about this and things like the available selection of locations
+available. This is done by a additional field in the base file (see also 
+<a href="/bolts/en/docs/0.4/document/openscad/basemodule.html">the basemodule documentation</a>). The entries are
+selfexplanatory, so here is the content of the base file with the connector
+infos:</p>
+<pre><code>---
+- filename: pipe.scad
+  type: module
+  author: Johannes Reinhardt &lt;jreinhardt@ist-dein-freund.de&gt;
+  license: LGPL 2.1+ &lt;http://www.gnu.org/licenses/lgpl-2.1&gt;
+  modules:
+    - name: pipe
+      arguments: [id, od, l]
+      classids: [genericpipe, din11850range2]
+      connectors:
+        name: pipeConn
+        arguments: [l,location]
+        locations: [front-in, front-out, back-in, back-out]
+  source: own work
+...
+</code></pre>
+<p>This is a good time to test again. You can use the utility script like shown
+<a href="/bolts/en/docs/0.4/document/openscad/basemodule.html">in the basemodule guide</a>. Make sure all
+connectors are where they should be and that this remains the case when you use
+a range of parameters.</p>
+<h3>Create drawings</h3>
+<p>The final thing to do is create drawings for the connectors to visually show
+their location for easy reference. The utility script can do most of the heavy
+lifting, by creating OpenSCAD scripts for each location that shows the part
+together with the connector there.</p>
+<pre><code>./bolts.py connectors
+</code></pre>
+<p>This results in a directory called <code>connectordrawings</code> in the output directory.
+It contains BOLTS for OpenSCAD and a directory called scad that contains scad
+files for all classes with connectors that have no drawings.  All that remains
+to do is to load these scripts into OpenSCAD, find a good angle and export a
+png using <code>Design-&gt;export as image...</code>. Make sure that it is easy to understand
+from the picture where the connector is located on the part, and how it is
+oriented.The images go into the <code>pipes</code> subdirectory of the <code>drawings</code> folder.</p>
+<p><a href="/bolts/en/docs/static/0.4/openscad-connectordrawings.png"><img alt="Finding a good angle" src="/bolts/en/docs/static/0.4/openscad-connectordrawings.png" /></a></p>
+<p>The final step is to add entries to the base file in this folder to tell BOLTS
+about all the drawings. Here is an example how it looks for the <code>front-in</code>
+connector:</p>
+<pre><code>- filename: pipe-back-in
+  author: Johannes Reinhardt &lt;jreinhardt@ist-dein-freund.de&gt;
+  license: CC0 1.0 &lt;http://creativecommons.org/publicdomain/zero/1.0/&gt;
+  type: drawing-connector
+  location: back-in
+  source: own work
+  classids: [genericpipe,din11850range2]
+</code></pre>
+<p>You should add your name as author. The license should be chosen to CC0, as
+this makes things easier. <code>type</code> must be <code>drawing-connector</code>.</p>
+<h3>Check everything again</h3>
+<p>To check that everything went fine, you can use</p>
+<pre><code>./bolts.py tasks
+</code></pre>
+<p>and make sure that the classes you have been working on are not listed anymore
+with <code>Missing Connectors</code> and <code>Missing Drawings</code>.</p>
+<h3>Next steps</h3>
+<p>You might want to <a href="/bolts/en/docs/0.4/document/general/development.html">contribute</a> this part to
+BOLTS, so that every user can profit from your efforts.</p>
+      <h2>Comments</h2>
+      <div id="comments"></div>
+    </div>
+  </div>
+</div>
+
+  
+  <hr>
+  <footer id="footer">
+    <p>© Johannes Reinhardt, title image by <a href="https://www.flickr.com/photos/dkpphotography/9468970843">Dhruv Patel</a>, theme based on a <a href="https://github.com/Wolfr/cactus-jekyll-theme">design</a> by <a href="http://wolfslittlestore.be">Wolf's Little Store</a></p>
+  </footer>
+  
+</div>
+
+<script type="text/javascript" class="juvia">
+(function() {
+    var options = {
+        container    : '#comments',
+        site_key     : 'i2tzqcns7cm0alygsdvh9fhyfe2g0u1',
+        topic_key    : location.pathname,
+        topic_url    : location.href,
+        topic_title  : document.title || location.href,
+        comment_order: 'latest-first'
+    };
+
+    function makeQueryString(options) {
+        var key, params = [];
+        for (key in options) {
+            params.push(
+                encodeURIComponent(key) +
+                '=' +
+                encodeURIComponent(options[key]));
+        }
+        return params.join('&');
+    }
+
+    function makeApiUrl(options) {
+        // Makes sure that each call generates a unique URL, otherwise
+        // the browser may not actually perform the request.
+        if (!('_juviaRequestCounter' in window)) {
+            window._juviaRequestCounter = 0;
+        }
+
+        var result =
+            '//j.stbuehler.de/api/show_topic.js' +
+            '?_c=' + window._juviaRequestCounter +
+            '&' + makeQueryString(options);
+        window._juviaRequestCounter++;
+        return result;
+    }
+
+    var s       = document.createElement('script');
+    s.async     = true;
+    s.type      = 'text/javascript';
+    s.className = 'juvia';
+    s.src       = makeApiUrl(options);
+    (document.getElementsByTagName('head')[0] ||
+     document.getElementsByTagName('body')[0]).appendChild(s);
+})();
+</script>
+
+
+<script src="/bolts/static/js/all.js?9bb454f9"></script>
+
+</body>
+</html>

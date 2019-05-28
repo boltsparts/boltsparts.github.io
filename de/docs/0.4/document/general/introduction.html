@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/bolts/static/favicon.ico" />
+  
+  <link rel="stylesheet" href="/bolts/static/css/style.css?019e02bb" type="text/css" media="screen">
+  
+  <title>Documentation</title>
+</head>
+<body>
+
+   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Navigationsmenü ausklappen</span>
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/bolts/de/index.html">Home</a></li>
+          <li><a href="/bolts/de/blog/index.html">Blog</a></li>
+          <li><a href="/bolts/de/parts/index.html">Teile</a></li>
+          <li><a href="/bolts/de/docs/index.html">Dokumentation</a></li>
+          <li><a href="/bolts/de/contribute.html">Mitmachen</a></li>
+          <li><a href="/bolts/de/downloads.html">Downloads</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">de<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/bolts/en/docs/0.4/document/general/introduction.html">Englisch</a></li>
+              <li><a href="/bolts/de/docs/0.4/document/general/introduction.html">Deutsch</a></li>
+              <li><a href="/bolts/fr/docs/0.4/document/general/introduction.html">Französisch</a></li>
+              <li><a href="/bolts/es/docs/0.4/document/general/introduction.html">Spanisch</a></li>
+              <li><a href="/bolts/sv/docs/0.4/document/general/introduction.html">Schwedisch</a></li>
+            </ul>
+          </li>
+          <li><a class="github" href="https://github.com/jreinhardt/BOLTS">Github</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+
+
+  <div class="page-title-bar">
+    <div class="container">
+      
+      <h2>Documentation for BOLTS 0.4 (development version)</h2>
+      <a href="/bolts/de/docs/0.3/index.html">stable</a>
+      <a class="active" href="/bolts/de/docs/0.4/index.html">dev</a>
+      
+    </div>
+  </div>
+
+<div class="container">
+  
+<div class="row">
+  <div class="col-sm-8 doc-main">
+    <div class="doc-page">
+      <h2 class="doc-page-title">Eine kurze Einführung in BOLTS</a></h2>
+      <p>Das Ziel von BOLTS ist es, eine freie und quelloffene Standardteilebibliothek aufzubauen,
+die nicht an eine spezifische CAD Applikation gebunden ist. Aus diesem Grund sind alle
+Daten, die nötig sind, um die Teile zur Verfügung zu stellen, auf eine bestimmte Weise
+strukturiert: Es gibt backendunabhängige und backendspezifische Daten, wobei Backend die
+verschiedenen CAD Applikationen bezeichnet (bisher FreeCAD und OpenSCAD). Weil man diese
+Unterscheidung macht, muss man lediglich zusätzliche backendspezifische Daten hinzufügen,
+um ein Teil, das für ein Programm verfügbar ist, auch auf einem Anderen zur Verfügung zu
+stellen.</p>
+<h3>Backendunabhängige Daten</h3>
+<p>Sehr häufig gibt es mehrere ähnliche oder gar identische Standards für ein Teil,
+die von verschiedenen Standardisierungsorganen herausgegeben wurden. Aus diesem
+Grund bietet BOLTS das Konzept einer Klasse von Teilen, wobei eine Klasse mehrere
+identische Standards beschreiben kann. Um eine Klasse zu spezifizieren, muss man
+die Informationen über die verschiedenen Abmessungen der Teile, Tabllen mit deren
+Werten, eine Beschreibung, die Standards, die diese Klasse abdeckt, Zeichnungen und
+ähnliches spezifizieren. Im Gegensatz dazu wird die Geometrie des Teils für verschiedene
+CAD Programme auf unterschiedliche Art und Weise beschrieben und gehört daher zu den
+backendspezifischen Daten.</p>
+<p>BOLTS hat noch eine weitere Organisationsebene, die Kollektion. Eine Kollektion
+enthält mehrere Klassen, damit ähnliche, aber nicht identische Klassen zusammen
+gruppiert werden können. Die Informationen über die Klassen einer Kollektion sind
+in einer blt Datei abgelegt.</p>
+<h3>Backendspezifische Daten</h3>
+<p>There is also data required to create a 3D representation of a part in a CAD
+tool. For OpenSCAD we use a module definition in a scad file, for FreeCAD a
+python function. These are also called base modules or base functions, or base
+geometries when referring to any of them. Together with a base file containing
+metadata this forms the backend specific data.</p>
+<h3>Synergien</h3>
+<p>Sehr häufig können mehrere Klassen die gleiche Basisgeometrie verwenden. Zum Beispiel kennt
+BOLTS etwa 18 Standards für Unterlagsscheiben. Diese werden von 5 unterschiedlichen Klassen
+abgedeckt, die lediglich 2 verschiedene Basisgeometrien benötigen.</p>
+<p>Ein Bild sagt mehr als tausend Worte. Die zwei Blöcke auf der linken Seite (Standards
+und Klassen) sind backendunabhängig. Der backendspezifische Teil umfasst lediglich 2
+Basisgeometrien für jedes Programm:</p>
+<p><a href="/bolts/de/docs/static/0.4/washer.png"><img alt="Unterlagsscheibenkollektion" src="/bolts/de/docs/static/0.4/washer.png" style="width: 100%;"/></a></p>
+<h3>Zusammenfassung</h3>
+<p>Um nochmal zusammenzufassen:</p>
+<ul>
+<li>Die Daten in BOLTS sind entweder backendunabhängig oder backendspezifisch.</li>
+<li>Eine Klasse beschreibt keinen, einen oder mehrere Standards, eine Kollektion enthält eine oder mehrere Klassen.</li>
+<li>Damit eine Klasse in einer Applikation verwendbar ist, muss BOLTS eine geeignete Basisgeometrie für diese Klasse haben.</li>
+</ul>
+      <h2>Kommentare</h2>
+      <div id="comments"></div>
+    </div>
+  </div>
+</div>
+
+  
+  <hr>
+  <footer id="footer">
+    <p>© Johannes Reinhardt, Titelbild von <a href="https://www.flickr.com/photos/dkpphotography/9468970843">Dhruv Patel</a>, Design basierend auf einem <a href="https://github.com/Wolfr/cactus-jekyll-theme">Entwurf</a> von <a href="http://wolfslittlestore.be">Wolf's Little Store</a></p>
+  </footer>
+  
+</div>
+
+<script type="text/javascript" class="juvia">
+(function() {
+    var options = {
+        container    : '#comments',
+        site_key     : 'i2tzqcns7cm0alygsdvh9fhyfe2g0u1',
+        topic_key    : location.pathname,
+        topic_url    : location.href,
+        topic_title  : document.title || location.href,
+        comment_order: 'latest-first'
+    };
+
+    function makeQueryString(options) {
+        var key, params = [];
+        for (key in options) {
+            params.push(
+                encodeURIComponent(key) +
+                '=' +
+                encodeURIComponent(options[key]));
+        }
+        return params.join('&');
+    }
+
+    function makeApiUrl(options) {
+        // Makes sure that each call generates a unique URL, otherwise
+        // the browser may not actually perform the request.
+        if (!('_juviaRequestCounter' in window)) {
+            window._juviaRequestCounter = 0;
+        }
+
+        var result =
+            '//j.stbuehler.de/api/show_topic.js' +
+            '?_c=' + window._juviaRequestCounter +
+            '&' + makeQueryString(options);
+        window._juviaRequestCounter++;
+        return result;
+    }
+
+    var s       = document.createElement('script');
+    s.async     = true;
+    s.type      = 'text/javascript';
+    s.className = 'juvia';
+    s.src       = makeApiUrl(options);
+    (document.getElementsByTagName('head')[0] ||
+     document.getElementsByTagName('body')[0]).appendChild(s);
+})();
+</script>
+
+
+<script src="/bolts/static/js/all.js?9bb454f9"></script>
+
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/bolts/static/favicon.ico" />
+  
+  <link rel="stylesheet" href="/bolts/static/css/style.css?019e02bb" type="text/css" media="screen">
+  
+  <title>Blog</title>
+</head>
+<body>
+
+   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Changer la navigation</span>
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/bolts/fr/index.html">Page principale</a></li>
+          <li><a href="/bolts/fr/blog/index.html">Blogue</a></li>
+          <li><a href="/bolts/fr/parts/index.html">Pièces</a></li>
+          <li><a href="/bolts/fr/docs/index.html">Documentation</a></li>
+          <li><a href="/bolts/fr/contribute.html">Contribuer</a></li>
+          <li><a href="/bolts/fr/downloads.html">Téléchargements</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">fr<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/bolts/en/blog/2014/9/10/New-Webpage.html">Anglais</a></li>
+              <li><a href="/bolts/de/blog/2014/9/10/New-Webpage.html">Allemand</a></li>
+              <li><a href="/bolts/fr/blog/2014/9/10/New-Webpage.html">Français</a></li>
+              <li><a href="/bolts/es/blog/2014/9/10/New-Webpage.html">Espagnol</a></li>
+              <li><a href="/bolts/sv/blog/2014/9/10/New-Webpage.html">Suédois</a></li>
+            </ul>
+          </li>
+          <li><a class="github" href="https://github.com/jreinhardt/BOLTS">Github</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+
+
+<div class="page-title-bar">
+  <div class="container">
+    <h2>Blogue</h2>
+  </div>
+</div>
+
+<div class="container">
+  
+<div class="row">
+  <div class="col-sm-8 blog-main">
+    <div class="blog-post">
+      <h2 class="blog-post-title"><a href="/bolts/fr/blog/2014/9/10/New-Webpage.html">New and better website for BOLTS</a></h2>
+      <p class="blog-post-meta">Publié le 10 sept. 2014 à 13:30:00 par Johannes</p>
+      <p>You are currently visiting the shiny new website of BOLTS that I have worked on
+in the last few weeks. The old homepage was becoming more and more
+unmaintainable, as it developed into a tangled mess of generated and manually
+written content that was piped through Jekyll to be hosted as static html on
+GitHub pages. The new page improves on that in several respects, and this is
+what this post is about.</p>
+
+<!-- more -->
+
+<h2>New url</h2>
+
+<p>BOLTS now has a proper and more memorable domain at
+<a href="http://bolts-library.org">bolts-library.org</a>, instead of a relatively
+complicated github.io url. I had to take a domain with a additional suffix, as
+bolts alone was already taken in every useful top level domain. Thats the
+disadvantage if you choose an acronyme for a project that is also a real word.</p>
+
+<h2>Responsive Design</h2>
+
+<p>The <a href="https://github.com/Wolfr/cactus-jekyll-theme">original Jekyll Theme</a> that
+I based the design of the BOLTS page on was responsive to a certain extent, but
+I never spent the time to truly understand all the details, which resulted in a
+very bad visual appearance on small devices. When it comes to web design, I am
+most comfortable with <a href="http://getbootstrap.com">Bootstrap</a>, so I decided to
+rebuild the homepage in Bootstrap. It looks a bit different now, but works much
+better on tablets and phones.</p>
+
+<h2>Translations</h2>
+
+<p>One of the main reason for the rebuild of the website was that I wanted to be
+able to provide a localized user experience for people not so comfortable with
+the english language. To manage translations I chose gettext (because it is a
+very common format for this kind of tasks and is well supported by many tools)
+and weblate (because it supports gettext and ties in very well with my work
+flow).</p>
+
+<p>All the translateable strings in BOLTS are collected in three different domains:</p>
+
+<ul>
+<li><code>messages</code> contains all the strings of the webpage, mainly link labels
+  for navigation, but also longer bits of text from the front page or other
+  pages.</li>
+<li><code>docs</code> contains all the documentation. I split up the big chunks of text
+  in paragraphs to make it easier to translate and deal with changes in the
+  content.</li>
+<li><code>parts</code> contains all strings harvested from the parts data, mostly labels
+  and descriptions intended for human consumption. This data will also be used
+  to provide a localised experience for e.g. BOLTS for FreeCAD.</li>
+</ul>
+
+<p>Translating all these strings (at the time of writing there are almost 1000
+source strings with nearly 15000 words marked for translation) is something
+that does not require as much technical knowledge as some of the other ways to
+contribute to BOLTS. But it helps a lot, by making it easier for people from
+all over the world to use BOLTS.</p>
+
+<p>So I ask you to go over to our
+<a href="https://weblate.stbuehler.de/projects/BOLTS/">Weblate instance</a> and start
+translating. You can choose which of the three domains (called subprojects in
+weblate) you want to work on and which language you want to translate into.
+Finally you can select a subset of strings to display, to translate hitherto
+untranslated stuff choose <code>untranslated strings</code>, if you want to check existing
+translations, choose <code>All strings</code> or another filter.</p>
+
+<p>You can then suggest translations without being logged in or registered.
+Suggestions need to be approved by a logged in translator, and can not be
+attributed to you. To save translations and have them properly attributed in
+the commit message, you can register an account for free, or if you have a
+google or github account you can log in from these.</p>
+
+<p>At the moment translations are set up for the four most popular languages of the
+visitors of the old website, namely English, German, French and Spanish. If you
+want to work on another language, just get in touch, e.g. by leaving a comment.</p>
+
+<p>You can change the language with the language selector on the left of the
+menubar. Untranslated content will still be displayed in english.</p>
+
+<h2>Full Text Search</h2>
+
+<p>Another functionality that I wanted to have and that was just not possible with
+the old setup is a search feature. The search is accessible from the top menu
+bar. It is language sensitive, i.e. will only search the localised version of
+the website for your current language, so at the moment a lot of untranslated
+content will still be found in english.</p>
+
+<p>The results are clustered in two categories, parts and documentation, so that
+you can easily select the result that you are interested in.</p>
+
+<h2>Versioned Documentation</h2>
+
+<p>Now the documentaion for multiple versions of BOLTS can be accessed separately.
+With the old setup, a common problem was, that the documentation was updated
+for the current development version of BOLTS, and therefore differed
+significantly from what people actually had installed, which was confusing. Now
+the documentation for the stable relaease and the development version can be
+accessed separately</p>
+
+<p>At the moment however, the documentation for the development version is not
+fully up to date.</p>
+
+<h2>Better Technology</h2>
+
+<p>All these improvements are possible because the new website is written in
+<a href="https://www.python.org/">Python</a> and the <a href="http://flask.pocoo.org/">Flask Micro Framework</a>, 
+making use of libraries like <a href="http://babel.pocoo.org/">Babel</a>,
+<a href="https://pythonhosted.org/Whoosh/index.html">Whoosh</a> and
+<a href="http://webassets.readthedocs.org/en/latest">Webassets</a>.</p>
+
+<p>The resulting web application is hosted on
+<a href="https://www.openshift.com/">OpenShift</a> a Platform as a Service (PaaS) built by
+RedHat, which integrates very well with the git based workflow that emerged for
+the development of BOLTS.</p>
+
+<p>This stack will also allow for further experiments, improvements and
+extensions. For example it will be very easy to expose a REST API to all the
+data BOLTS nows about, to allow other application to easily obtain informations
+about standard parts.</p>
+
+<h2>Better Workflow</h2>
+
+<p>For me the new site results in a much more comfortable workflow. The old site
+lived in a separate and highly diverged <code>gh-pages</code> branch, and updating the
+page with data from the master branch required a fragile construction of helper
+scripts and resulted in a bloated repository and many extra commits.</p>
+
+<p>The new website lives in the master branch and is therefore much easier to
+manage. Also no generated content (apart from downloads) is committed, which
+reduces the growth of the repository. I probably should at some point clean up
+the history of the repo, to cut down the size.</p>
+
+<h2>Disadvantages</h2>
+
+<p>There are a few small disadvantages though. Due to the migration all the Google
+credit that the old page had accumulated is lost, so at the moment it is a bit
+more difficult to find the new website by googling.</p>
+
+<p>And everytime I push an update to the homepage, there is roughly half a minute
+downtime. It is possible to avoid this, but this requires a few changes to the
+app, and I have not yet tackled that.</p>
+      <h2>Commentaires</h2>
+      <div id="comments"></div>
+    </div>
+  </div>
+</div>
+
+  
+  <hr>
+  <footer id="footer">
+    <p>© Johannes Reinhardt, Image de titre par <a href="https://www.flickr.com/photos/dkpphotography/9468970843">Dhruv Patel</a>, thème basé sur un <a href="https://github.com/Wolfr/cactus-jekyll-theme">design</a> par <a href="http://wolfslittlestore.be">Wolf's Little Store</a></p>
+  </footer>
+  
+</div>
+
+<script type="text/javascript" class="juvia">
+(function() {
+    var options = {
+        container    : '#comments',
+        site_key     : 'i2tzqcns7cm0alygsdvh9fhyfe2g0u1',
+        topic_key    : location.pathname,
+        topic_url    : location.href,
+        topic_title  : document.title || location.href,
+        comment_order: 'latest-first'
+    };
+
+    function makeQueryString(options) {
+        var key, params = [];
+        for (key in options) {
+            params.push(
+                encodeURIComponent(key) +
+                '=' +
+                encodeURIComponent(options[key]));
+        }
+        return params.join('&');
+    }
+
+    function makeApiUrl(options) {
+        // Makes sure that each call generates a unique URL, otherwise
+        // the browser may not actually perform the request.
+        if (!('_juviaRequestCounter' in window)) {
+            window._juviaRequestCounter = 0;
+        }
+
+        var result =
+            '//j.stbuehler.de/api/show_topic.js' +
+            '?_c=' + window._juviaRequestCounter +
+            '&' + makeQueryString(options);
+        window._juviaRequestCounter++;
+        return result;
+    }
+
+    var s       = document.createElement('script');
+    s.async     = true;
+    s.type      = 'text/javascript';
+    s.className = 'juvia';
+    s.src       = makeApiUrl(options);
+    (document.getElementsByTagName('head')[0] ||
+     document.getElementsByTagName('body')[0]).appendChild(s);
+})();
+</script>
+
+
+<script src="/bolts/static/js/all.js?9bb454f9"></script>
+
+</body>
+</html>

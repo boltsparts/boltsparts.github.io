@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/bolts/static/favicon.ico" />
+  
+  <link rel="stylesheet" href="/bolts/static/css/style.css?019e02bb" type="text/css" media="screen">
+  
+  <title>Blog</title>
+</head>
+<body>
+
+   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/bolts/es/index.html">Home</a></li>
+          <li><a href="/bolts/es/blog/index.html">Blog</a></li>
+          <li><a href="/bolts/es/parts/index.html">Parts</a></li>
+          <li><a href="/bolts/es/docs/index.html">Documentation</a></li>
+          <li><a href="/bolts/es/contribute.html">Contribute</a></li>
+          <li><a href="/bolts/es/downloads.html">Downloads</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">es<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/bolts/en/blog/2015/4/19/Updates.html">English</a></li>
+              <li><a href="/bolts/de/blog/2015/4/19/Updates.html">German</a></li>
+              <li><a href="/bolts/fr/blog/2015/4/19/Updates.html">French</a></li>
+              <li><a href="/bolts/es/blog/2015/4/19/Updates.html">Spanish</a></li>
+              <li><a href="/bolts/sv/blog/2015/4/19/Updates.html">Swedish</a></li>
+            </ul>
+          </li>
+          <li><a class="github" href="https://github.com/jreinhardt/BOLTS">Github</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+
+
+<div class="page-title-bar">
+  <div class="container">
+    <h2>Blog</h2>
+  </div>
+</div>
+
+<div class="container">
+  
+<div class="row">
+  <div class="col-sm-8 blog-main">
+    <div class="blog-post">
+      <h2 class="blog-post-title"><a href="/bolts/es/blog/2015/4/19/Updates.html">Updates</a></h2>
+      <p class="blog-post-meta">Posted on 19 abr. 2015 16:00:00 by Johannes</p>
+      <p>This is a news updates that discusses the lack of updates, an important update and many small updates.
+<!-- more --></p>
+
+<p>There have been no updates on BOLTS itself, as I have not much time at the
+moment. I hope to be able to get back soon, and finish a large change in the
+way BOLTS handles data, which should pave the way for a few new features. And I
+hope to finally tackle a better integration of BOLTS into FreeCAD.</p>
+
+<p>Speaking of FreeCAD, recently version 0.15 of FreeCAD <a href="http://freecadweb.org/wiki/index.php?title=Release_notes_015">was
+released</a>. The
+exciting change from the point of view of BOLTS is that the FreeCAD libpack now
+contains the python dependencies of BOLTS. This should solve most of the
+difficulties windows users have experienced when trying to install BOLTS on
+Windows.</p>
+
+<p>And even though not much is happening on the development side of BOLTS, its popularity is rising steadily. The webpage has more than 1000 visitors every month and a few brave anonymous contributors continue to improve the state of <a href="https://weblate.stbuehler.de/projects/BOLTS/">the translations</a> for part descriptions, webpage and documentation. Thanks a lot, whoever you are!</p>
+      <h2>Comments</h2>
+      <div id="comments"></div>
+    </div>
+  </div>
+</div>
+
+  
+  <hr>
+  <footer id="footer">
+    <p>© Johannes Reinhardt, title image by <a href="https://www.flickr.com/photos/dkpphotography/9468970843">Dhruv Patel</a>, theme based on a <a href="https://github.com/Wolfr/cactus-jekyll-theme">design</a> by <a href="http://wolfslittlestore.be">Wolf's Little Store</a></p>
+  </footer>
+  
+</div>
+
+<script type="text/javascript" class="juvia">
+(function() {
+    var options = {
+        container    : '#comments',
+        site_key     : 'i2tzqcns7cm0alygsdvh9fhyfe2g0u1',
+        topic_key    : location.pathname,
+        topic_url    : location.href,
+        topic_title  : document.title || location.href,
+        comment_order: 'latest-first'
+    };
+
+    function makeQueryString(options) {
+        var key, params = [];
+        for (key in options) {
+            params.push(
+                encodeURIComponent(key) +
+                '=' +
+                encodeURIComponent(options[key]));
+        }
+        return params.join('&');
+    }
+
+    function makeApiUrl(options) {
+        // Makes sure that each call generates a unique URL, otherwise
+        // the browser may not actually perform the request.
+        if (!('_juviaRequestCounter' in window)) {
+            window._juviaRequestCounter = 0;
+        }
+
+        var result =
+            '//j.stbuehler.de/api/show_topic.js' +
+            '?_c=' + window._juviaRequestCounter +
+            '&' + makeQueryString(options);
+        window._juviaRequestCounter++;
+        return result;
+    }
+
+    var s       = document.createElement('script');
+    s.async     = true;
+    s.type      = 'text/javascript';
+    s.className = 'juvia';
+    s.src       = makeApiUrl(options);
+    (document.getElementsByTagName('head')[0] ||
+     document.getElementsByTagName('body')[0]).appendChild(s);
+})();
+</script>
+
+
+<script src="/bolts/static/js/all.js?9bb454f9"></script>
+
+</body>
+</html>

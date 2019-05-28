@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/bolts/static/favicon.ico" />
+  
+  <link rel="stylesheet" href="/bolts/static/css/style.css?019e02bb" type="text/css" media="screen">
+  
+  <title>Part list</title>
+</head>
+<body>
+
+   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/bolts/sv/index.html">Home</a></li>
+          <li><a href="/bolts/sv/blog/index.html">Blog</a></li>
+          <li><a href="/bolts/sv/parts/index.html">Parts</a></li>
+          <li><a href="/bolts/sv/docs/index.html">Documentation</a></li>
+          <li><a href="/bolts/sv/contribute.html">Contribute</a></li>
+          <li><a href="/bolts/sv/downloads.html">Downloads</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">sv<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/bolts/en/parts/standards/IEC60086Cat1.html">English</a></li>
+              <li><a href="/bolts/de/parts/standards/IEC60086Cat1.html">German</a></li>
+              <li><a href="/bolts/fr/parts/standards/IEC60086Cat1.html">French</a></li>
+              <li><a href="/bolts/es/parts/standards/IEC60086Cat1.html">Spanish</a></li>
+              <li><a href="/bolts/sv/parts/standards/IEC60086Cat1.html">Swedish</a></li>
+            </ul>
+          </li>
+          <li><a class="github" href="https://github.com/jreinhardt/BOLTS">Github</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+
+
+<div class="page-title-bar">
+  <div class="container">
+    <h2>Parts list</h2>
+  </div>
+</div>
+
+<div class="container">
+  
+<h1>IEC 60086 Category 1</h1>
+<table class="table">
+<tr><th><strong>Author:</strong></th><td>Johannes Reinhardt</td></tr>
+<tr><th><strong>License:</strong></th><td><a href="http://opensource.org/licenses/MIT">MIT</a></td></tr>
+<tr><th><strong>Collection:</strong></th><td><a href="/bolts/sv/parts/collections/batteries.html">Batteries</a></td></tr>
+<tr><th><strong>Identical to:</strong></th><td><a href="/bolts/sv/parts/names/RoundBatteries.html">Round Batteries</a></td></tr>
+<tr><th><strong>Status:</strong></th><td>active</td></tr>
+<tr><th><strong>Standard body:</strong></th><td><a href="/bolts/sv/parts/bodies/IEC.html">IEC</a></td></tr>
+<tr><th><strong>ID:</strong></th><td>IEC60086Cat1</td></tr>
+<tr><th><strong>Source:</strong></th><td>http://en.wikipedia.org/wiki/List_of_battery_sizes</td></tr>
+</table>
+
+
+<h2>Drawings</h2>
+<a href="/bolts/sv/parts/drawings/batteries/roundBattery.png"><img class="img-responsive" src="/bolts/sv/parts/drawings/batteries/roundBattery.png"></a>
+
+<table class="table">
+<tr><th>Parameter Name</th> <th>Description</th><tr>
+<tr><td>h</td> <td>height</td></tr>
+<tr><td>T</td> <td>Type Code</td></tr>
+<tr><td>d</td> <td>diameter</td></tr>
+</table>
+
+<h2>Description</h2>
+<p>Cylindrical cells with protruding positive and recessed or flat negative terminals.</p>
+
+<h2>FreeCAD</h2>
+
+<table class="table">
+<tr><th><strong>Author:</strong></th><td>Johannes Reinhardt</td></tr>
+<tr><th><strong>License:</strong></th><td><a href="http://www.gnu.org/licenses/lgpl-2.1">LGPL 2.1+</a></td></tr>
+</table>
+
+
+<h2>OpenSCAD</h2>
+
+<table class="table">
+<tr><th><strong>Author:</strong></th><td>Johannes Reinhardt</td></tr>
+<tr><th><strong>License:</strong></th><td><a href="http://www.gnu.org/licenses/lgpl-2.1">LGPL 2.1+</a></td></tr>
+</table>
+<h3>Incantations</h3>
+  <pre><code>module IEC60086Cat1(T=&#34;AAA&#34;, part_mode=&#34;default&#34;)
+function IEC60086Cat1_dims(T=&#34;AAA&#34;, part_mode=&#34;default&#34;)
+function IEC60086Cat1_conn(location,T=&#34;AAA&#34;, part_mode=&#34;default&#34;)</code></pre>
+  <h3>Connectors</h3>
+  <table class="table">
+<tr><th>Location</th> <th>Drawing</th><tr>
+<tr><td>plus</td> <td><a href="/bolts/sv/parts/drawings/batteries/roundBattery-plus.png"><img src="/bolts/sv/parts/drawings/batteries/roundBattery-plus.png" width="200"></a></td></tr>
+<tr><td>minus</td> <td><a href="/bolts/sv/parts/drawings/batteries/roundBattery-minus.png"><img src="/bolts/sv/parts/drawings/batteries/roundBattery-minus.png" width="200"></a></td></tr>
+</table>
+
+
+<h2>Tables</h2>
+  
+  <table class="table">
+<tr><th>T</th> <th>h (mm)</th> <th>d (mm)</th><tr>
+<tr><td>A</td> <td>50.0</td> <td>17.0</td></tr>
+<tr><td>AA</td> <td>50.5</td> <td>14.5</td></tr>
+<tr><td>AAA</td> <td>44.5</td> <td>10.5</td></tr>
+<tr><td>AAAA</td> <td>42.5</td> <td>8.3</td></tr>
+<tr><td>C</td> <td>50.0</td> <td>26.2</td></tr>
+<tr><td>D</td> <td>61.5</td> <td>34.2</td></tr>
+<tr><td>Half-AA</td> <td>24.0</td> <td>14.5</td></tr>
+<tr><td>N</td> <td>30.2</td> <td>12.0</td></tr>
+<tr><td>Sub-C</td> <td>42.9</td> <td>22.2</td></tr>
+</table>
+  
+  
+
+<h2>Comments</h2>
+<div id="comments"></div>
+
+  
+  <hr>
+  <footer id="footer">
+    <p>© Johannes Reinhardt, title image by <a href="https://www.flickr.com/photos/dkpphotography/9468970843">Dhruv Patel</a>, theme based on a <a href="https://github.com/Wolfr/cactus-jekyll-theme">design</a> by <a href="http://wolfslittlestore.be">Wolf's Little Store</a></p>
+  </footer>
+  
+</div>
+
+<script type="text/javascript" class="juvia">
+(function() {
+    var options = {
+        container    : '#comments',
+        site_key     : 'i2tzqcns7cm0alygsdvh9fhyfe2g0u1',
+        topic_key    : location.pathname,
+        topic_url    : location.href,
+        topic_title  : document.title || location.href,
+        comment_order: 'latest-first'
+    };
+
+    function makeQueryString(options) {
+        var key, params = [];
+        for (key in options) {
+            params.push(
+                encodeURIComponent(key) +
+                '=' +
+                encodeURIComponent(options[key]));
+        }
+        return params.join('&');
+    }
+
+    function makeApiUrl(options) {
+        // Makes sure that each call generates a unique URL, otherwise
+        // the browser may not actually perform the request.
+        if (!('_juviaRequestCounter' in window)) {
+            window._juviaRequestCounter = 0;
+        }
+
+        var result =
+            '//j.stbuehler.de/api/show_topic.js' +
+            '?_c=' + window._juviaRequestCounter +
+            '&' + makeQueryString(options);
+        window._juviaRequestCounter++;
+        return result;
+    }
+
+    var s       = document.createElement('script');
+    s.async     = true;
+    s.type      = 'text/javascript';
+    s.className = 'juvia';
+    s.src       = makeApiUrl(options);
+    (document.getElementsByTagName('head')[0] ||
+     document.getElementsByTagName('body')[0]).appendChild(s);
+})();
+</script>
+
+
+<script src="/bolts/static/js/all.js?9bb454f9"></script>
+
+</body>
+</html>

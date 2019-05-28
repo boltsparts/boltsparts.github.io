@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/bolts/static/favicon.ico" />
+  
+  <link rel="stylesheet" href="/bolts/static/css/style.css?019e02bb" type="text/css" media="screen">
+  
+  <title>Documentation</title>
+</head>
+<body>
+
+   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Navigationsmenü ausklappen</span>
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/bolts/de/index.html">Home</a></li>
+          <li><a href="/bolts/de/blog/index.html">Blog</a></li>
+          <li><a href="/bolts/de/parts/index.html">Teile</a></li>
+          <li><a href="/bolts/de/docs/index.html">Dokumentation</a></li>
+          <li><a href="/bolts/de/contribute.html">Mitmachen</a></li>
+          <li><a href="/bolts/de/downloads.html">Downloads</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">de<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/bolts/en/docs/0.3/document/freecad/basefcstd.html">Englisch</a></li>
+              <li><a href="/bolts/de/docs/0.3/document/freecad/basefcstd.html">Deutsch</a></li>
+              <li><a href="/bolts/fr/docs/0.3/document/freecad/basefcstd.html">Französisch</a></li>
+              <li><a href="/bolts/es/docs/0.3/document/freecad/basefcstd.html">Spanisch</a></li>
+              <li><a href="/bolts/sv/docs/0.3/document/freecad/basefcstd.html">Schwedisch</a></li>
+            </ul>
+          </li>
+          <li><a class="github" href="https://github.com/jreinhardt/BOLTS">Github</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+
+
+  <div class="page-title-bar">
+    <div class="container">
+      
+      <h2>Documentation for BOLTS 0.3 (current stable version)</h2>
+      <a class="active" href="/bolts/de/docs/0.3/index.html">stable</a>
+      <a href="/bolts/de/docs/0.4/index.html">dev</a>
+      
+    </div>
+  </div>
+
+<div class="container">
+  
+<div class="row">
+  <div class="col-sm-8 doc-main">
+    <div class="doc-page">
+      <h2 class="doc-page-title">Wie man eine fcstd Basisgeometrie erstellt</a></h2>
+      <p>Sie müssen FreeCAD und <a href="/bolts/en/docs/0.3/document/freecad/installation.html">FreeCAD für BOLTS installiert haben</a>.</p>
+<p>Diese Anleitung setzt voraus, dass die blt Datei für dieses Teil bereits erstellt ist, und Sie eine
+fcstd Datei mit dem Teil haben, dass sie zu BOLTS hinzufügen wollen.</p>
+<p>Wir tun dies am Beispiel eines Strangpressprofils.</p>
+<h3>Überprüfe die fcstd-Datei in FreeCAD</h3>
+<p>Lade das Teil in FreeCAD und prüfe, ob es visuell in Ordnung ist.</p>
+<p>Wenn das Teil parametrisch sein soll, dann versuche die Parameter anzupassen↵
+die BOLTS definieren kann. Für die Aluminiumstrangproile ist es nur die↵
+Länge, die der Länge des Rechtecks in der Datei entspricht. Selektiere das↵
+Rechteck in der Combo Ansicht,dann das Register Daten und ändere den Wert für die↵
+Länge. Das Teil sollte jetzt seine Länge verändern, aber immer noch wie erwartet aussehen. Mache↵
+dies für alle Parameter, überprüfe auch etwaige Kombinationen.</p>
+<p><a href="/bolts/de/docs/static/0.3/fcstd-base1.png"><img alt="Visuelles überprüfen des Teils" src="/bolts/de/docs/static/0.3/fcstd-base1.png" /></a></p>
+<h3>Find out feature and property names</h3>
+<p>Für gewöhnlich hat ein Teil mehrere Eigenschaft. Wir benötigen eine Lösung BOLTS mitzuteilen welche Eigenschaft es benutzen soll. Wenn das Teil parametrisch ist, müssen wir auch mitteilen wie die Eigenschaften den Parametern zugeordnet werden.</p>
+<p>Features in FreeCAD have a unique name in a document, but this name is not
+always identical to the label that is displayed in the combo view, so be
+careful. BOLTS offers a convenient way to find out the names of all features in
+the document. Enter the following lines into the python console of FreeCAD:</p>
+<pre><code>import BOLTS
+BOLTS.list_names(FreeCAD.ActiveDocument)
+</code></pre>
+<p>The first line imports and starts BOLTS, the second line calls a function from
+BOLTS that gives out a list of all features with their label and the
+corresponding object names.</p>
+<p><a href="/bolts/de/docs/static/0.3/fcstd-base2.png"><img alt="Featurenamen finden" src="/bolts/de/docs/static/0.3/fcstd-base2.png" /></a></p>
+<p>We need to remember the name of the root feature, that BOLTS is supposed to
+insert, and the names of all features that provide parametric behaviour and the
+corresponding names of the properties.</p>
+<p>For the T slot extrusion, the root feature has the label <code>Fillet</code>, and the name
+<code>Fillet</code>, the length of the extrusion can be changed with the <code>Height</code> property
+of the <code>Box</code> (both name and label).</p>
+<h3>Copy the fcstd file to the correct directory</h3>
+<p>The fcstd file goes to the subdirectory of the collection in the freecad
+directory of the repository.</p>
+<h3>Write the base file</h3>
+<p>The base file provides BOLTS with all the informations it needs to know about
+the files in a collection directory.</p>
+<p>For the aluminum extrusion it looks like this:</p>
+<pre><code>---
+- filename: tslot-20x20-2S.fcstd
+  author: Johannes Reinhardt &lt;jreinhardt@ist-dein-freund.de&gt;
+  license: CC0 &lt;http://creativecommons.org/publicdomain/zero/1.0/&gt;
+  type: fcstd
+  objects:
+   - objectname: Fillet
+     classids: [tslot20x20-2s]
+     proptoparam:
+       Fillet : {Label : name}
+       Box: {Height : l}
+  source: created from scratch, dimensions from http://www13.boschrexroth-us.com/partstream/Load_Category.aspx?Category=20mm%20Series&amp;menu=1,1,1
+...
+</code></pre>
+<p>The hyphens and dots on the first and the last line indicate the begin and end
+of the metadata (a base file is a <a href="http://yaml.org/">YAML file</a>. Between those
+two markers follows a list of base file elements, one for each file. The begin
+of a new element is indicated by a hyphen. If there are more than one file in
+the collection directory, there would be more elements, but here it is only
+one.</p>
+<p>Each element contains various fields with information about the file, e.g. the
+filename or name and email address of the author, here in lines 2 and 3.</p>
+<p>Because the part will form a combined work with the rest of the design, and we
+do not want to force the users of BOLTS to put their work under a certain
+license, BOLTS requires that the author waives all rights for this part, by
+releasing it in the Public Domain, preferably by the use of the <a href="http://creativecommons.org/publicdomain/zero/1.0/">CC0
+License</a>.  This is done in
+the fourth line.</p>
+<p>In the fifth line the type of file is indicated, in this case it is a fcstd
+file. Then follows a list of objects. It is in principle possible, to have
+several different parts in one fcstd file. Each element describes one object.</p>
+<p>The objectname field gives the name of the root feature for this object. We
+learned this name in the second step of this tutorial. For the extrusion this
+is <code>Fillet</code>.</p>
+<p>The classids field gives a list of classids (as given in the blt file of this
+collection), for which this object is used. In our example it is only a single
+classid.</p>
+<p>The proptoparam field gives the mapping between the parameters as specified in
+the blt file of the collection, and the feature names and properties that we
+found out in the second step of this tutorial. The <code>Label</code> property of the
+feature with name <code>Fillet</code> (the root feature) should be set to the name of the
+part and the <code>Height</code> property of the feature <code>Box</code> should be set to the length
+<code>l</code>.</p>
+<p>A parameter might appear more than once if more than one feature needs to be
+adjusted.</p>
+<p>The optional source field allows to give informations about the origin of the
+file. So if there is a URL from which this file was downloaded, this can be
+included here.</p>
+<p>When working on base files, pay attention to whitespace and identation and do
+not use tabs.</p>
+<h3>Test it</h3>
+<p>Sie sollten nun das neu hinzugefügte Teil testen. Dies geht am einfachsten in der Kommandozeile mit</p>
+<pre><code>./bolts.py export freecad
+./bolts.py test freecad
+</code></pre>
+<p>in the repo directory. This will fire up a FreeCAD instance with the module
+search path set appropriately, so that typing</p>
+<pre><code>import BOLTS
+</code></pre>
+<p>on the FreeCAD python console should do the trick.</p>
+<p>If BOLTS is started successfully, try adding the newly added part to the
+current document with different combinations of parameters.</p>
+<p><a href="/bolts/de/docs/static/0.3/fcstd-base3.png"><img alt="Testen des Ergebnisses" src="/bolts/de/docs/static/0.3/fcstd-base3.png" /></a></p>
+<h3>Nächste Schritte</h3>
+<p>You might want to <a href="/bolts/en/docs/0.3/document/general/development.html">contribute</a> this part to
+BOLTS, so that every user can profit from your efforts.</p>
+      <h2>Kommentare</h2>
+      <div id="comments"></div>
+    </div>
+  </div>
+</div>
+
+  
+  <hr>
+  <footer id="footer">
+    <p>© Johannes Reinhardt, Titelbild von <a href="https://www.flickr.com/photos/dkpphotography/9468970843">Dhruv Patel</a>, Design basierend auf einem <a href="https://github.com/Wolfr/cactus-jekyll-theme">Entwurf</a> von <a href="http://wolfslittlestore.be">Wolf's Little Store</a></p>
+  </footer>
+  
+</div>
+
+<script type="text/javascript" class="juvia">
+(function() {
+    var options = {
+        container    : '#comments',
+        site_key     : 'i2tzqcns7cm0alygsdvh9fhyfe2g0u1',
+        topic_key    : location.pathname,
+        topic_url    : location.href,
+        topic_title  : document.title || location.href,
+        comment_order: 'latest-first'
+    };
+
+    function makeQueryString(options) {
+        var key, params = [];
+        for (key in options) {
+            params.push(
+                encodeURIComponent(key) +
+                '=' +
+                encodeURIComponent(options[key]));
+        }
+        return params.join('&');
+    }
+
+    function makeApiUrl(options) {
+        // Makes sure that each call generates a unique URL, otherwise
+        // the browser may not actually perform the request.
+        if (!('_juviaRequestCounter' in window)) {
+            window._juviaRequestCounter = 0;
+        }
+
+        var result =
+            '//j.stbuehler.de/api/show_topic.js' +
+            '?_c=' + window._juviaRequestCounter +
+            '&' + makeQueryString(options);
+        window._juviaRequestCounter++;
+        return result;
+    }
+
+    var s       = document.createElement('script');
+    s.async     = true;
+    s.type      = 'text/javascript';
+    s.className = 'juvia';
+    s.src       = makeApiUrl(options);
+    (document.getElementsByTagName('head')[0] ||
+     document.getElementsByTagName('body')[0]).appendChild(s);
+})();
+</script>
+
+
+<script src="/bolts/static/js/all.js?9bb454f9"></script>
+
+</body>
+</html>

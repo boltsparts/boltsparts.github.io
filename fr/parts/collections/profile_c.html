@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/bolts/static/favicon.ico" />
+  
+  <link rel="stylesheet" href="/bolts/static/css/style.css?019e02bb" type="text/css" media="screen">
+  
+  <title>Part list</title>
+</head>
+<body>
+
+   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Changer la navigation</span>
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/bolts/fr/index.html">Page principale</a></li>
+          <li><a href="/bolts/fr/blog/index.html">Blogue</a></li>
+          <li><a href="/bolts/fr/parts/index.html">Pièces</a></li>
+          <li><a href="/bolts/fr/docs/index.html">Documentation</a></li>
+          <li><a href="/bolts/fr/contribute.html">Contribuer</a></li>
+          <li><a href="/bolts/fr/downloads.html">Téléchargements</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">fr<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/bolts/en/parts/collections/profile_c.html">Anglais</a></li>
+              <li><a href="/bolts/de/parts/collections/profile_c.html">Allemand</a></li>
+              <li><a href="/bolts/fr/parts/collections/profile_c.html">Français</a></li>
+              <li><a href="/bolts/es/parts/collections/profile_c.html">Espagnol</a></li>
+              <li><a href="/bolts/sv/parts/collections/profile_c.html">Suédois</a></li>
+            </ul>
+          </li>
+          <li><a class="github" href="https://github.com/jreinhardt/BOLTS">Github</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+
+
+<div class="page-title-bar">
+  <div class="container">
+    <h2>Parts list</h2>
+  </div>
+</div>
+
+<div class="container">
+  
+<h1>Profiles C</h1>
+<table class="table">
+<tr><th><strong>Auteur:</strong></th><td>Bernd Hahnebach</td></tr>
+<tr><th><strong>License:</strong></th><td><a href="http://www.gnu.org/licenses/lgpl-2.1">LGPL 2.1+</a></td></tr>
+<tr><th><strong>ID:</strong></th><td>profile_c</td></tr>
+</table>
+
+<h2>Description</h2>
+<p>Various hotrolled C profiles</p>
+<h2>Names</h2>
+<table class="table">
+  
+  <tr><td><a href="/bolts/fr/parts/names/UAEProfile.html">Profilé UAE</a></td><td>Profilé UAP, profilé poutre en C métrique européen</td></tr>
+  
+  <tr><td><a href="/bolts/fr/parts/names/UPEProfile.html">UPE Profile</a></td><td>UPE profile, metric european standard c-beam profile</td></tr>
+  
+</table>
+<h2>Standards</h2>
+<table class="table">
+  
+  <tr><td><a href="/bolts/fr/parts/standards/NFA45_255.html">NFA45-255</a></td><td>Profilé UAP, profilé poutre en C métrique européen</td></tr>
+  
+  <tr><td><a href="/bolts/fr/parts/standards/DIN1026_2.html">DIN 1026-2</a></td><td>UPE profile, metric european standard c-beam profile</td></tr>
+  
+</table>
+
+<h2>Comments</h2>
+<div id="comments"></div>
+
+  
+  <hr>
+  <footer id="footer">
+    <p>© Johannes Reinhardt, Image de titre par <a href="https://www.flickr.com/photos/dkpphotography/9468970843">Dhruv Patel</a>, thème basé sur un <a href="https://github.com/Wolfr/cactus-jekyll-theme">design</a> par <a href="http://wolfslittlestore.be">Wolf's Little Store</a></p>
+  </footer>
+  
+</div>
+
+<script type="text/javascript" class="juvia">
+(function() {
+    var options = {
+        container    : '#comments',
+        site_key     : 'i2tzqcns7cm0alygsdvh9fhyfe2g0u1',
+        topic_key    : location.pathname,
+        topic_url    : location.href,
+        topic_title  : document.title || location.href,
+        comment_order: 'latest-first'
+    };
+
+    function makeQueryString(options) {
+        var key, params = [];
+        for (key in options) {
+            params.push(
+                encodeURIComponent(key) +
+                '=' +
+                encodeURIComponent(options[key]));
+        }
+        return params.join('&');
+    }
+
+    function makeApiUrl(options) {
+        // Makes sure that each call generates a unique URL, otherwise
+        // the browser may not actually perform the request.
+        if (!('_juviaRequestCounter' in window)) {
+            window._juviaRequestCounter = 0;
+        }
+
+        var result =
+            '//j.stbuehler.de/api/show_topic.js' +
+            '?_c=' + window._juviaRequestCounter +
+            '&' + makeQueryString(options);
+        window._juviaRequestCounter++;
+        return result;
+    }
+
+    var s       = document.createElement('script');
+    s.async     = true;
+    s.type      = 'text/javascript';
+    s.className = 'juvia';
+    s.src       = makeApiUrl(options);
+    (document.getElementsByTagName('head')[0] ||
+     document.getElementsByTagName('body')[0]).appendChild(s);
+})();
+</script>
+
+
+<script src="/bolts/static/js/all.js?9bb454f9"></script>
+
+</body>
+</html>

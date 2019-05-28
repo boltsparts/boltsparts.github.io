@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/bolts/static/favicon.ico" />
+  
+  <link rel="stylesheet" href="/bolts/static/css/style.css?019e02bb" type="text/css" media="screen">
+  
+  <title>Documentation</title>
+</head>
+<body>
+
+   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Navigationsmenü ausklappen</span>
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/bolts/de/index.html">Home</a></li>
+          <li><a href="/bolts/de/blog/index.html">Blog</a></li>
+          <li><a href="/bolts/de/parts/index.html">Teile</a></li>
+          <li><a href="/bolts/de/docs/index.html">Dokumentation</a></li>
+          <li><a href="/bolts/de/contribute.html">Mitmachen</a></li>
+          <li><a href="/bolts/de/downloads.html">Downloads</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">de<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/bolts/en/docs/0.3/document/freecad/basefunction.html">Englisch</a></li>
+              <li><a href="/bolts/de/docs/0.3/document/freecad/basefunction.html">Deutsch</a></li>
+              <li><a href="/bolts/fr/docs/0.3/document/freecad/basefunction.html">Französisch</a></li>
+              <li><a href="/bolts/es/docs/0.3/document/freecad/basefunction.html">Spanisch</a></li>
+              <li><a href="/bolts/sv/docs/0.3/document/freecad/basefunction.html">Schwedisch</a></li>
+            </ul>
+          </li>
+          <li><a class="github" href="https://github.com/jreinhardt/BOLTS">Github</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+
+
+  <div class="page-title-bar">
+    <div class="container">
+      
+      <h2>Documentation for BOLTS 0.3 (current stable version)</h2>
+      <a class="active" href="/bolts/de/docs/0.3/index.html">stable</a>
+      <a href="/bolts/de/docs/0.4/index.html">dev</a>
+      
+    </div>
+  </div>
+
+<div class="container">
+  
+<div class="row">
+  <div class="col-sm-8 doc-main">
+    <div class="doc-page">
+      <h2 class="doc-page-title">Erstellen einer Basis-Funktion</a></h2>
+      <p>Sie müssen FreeCAD und <a href="/bolts/en/docs/0.3/document/freecad/installation.html">FreeCAD für BOLTS installiert haben</a>.</p>
+<p>This assumes that the <a href="/bolts/en/docs/0.3/document/general/blt-files.html">blt file</a>  for this part
+is already created, and you have a python function that creates the part that
+you want to add to BOLTS. For more information on part scripting in FreeCAD see
+the <a href="http://freecadweb.org/wiki/index.php?title=Power_users_hub">FreeCAD documentation on this topic</a>.</p>
+<h3>Die Funktion</h3>
+<p>Als Beispiel nutzen wir die folgenden Funktion um einen Unterlegscheibe zu erstellen:</p>
+<pre><code>import Part
+
+def washer1(params,document):
+    key = params['key']
+    d1 = params['d1']
+    d2 = params['d2']
+    s = params['s']
+    name = params['name']
+
+    part = document.addObject("Part::Feature",name)
+    outer = Part.makeCylinder(d2,s)
+    inner = Part.makeCylinder(d1,s)
+    part.Shape = outer.cut(inner).removeSplitter()
+</code></pre>
+<p>This function uses the CSG facilities of FreeCAD, but it is equally possible to
+use BRep scripting.</p>
+<p>It is necessary to write the function such that it is a function of two
+parameters, a dict of parameter names and values, and a FreeCAD document. The
+keys of this dict will be the names of the parameters of the part, as described
+in the blt file. There is an additional parameter <code>name</code> that holds the name of
+the part.</p>
+<p>In the first part of the function, we are assigning local variables with the
+parameter values as a shortcut. In the second part of the function, we add a
+new object to the document, create the geometry and assign it to the part.
+<code>removeSplitter</code> cleans up artifacts resulting from CSG operation under certain
+circumstances.</p>
+<h3>Put it to the right place</h3>
+<p>This function should reside in a file (in this case called <code>washer.py</code>) with
+extension <code>.py</code> in a subdirectory of the freecad directory which is named after
+the collection to which the part belongs (in this case <code>washer</code>). This
+directory must contain a empty file called <code>__init__.py</code> and the base file for
+this collection (in this case <code>washer.base</code>).</p>
+<h3>Write the base file</h3>
+<p>The base file provides BOLTS with all the informations it needs to know about
+the files in a collection directory, it is a kind of manifest file. It contains
+a list of sections (more precisely 
+<a href="/bolts/de/docs/0.3/specification.html#base-file-element">base file elements</a>)
+, each describing one file:</p>
+<pre><code>---
+- filename: washer.py
+  author: Johannes Reinhardt &lt;jreinhardt@ist-dein-freund.de&gt;
+  license: LGPL 2.1+ &lt;http://www.gnu.org/licenses/lgpl-2.1&gt;
+  type: function
+  functions:
+    - name: washer1
+      classids: [plainwasher1, plainwasher2, plainwasherforcheesehead, heavydutyplainwasher]
+...
+</code></pre>
+<p>The hyphens and dots on the first and the last line indicate the begin and
+end of the metadata (a base file is a <a href="http://yaml.org/">YAML file</a>. Between
+those two markers follows a list of base file elements, one for each file.
+The begin of a new element is indicated by a hyphen. If there are more than
+one file in the collection directory, there would be more elements, but here
+it is only one.</p>
+<p>The base file element gives informations about the file like the filename,
+the author and the license under which it is published.</p>
+<p>The line <code>type: function</code> indicates that it contains python functions for
+FreeCAD. As a file can contain more than one function, a list of elements
+follows, that describe the individual functions. In our case there is only
+one, called washer1.</p>
+<p>There is the possibility to add an optional <code>source</code> field which allows to give
+informations about the origin of the file. If there is a URL from which this
+file was downloaded, this can be included here.</p>
+<p>The <code>classids</code> field contains a list of classids to which this function
+applies.  BOLTS contains four different classes that describe washers, so in
+this case this list is rather long, but in other cases it might only contain
+a single entry. Be careful, that the parameter names for all classes in this
+list must be the same, otherwise the parameter dict contains unexpected
+entries or names can not be found.</p>
+<p>When working on base files, pay attention to whitespace and identation and do
+not use tabs.</p>
+<h3>Testing</h3>
+<p>Sie sollten nun das neu hinzugefügte Teil testen. Dies geht am einfachsten in der Kommandozeile mit</p>
+<pre><code>./bolts.py export freecad
+./bolts.py test freecad
+</code></pre>
+<p>in the repo directory. This will fire up a FreeCAD instance with the module
+search path set appropriately, so that typing</p>
+<pre><code>import BOLTS
+</code></pre>
+<p>on the FreeCAD python console should do the trick.</p>
+<p>If BOLTS is started successfully, try adding the newly added part to the
+current document with different combinations of parameters.</p>
+<p>If nothing happens when you try to add the file, there is probably an error
+occuring during the execution of the function. Such errors are suppressed by
+the gui system, so that no error messages are displayed. You can circumvent
+this by activating the <code>Add part</code> button manually. To do this type</p>
+<pre><code>BOLTS.widget.ui.addButton.clicked.emit(True)
+</code></pre>
+<p>in the FreeCAD python console. This should display exceptions if they occur and
+also the output from <code>print</code> statements.</p>
+<p>When fixing a bug, you have to close FreeCAD, and repeat this step from the
+beginning. This is a rather tedious development cycle, so taking care when
+writing the function pays off in this case.</p>
+<h3>Nächste Schritte</h3>
+<p>You might want to <a href="/bolts/en/docs/0.3/document/general/development.html">contribute</a> this part to
+BOLTS, so that every user can profit from your efforts.</p>
+      <h2>Kommentare</h2>
+      <div id="comments"></div>
+    </div>
+  </div>
+</div>
+
+  
+  <hr>
+  <footer id="footer">
+    <p>© Johannes Reinhardt, Titelbild von <a href="https://www.flickr.com/photos/dkpphotography/9468970843">Dhruv Patel</a>, Design basierend auf einem <a href="https://github.com/Wolfr/cactus-jekyll-theme">Entwurf</a> von <a href="http://wolfslittlestore.be">Wolf's Little Store</a></p>
+  </footer>
+  
+</div>
+
+<script type="text/javascript" class="juvia">
+(function() {
+    var options = {
+        container    : '#comments',
+        site_key     : 'i2tzqcns7cm0alygsdvh9fhyfe2g0u1',
+        topic_key    : location.pathname,
+        topic_url    : location.href,
+        topic_title  : document.title || location.href,
+        comment_order: 'latest-first'
+    };
+
+    function makeQueryString(options) {
+        var key, params = [];
+        for (key in options) {
+            params.push(
+                encodeURIComponent(key) +
+                '=' +
+                encodeURIComponent(options[key]));
+        }
+        return params.join('&');
+    }
+
+    function makeApiUrl(options) {
+        // Makes sure that each call generates a unique URL, otherwise
+        // the browser may not actually perform the request.
+        if (!('_juviaRequestCounter' in window)) {
+            window._juviaRequestCounter = 0;
+        }
+
+        var result =
+            '//j.stbuehler.de/api/show_topic.js' +
+            '?_c=' + window._juviaRequestCounter +
+            '&' + makeQueryString(options);
+        window._juviaRequestCounter++;
+        return result;
+    }
+
+    var s       = document.createElement('script');
+    s.async     = true;
+    s.type      = 'text/javascript';
+    s.className = 'juvia';
+    s.src       = makeApiUrl(options);
+    (document.getElementsByTagName('head')[0] ||
+     document.getElementsByTagName('body')[0]).appendChild(s);
+})();
+</script>
+
+
+<script src="/bolts/static/js/all.js?9bb454f9"></script>
+
+</body>
+</html>

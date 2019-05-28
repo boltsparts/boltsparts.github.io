@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/bolts/static/favicon.ico" />
+  
+  <link rel="stylesheet" href="/bolts/static/css/style.css?019e02bb" type="text/css" media="screen">
+  
+  <title>Blog</title>
+</head>
+<body>
+
+   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/bolts/es/index.html">Home</a></li>
+          <li><a href="/bolts/es/blog/index.html">Blog</a></li>
+          <li><a href="/bolts/es/parts/index.html">Parts</a></li>
+          <li><a href="/bolts/es/docs/index.html">Documentation</a></li>
+          <li><a href="/bolts/es/contribute.html">Contribute</a></li>
+          <li><a href="/bolts/es/downloads.html">Downloads</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">es<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/bolts/en/blog/2013/11/11/Python-2.6.html">English</a></li>
+              <li><a href="/bolts/de/blog/2013/11/11/Python-2.6.html">German</a></li>
+              <li><a href="/bolts/fr/blog/2013/11/11/Python-2.6.html">French</a></li>
+              <li><a href="/bolts/es/blog/2013/11/11/Python-2.6.html">Spanish</a></li>
+              <li><a href="/bolts/sv/blog/2013/11/11/Python-2.6.html">Swedish</a></li>
+            </ul>
+          </li>
+          <li><a class="github" href="https://github.com/jreinhardt/BOLTS">Github</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+
+
+<div class="page-title-bar">
+  <div class="container">
+    <h2>Blog</h2>
+  </div>
+</div>
+
+<div class="container">
+  
+<div class="row">
+  <div class="col-sm-8 blog-main">
+    <div class="blog-post">
+      <h2 class="blog-post-title"><a href="/bolts/es/blog/2013/11/11/Python-2.6.html">Python 2.6 compatibility</a></h2>
+      <p class="blog-post-meta">Posted on 11 nov. 2013 0:00:00 by Johannes</p>
+      <p>With the help of FreeCAD user KeithSloan I was able to track down all
+instances of <a href="https://github.com/jreinhardt/BOLTS/issues/60">python 2.7 specific</a>
+syntax and standard libraries, so that the current development snapshot of
+BOLTS for FreeCAD is usable with python 2.6.</p>
+
+<!-- more -->
+
+<p>Problems were caused by dict comprehensions</p>
+
+<pre><code>a = { k:[] for k in range(10) }
+</code></pre>
+
+<p>that were only introduced in python 2.7. A 2.6 compatible reformulation of this is</p>
+
+<pre><code>a = dict((k,[]) for k in range(10))
+</code></pre>
+
+<p>Additionally the importlib was introduced to the standard library only in
+python 2.7, but there exists a
+<a href="https://pypi.python.org/pypi/importlib/1.0.2">backport</a> for older versions.</p>
+
+<p>The last problem was related to <code>check_output</code> from the <code>subprocess</code> module, which is not present in the python 2.6 standard library.</p>
+
+<p>This allows users with python 2.6 (which is still used a lot e.g. in Ubuntu LTS
+releases) to <a href="/bolts/en/docs/0.3/document/freecad/usage.html">use BOLTS</a> for FreeCAD. However for
+development, the scripts that generate the distributions and the <a href="/bolts/en/docs/0.3/document/general/utility-script.html">utility
+script</a> use 2.7 features and
+it would be a lot of work to make these 2.6 compatible, so I do not plan to do
+that.</p>
+
+<p>Instead it might be a good idea to look into python 3 compatibility in the long
+term.</p>
+      <h2>Comments</h2>
+      <div id="comments"></div>
+    </div>
+  </div>
+</div>
+
+  
+  <hr>
+  <footer id="footer">
+    <p>© Johannes Reinhardt, title image by <a href="https://www.flickr.com/photos/dkpphotography/9468970843">Dhruv Patel</a>, theme based on a <a href="https://github.com/Wolfr/cactus-jekyll-theme">design</a> by <a href="http://wolfslittlestore.be">Wolf's Little Store</a></p>
+  </footer>
+  
+</div>
+
+<script type="text/javascript" class="juvia">
+(function() {
+    var options = {
+        container    : '#comments',
+        site_key     : 'i2tzqcns7cm0alygsdvh9fhyfe2g0u1',
+        topic_key    : location.pathname,
+        topic_url    : location.href,
+        topic_title  : document.title || location.href,
+        comment_order: 'latest-first'
+    };
+
+    function makeQueryString(options) {
+        var key, params = [];
+        for (key in options) {
+            params.push(
+                encodeURIComponent(key) +
+                '=' +
+                encodeURIComponent(options[key]));
+        }
+        return params.join('&');
+    }
+
+    function makeApiUrl(options) {
+        // Makes sure that each call generates a unique URL, otherwise
+        // the browser may not actually perform the request.
+        if (!('_juviaRequestCounter' in window)) {
+            window._juviaRequestCounter = 0;
+        }
+
+        var result =
+            '//j.stbuehler.de/api/show_topic.js' +
+            '?_c=' + window._juviaRequestCounter +
+            '&' + makeQueryString(options);
+        window._juviaRequestCounter++;
+        return result;
+    }
+
+    var s       = document.createElement('script');
+    s.async     = true;
+    s.type      = 'text/javascript';
+    s.className = 'juvia';
+    s.src       = makeApiUrl(options);
+    (document.getElementsByTagName('head')[0] ||
+     document.getElementsByTagName('body')[0]).appendChild(s);
+})();
+</script>
+
+
+<script src="/bolts/static/js/all.js?9bb454f9"></script>
+
+</body>
+</html>

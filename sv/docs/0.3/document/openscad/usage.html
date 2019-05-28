@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/bolts/static/favicon.ico" />
+  
+  <link rel="stylesheet" href="/bolts/static/css/style.css?019e02bb" type="text/css" media="screen">
+  
+  <title>Documentation</title>
+</head>
+<body>
+
+   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/bolts/sv/index.html">Home</a></li>
+          <li><a href="/bolts/sv/blog/index.html">Blog</a></li>
+          <li><a href="/bolts/sv/parts/index.html">Parts</a></li>
+          <li><a href="/bolts/sv/docs/index.html">Documentation</a></li>
+          <li><a href="/bolts/sv/contribute.html">Contribute</a></li>
+          <li><a href="/bolts/sv/downloads.html">Downloads</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">sv<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/bolts/en/docs/0.3/document/openscad/usage.html">English</a></li>
+              <li><a href="/bolts/de/docs/0.3/document/openscad/usage.html">German</a></li>
+              <li><a href="/bolts/fr/docs/0.3/document/openscad/usage.html">French</a></li>
+              <li><a href="/bolts/es/docs/0.3/document/openscad/usage.html">Spanish</a></li>
+              <li><a href="/bolts/sv/docs/0.3/document/openscad/usage.html">Swedish</a></li>
+            </ul>
+          </li>
+          <li><a class="github" href="https://github.com/jreinhardt/BOLTS">Github</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+
+
+  <div class="page-title-bar">
+    <div class="container">
+      
+      <h2>Documentation for BOLTS 0.3 (current stable version)</h2>
+      <a class="active" href="/bolts/sv/docs/0.3/index.html">stable</a>
+      <a href="/bolts/sv/docs/0.4/index.html">dev</a>
+      
+    </div>
+  </div>
+
+<div class="container">
+  
+<div class="row">
+  <div class="col-sm-8 doc-main">
+    <div class="doc-page">
+      <h2 class="doc-page-title">How to use BOLTS for OpenSCAD</a></h2>
+      <p>You need to have <a href="/bolts/en/docs/0.3/document/openscad/installation.html">installed BOLTS for OpenSCAD</a>.</p>
+<h3>Inserting parts</h3>
+<p>Using parts from BOLTS works exactly like
+<a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Modules">using modules</a>
+that you defined yourself in your scad file.</p>
+<p>The most difficult part is to find the right module. Modules are named after
+the standard that specifies the dimensions of a part. If a part is not
+standardized, the module has a descriptive name.</p>
+<p>It might seem a bit awkward to refer to a simple bolt as <a href="/bolts/en/parts/standards/DIN931.html">DIN931</a>
+or <a href="/bolts/en/parts/standards/ISO4014.html">ISO4014</a>, but by using this naming scheme, the part is
+uniquely specified, and this information is useful when assembling a bill of
+materials or shopping for all required parts for a design.</p>
+<p>But most people do not know the standard numbers for the parts that they want
+to use. For this reason BOLTS offers on its webpage a
+<a href="/bolts/en/parts/index.html?version=0.3">browsable overview</a>
+over all parts that it provides. There one can browse through the different
+collections and check out which standards of a standardization body are
+available in BOLTS.</p>
+<p>Each part has a dedicated page, where one can find more detailed informations
+about this part, a drawing and tables with dimensions. The information that is
+most interesting for our purposes can be found in the section OpenSCAD. There
+it says either that the part is not available for OpenSCAD (in which case you
+might consider <a href="/bolts/en/contribute.html?version=0.3">to help making it available</a>),
+or gives details how to use it.</p>
+<p>The hexagon bolt <a href="/bolts/en/parts/standards/ISO4014.html">ISO4014</a> is available, and in the subsection
+<code>Incantations</code> the first tells us how to insert it in our scad code. The module
+name is <code>ISO4014</code>, it takes two parameters, a key (default value "M3"), and the
+length l (default value 20).  The meaning of the parameters can be checked in
+the drawing and the tables on he page.</p>
+<p>So to insert a M3x20 hexagon bolt into our design, we just write</p>
+<pre><code>ISO4014();
+</code></pre>
+<p>for an M8x40, we use</p>
+<pre><code>ISO4014("M8",40);
+</code></pre>
+<p>and so on.</p>
+<h3>Using dimensions</h3>
+<p>You probably need to translate and rotate the bolt in your design to have it
+exactly where you want it. For that it is useful to know the dimensions of the
+part. One could look them up in the tables and insert the numbers in the scad
+file by hand, but BOLTS offers a more flexible way: On can obtain a list of all
+parameters of the part using the second line listes in the <code>Incantation</code>
+section of the part page.</p>
+<p>For example for a M4 washer according to <a href="/bolts/en/parts/standards/DIN125A.html">DIN125A</a>:</p>
+<pre><code>dims = DIN125A_dims("M4");
+</code></pre>
+<p>dims is now a list of lists with the content</p>
+<pre><code> [["s", 0.8], ["d2", 9], ["key", "M4"], ["d1", 4.3]]
+</code></pre>
+<p>A specific dimension (like the inner diameter) can now either be accessed using
+list indices</p>
+<pre><code>echo(dims[3][0]);
+</code></pre>
+<p>or by using a convenience function provided by BOLTS</p>
+<pre><code>echo(get_dim(dims,"d1"));
+</code></pre>
+<p>If you need only a single parameter, it is even shorter to avoid the dims variable and write</p>
+<pre><code>echo(get_dim(DIN125A_dims("M4"),"d1"));
+</code></pre>
+<p>By using dimensions this way, your code avoids magic numbers and becomes more
+readable and can be modified easily.</p>
+<h3>Using connectors</h3>
+<p>To make the positioning of BOLTS part easier, BOLTS includes
+<a href="https://github.com/jreinhardt/local-scad">local.scad</a>, an improved version of
+the <a href="http://www.thingiverse.com/thing:30136">attach library</a>.</p>
+<p>Instead of having complicated nested <code>translate</code> and <code>rotate</code> calls, this
+library allows to specify the position and orientation of a portion of a design
+using so called connectors. A connector is a data type that contains
+informations about both position and orientation.</p>
+<p>A connector is created with the <code>new_cs</code> function, which takes two arguments: a
+vector with three values specifying the origin of the connector and a list of
+two vectors specifying one main and one additional direction.</p>
+<p>Connectors are actually like local coordinate systems with a origin and three
+axes, but the third direction does not need to be specified, but is calculated
+from the other two direction.</p>
+<p>Connectors can be displayed using the <code>show_cs</code> module, which takes a connector
+as argument. The resulting object has a size of one unit, so it might be
+difficult to spot in big designs.</p>
+<p>Positioning is done with the <code>align</code> module, which takes two connectors as
+arguments. It then translates and rotates the child of the module such that the
+first connector is aligned with the second connector. Optionally, a
+displacement in the connector coordinate system can be specified.</p>
+<p>Many parts in BOLTS already have connectors connectors defined, to check what a
+specific part provides, check the part page in the
+<a href="/bolts/en/parts/index.html?version=0.3">online reference</a>. For parts with connectors
+a function is available with the same name as the part, but with a <code>_conn</code>
+appended. This function takes the name of the connector as first argument and
+the same arguments as the part as further arguments and returns the connector.</p>
+<p>The general workflow is to create a connector which specifies where the BOLTS
+part should end up in your design. Then a connector of the BOLTS part is
+chosen, depending on what point of the part should end up there. Finally the
+align module is used to position the part.</p>
+<p>This structure is illustrated again by the following example:</p>
+<h3>Example: Bolted connection</h3>
+<pre><code>include &lt;BOLTS.scad&gt;
+
+$fn=50;
+
+% cube([10,40,50]);
+
+//target connector
+cube_cs = new_cs(origin = [10,20,20], axes = [[-1,0,0],[0,-1,0]]);
+
+//BOLTS part connectors
+washer_cs = ISO7089_conn("top","M4");
+bolt_cs = ISO4017_conn("root","M4",20);
+nut_cs = ISO4035_conn("bottom","M4");
+
+//connectors can be displayed with
+//show_cs(cube_cs);
+
+//thickness of washer
+s = get_dim(ISO7089_dims("M4"),"s");
+
+//position washer and bolt at the location specified by cube_cs
+align(washer_cs,cube_cs) ISO7089("M4");
+align(bolt_cs,cube_cs,[-s,0,0]) ISO4017("M4",20);
+align(washer_cs,cube_cs,[10+s,0,0]) ISO7089("M4");
+align(nut_cs,cube_cs,[10+s,0,0]) ISO4035("M4");
+</code></pre>
+<p>This results in</p>
+<p><a href="/bolts/sv/docs/static/0.3/openscad-positioningexample.png"><img alt="Bolted connection example" src="/bolts/sv/docs/static/0.3/openscad-positioningexample.png" /></a></p>
+<h3>Check for errors</h3>
+<p>The modules provided by BOLTS perform a number of sanity checks. If there is a
+problem, it will output a warning on the console, so you should check that
+after compiling.</p>
+<p>For example, if you mix up the parameters</p>
+<pre><code>ISO4014(40,"M8");
+</code></pre>
+<p>BOLTS will tell you</p>
+<pre><code>Error: Expected a Table Index as parameter key for ISO4014, but 40 is not a string
+Error: Expected a Length (mm) as parameter l for ISO4014, but M8 is not numerical
+TableLookUpError in ISO4014, table 0
+</code></pre>
+<p>Or if you accidentally give a negative length</p>
+<pre><code>ISO4014("M8",-40);
+</code></pre>
+<p>BOLTS will tell you</p>
+<pre><code>Error: Expected a Length (mm) as parameter l for ISO4014, but -40 is negative
+</code></pre>
+<p>Or if you use a standard, that is not used anymore (like <a href="/bolts/en/parts/standards/DIN931.html">DIN931</a>):</p>
+<pre><code>DIN931("M4",20);
+</code></pre>
+<p>BOLTS will inform you that</p>
+<pre><code>Warning: The standard DIN931 is withdrawn. Although withdrawn standards are often still in use, it might be better to use its successor DINEN24014 instead
+</code></pre>
+<h3>Checking for the version</h3>
+<p>BOLTS provides version information to allow a scad file to complain when a
+unsuitable version of BOLTS is used. This is especially important for scad
+files that are published on the internet. Version information comes in two
+flavours: the number of the release, and a date.</p>
+<p>The number of the release can be accessed by calling the function</p>
+<pre><code>BOLTS_version()
+</code></pre>
+<p>For a stable release it returns a list with the major and minor version as
+integers. For a development release the string "development" is returned.</p>
+<p>The date can be accessed using the function</p>
+<pre><code>BOLTS_date()
+</code></pre>
+<p>and is returned as a list with three integers for the year, the month and the
+day at which the distribution was exported.</p>
+<p>The final ingredient to uniquely identify the version of BOLTS is the license.
+Distributions conforming to different licenses can differ in the selection of
+parts offered. To query the license of the distribution one can use the function</p>
+<pre><code>BOLTS_license()
+</code></pre>
+<p>which returns a string with the license.</p>
+      <h2>Comments</h2>
+      <div id="comments"></div>
+    </div>
+  </div>
+</div>
+
+  
+  <hr>
+  <footer id="footer">
+    <p>© Johannes Reinhardt, title image by <a href="https://www.flickr.com/photos/dkpphotography/9468970843">Dhruv Patel</a>, theme based on a <a href="https://github.com/Wolfr/cactus-jekyll-theme">design</a> by <a href="http://wolfslittlestore.be">Wolf's Little Store</a></p>
+  </footer>
+  
+</div>
+
+<script type="text/javascript" class="juvia">
+(function() {
+    var options = {
+        container    : '#comments',
+        site_key     : 'i2tzqcns7cm0alygsdvh9fhyfe2g0u1',
+        topic_key    : location.pathname,
+        topic_url    : location.href,
+        topic_title  : document.title || location.href,
+        comment_order: 'latest-first'
+    };
+
+    function makeQueryString(options) {
+        var key, params = [];
+        for (key in options) {
+            params.push(
+                encodeURIComponent(key) +
+                '=' +
+                encodeURIComponent(options[key]));
+        }
+        return params.join('&');
+    }
+
+    function makeApiUrl(options) {
+        // Makes sure that each call generates a unique URL, otherwise
+        // the browser may not actually perform the request.
+        if (!('_juviaRequestCounter' in window)) {
+            window._juviaRequestCounter = 0;
+        }
+
+        var result =
+            '//j.stbuehler.de/api/show_topic.js' +
+            '?_c=' + window._juviaRequestCounter +
+            '&' + makeQueryString(options);
+        window._juviaRequestCounter++;
+        return result;
+    }
+
+    var s       = document.createElement('script');
+    s.async     = true;
+    s.type      = 'text/javascript';
+    s.className = 'juvia';
+    s.src       = makeApiUrl(options);
+    (document.getElementsByTagName('head')[0] ||
+     document.getElementsByTagName('body')[0]).appendChild(s);
+})();
+</script>
+
+
+<script src="/bolts/static/js/all.js?9bb454f9"></script>
+
+</body>
+</html>
