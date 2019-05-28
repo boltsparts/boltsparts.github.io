@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="/bolts/static/favicon.ico" />
+  <link rel="shortcut icon" href="/static/favicon.ico" />
   
-  <link rel="stylesheet" href="/bolts/static/css/style.css?019e02bb" type="text/css" media="screen">
+  <link rel="stylesheet" href="/static/css/style.css?019e02bb" type="text/css" media="screen">
   
   <title>Blog</title>
 </head>
@@ -22,22 +22,22 @@
       </div>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li><a href="/bolts/en/index.html">Home</a></li>
-          <li><a href="/bolts/en/blog/index.html">Blog</a></li>
-          <li><a href="/bolts/en/parts/index.html">Parts</a></li>
-          <li><a href="/bolts/en/docs/index.html">Documentation</a></li>
-          <li><a href="/bolts/en/contribute.html">Contribute</a></li>
-          <li><a href="/bolts/en/downloads.html">Downloads</a></li>
+          <li><a href="/en/index.html">Home</a></li>
+          <li><a href="/en/blog/index.html">Blog</a></li>
+          <li><a href="/en/parts/index.html">Parts</a></li>
+          <li><a href="/en/docs/index.html">Documentation</a></li>
+          <li><a href="/en/contribute.html">Contribute</a></li>
+          <li><a href="/en/downloads.html">Downloads</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">en<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="/bolts/en/blog/2014/2/2/News-Digest.html">English</a></li>
-              <li><a href="/bolts/de/blog/2014/2/2/News-Digest.html">German</a></li>
-              <li><a href="/bolts/fr/blog/2014/2/2/News-Digest.html">French</a></li>
-              <li><a href="/bolts/es/blog/2014/2/2/News-Digest.html">Spanish</a></li>
-              <li><a href="/bolts/sv/blog/2014/2/2/News-Digest.html">Swedish</a></li>
+              <li><a href="/en/blog/2014/2/2/News-Digest.html">English</a></li>
+              <li><a href="/de/blog/2014/2/2/News-Digest.html">German</a></li>
+              <li><a href="/fr/blog/2014/2/2/News-Digest.html">French</a></li>
+              <li><a href="/es/blog/2014/2/2/News-Digest.html">Spanish</a></li>
+              <li><a href="/sv/blog/2014/2/2/News-Digest.html">Swedish</a></li>
             </ul>
           </li>
           <li><a class="github" href="https://github.com/jreinhardt/BOLTS">Github</a></li>
@@ -59,7 +59,7 @@
 <div class="row">
   <div class="col-sm-8 blog-main">
     <div class="blog-post">
-      <h2 class="blog-post-title"><a href="/bolts/en/blog/2014/2/2/News-Digest.html">News Digest</a></h2>
+      <h2 class="blog-post-title"><a href="/en/blog/2014/2/2/News-Digest.html">News Digest</a></h2>
       <p class="blog-post-meta">Posted on Feb 2, 2014, 11:15:00 PM by Johannes</p>
       <p>Since the last post a bunch of fixes, additions and smaller improvements happened.</p>
 
@@ -73,18 +73,18 @@ them with short explanations:</p>
 <ul>
 <li>I reintegrated bolttools in the BOLTS git repo. This avoids submodules and all the problems and confusions they cause.</li>
 <li>Types for parameters in blt files files are now mandatory. I got bitten too often by strange errors that were caused by forgotten types. blt files get a bit more verbose by that, though.</li>
-<li><a href="/bolts/en/blog/2013/12/28/OpenSCAD-positioning.html">OpenSCAD connectors</a> are now documented on the specification pages, see for example <a href="/bolts/en/parts/standards/ISO4017.html">here</a>. For every connector a picture is shown that shows the position and orientation of the connector with respect to the part. I also created a bit of infrastructure to semi-automate the creation of these pictures.</li>
+<li><a href="/en/blog/2013/12/28/OpenSCAD-positioning.html">OpenSCAD connectors</a> are now documented on the specification pages, see for example <a href="/en/parts/standards/ISO4017.html">here</a>. For every connector a picture is shown that shows the position and orientation of the connector with respect to the part. I also created a bit of infrastructure to semi-automate the creation of these pictures.</li>
 </ul>
 
-<p><a href="/bolts/en/blog/static/openscad-connectors-documentation.png"><img alt="Connector position documentation" src="/bolts/en/blog/static/openscad-connectors-documentation.png" /></a></p>
+<p><a href="/en/blog/static/openscad-connectors-documentation.png"><img alt="Connector position documentation" src="/en/blog/static/openscad-connectors-documentation.png" /></a></p>
 
 <ul>
-<li>Fabrizio Pollastri started a collection for <a href="/bolts/en/parts/collections/connecting_bars.html">connecting bars</a>. He also uncovered a problem with FreeCAD drawings module, so drawings are still missing for this collection.</li>
-<li>Some users had problems connected with the <a href="/bolts/en/blog/2014/1/13/PySide-and-Tables.html">PySide Migration</a>, that I could not reproduce. In the <a href="http://forum.freecadweb.org/viewtopic.php?f=8&amp;t=4549">development thread</a> on the FreeCAD forum, arcol found the solution. One needs to have the pyside-tools package installed, otherwise BOLTS would fail with a cryptic error message. Now the error message should be more informative.</li>
+<li>Fabrizio Pollastri started a collection for <a href="/en/parts/collections/connecting_bars.html">connecting bars</a>. He also uncovered a problem with FreeCAD drawings module, so drawings are still missing for this collection.</li>
+<li>Some users had problems connected with the <a href="/en/blog/2014/1/13/PySide-and-Tables.html">PySide Migration</a>, that I could not reproduce. In the <a href="http://forum.freecadweb.org/viewtopic.php?f=8&amp;t=4549">development thread</a> on the FreeCAD forum, arcol found the solution. One needs to have the pyside-tools package installed, otherwise BOLTS would fail with a cryptic error message. Now the error message should be more informative.</li>
 <li>In the same thread the idea of coloring faces of parts to indicate threads was discussed, and I implemented it</li>
 </ul>
 
-<p><a href="/bolts/en/blog/static/freecad-color-threads.png"><img alt="Color coded threads" src="/bolts/en/blog/static/freecad-color-threads.png" /></a></p>
+<p><a href="/en/blog/static/freecad-color-threads.png"><img alt="Color coded threads" src="/en/blog/static/freecad-color-threads.png" /></a></p>
 
 <ul>
 <li>I added a new parameter type for angles specified in degrees. This allows to have more checks and better output for the online documentation. I also refactored the code that is responsible for that and simplified it a lot.</li>
@@ -92,7 +92,7 @@ them with short explanations:</p>
 <li>The Python functions that create the parts for FreeCAD can now throw ValueErrors to indicate invalid parameter combinations. The user is presented with a ErrorDialog with details about the problem.</li>
 </ul>
 
-<p>All these improvements are available in the most current <a href="/bolts/en/downloads.html?version=0.3">development snapshot</a>.</p>
+<p>All these improvements are available in the most current <a href="/en/downloads.html?version=0.3">development snapshot</a>.</p>
       <h2>Comments</h2>
       <div id="comments"></div>
     </div>
@@ -155,7 +155,7 @@ them with short explanations:</p>
 </script>
 
 
-<script src="/bolts/static/js/all.js?9bb454f9"></script>
+<script src="/static/js/all.js?9bb454f9"></script>
 
 </body>
 </html>

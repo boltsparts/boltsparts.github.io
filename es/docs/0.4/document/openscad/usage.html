@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="/bolts/static/favicon.ico" />
+  <link rel="shortcut icon" href="/static/favicon.ico" />
   
-  <link rel="stylesheet" href="/bolts/static/css/style.css?019e02bb" type="text/css" media="screen">
+  <link rel="stylesheet" href="/static/css/style.css?019e02bb" type="text/css" media="screen">
   
   <title>Documentation</title>
 </head>
@@ -22,22 +22,22 @@
       </div>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li><a href="/bolts/es/index.html">Home</a></li>
-          <li><a href="/bolts/es/blog/index.html">Blog</a></li>
-          <li><a href="/bolts/es/parts/index.html">Parts</a></li>
-          <li><a href="/bolts/es/docs/index.html">Documentation</a></li>
-          <li><a href="/bolts/es/contribute.html">Contribute</a></li>
-          <li><a href="/bolts/es/downloads.html">Downloads</a></li>
+          <li><a href="/es/index.html">Home</a></li>
+          <li><a href="/es/blog/index.html">Blog</a></li>
+          <li><a href="/es/parts/index.html">Parts</a></li>
+          <li><a href="/es/docs/index.html">Documentation</a></li>
+          <li><a href="/es/contribute.html">Contribute</a></li>
+          <li><a href="/es/downloads.html">Downloads</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">es<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="/bolts/en/docs/0.4/document/openscad/usage.html">English</a></li>
-              <li><a href="/bolts/de/docs/0.4/document/openscad/usage.html">German</a></li>
-              <li><a href="/bolts/fr/docs/0.4/document/openscad/usage.html">French</a></li>
-              <li><a href="/bolts/es/docs/0.4/document/openscad/usage.html">Spanish</a></li>
-              <li><a href="/bolts/sv/docs/0.4/document/openscad/usage.html">Swedish</a></li>
+              <li><a href="/en/docs/0.4/document/openscad/usage.html">English</a></li>
+              <li><a href="/de/docs/0.4/document/openscad/usage.html">German</a></li>
+              <li><a href="/fr/docs/0.4/document/openscad/usage.html">French</a></li>
+              <li><a href="/es/docs/0.4/document/openscad/usage.html">Spanish</a></li>
+              <li><a href="/sv/docs/0.4/document/openscad/usage.html">Swedish</a></li>
             </ul>
           </li>
           <li><a class="github" href="https://github.com/jreinhardt/BOLTS">Github</a></li>
@@ -52,8 +52,8 @@
     <div class="container">
       
       <h2>Documentation for BOLTS 0.4 (development version)</h2>
-      <a href="/bolts/es/docs/0.3/index.html">stable</a>
-      <a class="active" href="/bolts/es/docs/0.4/index.html">dev</a>
+      <a href="/es/docs/0.3/index.html">stable</a>
+      <a class="active" href="/es/docs/0.4/index.html">dev</a>
       
     </div>
   </div>
@@ -64,7 +64,7 @@
   <div class="col-sm-8 doc-main">
     <div class="doc-page">
       <h2 class="doc-page-title">How to use BOLTS for OpenSCAD</a></h2>
-      <p>You need to have <a href="/bolts/en/docs/0.4/document/openscad/installation.html">installed BOLTS for OpenSCAD</a>.</p>
+      <p>You need to have <a href="/en/docs/0.4/document/openscad/installation.html">installed BOLTS for OpenSCAD</a>.</p>
 <h3>Inserting parts</h3>
 <p>Using parts from BOLTS works exactly like
 <a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Modules">using modules</a>
@@ -72,13 +72,13 @@ that you defined yourself in your scad file.</p>
 <p>The most difficult part is to find the right module. Modules are named after
 the standard that specifies the dimensions of a part. If a part is not
 standardized, the module has a descriptive name.</p>
-<p>It might seem a bit awkward to refer to a simple bolt as <a href="/bolts/en/parts/standards/DIN931.html">DIN931</a>
-or <a href="/bolts/en/parts/standards/ISO4014.html">ISO4014</a>, but by using this naming scheme, the part is
+<p>It might seem a bit awkward to refer to a simple bolt as <a href="/en/parts/standards/DIN931.html">DIN931</a>
+or <a href="/en/parts/standards/ISO4014.html">ISO4014</a>, but by using this naming scheme, the part is
 uniquely specified, and this information is useful when assembling a bill of
 materials or shopping for all required parts for a design.</p>
 <p>But most people do not know the standard numbers for the parts that they want
 to use. For this reason BOLTS offers on its webpage a
-<a href="/bolts/en/parts/index.html?version=0.4">browsable overview</a>
+<a href="/en/parts/index.html?version=0.4">browsable overview</a>
 over all parts that it provides. There one can browse through the different
 collections and check out which standards of a standardization body are
 available in BOLTS.</p>
@@ -86,9 +86,9 @@ available in BOLTS.</p>
 about this part, a drawing and tables with dimensions. The information that is
 most interesting for our purposes can be found in the section OpenSCAD. There
 it says either that the part is not available for OpenSCAD (in which case you
-might consider <a href="/bolts/en/contribute.html?version=0.4">to help making it available</a>),
+might consider <a href="/en/contribute.html?version=0.4">to help making it available</a>),
 or gives details how to use it.</p>
-<p>The hexagon bolt <a href="/bolts/en/parts/standards/ISO4014.html">ISO4014</a> is available, and in the subsection
+<p>The hexagon bolt <a href="/en/parts/standards/ISO4014.html">ISO4014</a> is available, and in the subsection
 <code>Incantations</code> the first tells us how to insert it in our scad code. The module
 name is <code>ISO4014</code>, it takes two parameters, a key (default value "M3"), and the
 length l (default value 20).  The meaning of the parameters can be checked in
@@ -107,7 +107,7 @@ part. One could look them up in the tables and insert the numbers in the scad
 file by hand, but BOLTS offers a more flexible way: On can obtain a list of all
 parameters of the part using the second line listes in the <code>Incantation</code>
 section of the part page.</p>
-<p>For example for a M4 washer according to <a href="/bolts/en/parts/standards/DIN125A.html">DIN125A</a>:</p>
+<p>For example for a M4 washer according to <a href="/en/parts/standards/DIN125A.html">DIN125A</a>:</p>
 <pre><code>dims = DIN125A_dims("M4");
 </code></pre>
 <p>dims is now a list of lists with the content</p>
@@ -148,7 +148,7 @@ first connector is aligned with the second connector. Optionally, a
 displacement in the connector coordinate system can be specified.</p>
 <p>Many parts in BOLTS already have connectors connectors defined, to check what a
 specific part provides, check the part page in the
-<a href="/bolts/en/parts/index.html?version=0.4">online reference</a>. For parts with connectors
+<a href="/en/parts/index.html?version=0.4">online reference</a>. For parts with connectors
 a function is available with the same name as the part, but with a <code>_conn</code>
 appended. This function takes the name of the connector as first argument and
 the same arguments as the part as further arguments and returns the connector.</p>
@@ -185,7 +185,7 @@ align(washer_cs,cube_cs,[10+s,0,0]) ISO7089("M4");
 align(nut_cs,cube_cs,[10+s,0,0]) ISO4035("M4");
 </code></pre>
 <p>This results in</p>
-<p><a href="/bolts/es/docs/static/0.4/openscad-positioningexample.png"><img alt="Bolted connection example" src="/bolts/es/docs/static/0.4/openscad-positioningexample.png" /></a></p>
+<p><a href="/es/docs/static/0.4/openscad-positioningexample.png"><img alt="Bolted connection example" src="/es/docs/static/0.4/openscad-positioningexample.png" /></a></p>
 <h3>Check for errors</h3>
 <p>The modules provided by BOLTS perform a number of sanity checks. If there is a
 problem, it will output a warning on the console, so you should check that
@@ -204,7 +204,7 @@ TableLookUpError in ISO4014, table 0
 <p>BOLTS will tell you</p>
 <pre><code>Error: Expected a Length (mm) as parameter l for ISO4014, but -40 is negative
 </code></pre>
-<p>Or if you use a standard, that is not used anymore (like <a href="/bolts/en/parts/standards/DIN931.html">DIN931</a>):</p>
+<p>Or if you use a standard, that is not used anymore (like <a href="/en/parts/standards/DIN931.html">DIN931</a>):</p>
 <pre><code>DIN931("M4",20);
 </code></pre>
 <p>BOLTS will inform you that</p>
@@ -293,7 +293,7 @@ parts offered. To query the license of the distribution one can use the function
 </script>
 
 
-<script src="/bolts/static/js/all.js?9bb454f9"></script>
+<script src="/static/js/all.js?9bb454f9"></script>
 
 </body>
 </html>

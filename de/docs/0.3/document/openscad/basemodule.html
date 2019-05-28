@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="/bolts/static/favicon.ico" />
+  <link rel="shortcut icon" href="/static/favicon.ico" />
   
-  <link rel="stylesheet" href="/bolts/static/css/style.css?019e02bb" type="text/css" media="screen">
+  <link rel="stylesheet" href="/static/css/style.css?019e02bb" type="text/css" media="screen">
   
   <title>Documentation</title>
 </head>
@@ -22,22 +22,22 @@
       </div>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li><a href="/bolts/de/index.html">Home</a></li>
-          <li><a href="/bolts/de/blog/index.html">Blog</a></li>
-          <li><a href="/bolts/de/parts/index.html">Teile</a></li>
-          <li><a href="/bolts/de/docs/index.html">Dokumentation</a></li>
-          <li><a href="/bolts/de/contribute.html">Mitmachen</a></li>
-          <li><a href="/bolts/de/downloads.html">Downloads</a></li>
+          <li><a href="/de/index.html">Home</a></li>
+          <li><a href="/de/blog/index.html">Blog</a></li>
+          <li><a href="/de/parts/index.html">Teile</a></li>
+          <li><a href="/de/docs/index.html">Dokumentation</a></li>
+          <li><a href="/de/contribute.html">Mitmachen</a></li>
+          <li><a href="/de/downloads.html">Downloads</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">de<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="/bolts/en/docs/0.3/document/openscad/basemodule.html">Englisch</a></li>
-              <li><a href="/bolts/de/docs/0.3/document/openscad/basemodule.html">Deutsch</a></li>
-              <li><a href="/bolts/fr/docs/0.3/document/openscad/basemodule.html">Französisch</a></li>
-              <li><a href="/bolts/es/docs/0.3/document/openscad/basemodule.html">Spanisch</a></li>
-              <li><a href="/bolts/sv/docs/0.3/document/openscad/basemodule.html">Schwedisch</a></li>
+              <li><a href="/en/docs/0.3/document/openscad/basemodule.html">Englisch</a></li>
+              <li><a href="/de/docs/0.3/document/openscad/basemodule.html">Deutsch</a></li>
+              <li><a href="/fr/docs/0.3/document/openscad/basemodule.html">Französisch</a></li>
+              <li><a href="/es/docs/0.3/document/openscad/basemodule.html">Spanisch</a></li>
+              <li><a href="/sv/docs/0.3/document/openscad/basemodule.html">Schwedisch</a></li>
             </ul>
           </li>
           <li><a class="github" href="https://github.com/jreinhardt/BOLTS">Github</a></li>
@@ -52,8 +52,8 @@
     <div class="container">
       
       <h2>Documentation for BOLTS 0.3 (current stable version)</h2>
-      <a class="active" href="/bolts/de/docs/0.3/index.html">stable</a>
-      <a href="/bolts/de/docs/0.4/index.html">dev</a>
+      <a class="active" href="/de/docs/0.3/index.html">stable</a>
+      <a href="/de/docs/0.4/index.html">dev</a>
       
     </div>
   </div>
@@ -65,7 +65,7 @@
     <div class="doc-page">
       <h2 class="doc-page-title">How to create a base module</a></h2>
       <p>This tutorial shows you the preferred way to make a class from a
-<a href="/bolts/en/docs/0.3/document/general/blt-files.html">collection</a> available in OpenSCAD.</p>
+<a href="/en/docs/0.3/document/general/blt-files.html">collection</a> available in OpenSCAD.</p>
 <p>This assumes that you have already a module available that takes a number of
 parameters as input and builds the part that the class describes.</p>
 <p>If not you have two options. Either you learn
@@ -82,7 +82,7 @@ yourself.</p>
 </ul>
 <p>However, to use code written by someone else, you need to make sure that there
 are no licensing problems. I wrote about licensing in BOLTS
-<a href="/bolts/en/docs/0.3/document/general/licensing.html">here</a>. If the code has no licensing
+<a href="/en/docs/0.3/document/general/licensing.html">here</a>. If the code has no licensing
 information or is published under a incompatible license, you can try to
 contact the author and ask him to dual-license with a license that allows
 inclusion in BOLTS.</p>
@@ -124,7 +124,7 @@ this directory does not exist, create it.</p>
 The base file provides BOLTS with all the informations it needs to know about
 the files in a collection directory, it is a kind of manifest file. It
 contains a list of sections 
-(more precisely <a href="/bolts/de/docs/0.3/specification.html#base-file-element">base file elements</a>),
+(more precisely <a href="/de/docs/0.3/specification.html#base-file-element">base file elements</a>),
 each describing one file.</p>
 <p>For the pipes collection the base file is <code>openscad/pipes/pipes.base</code> and has
 the following content:</p>
@@ -147,7 +147,7 @@ then follows the list of modules that are contained in the file.</p>
 <p>In the case of <code>pipe.scad</code> there is only one module called <code>pipe</code>. The
 arguments field gives the parameters that need to be supplied to the module.
 The parameters must be a subset of the parameters of the class as it is
-defined in the <a href="/bolts/en/docs/0.3/document/general/blt-files.html">blt file</a>.</p>
+defined in the <a href="/en/docs/0.3/document/general/blt-files.html">blt file</a>.</p>
 <p>The <code>classids</code> field contains a list of classids which this module can
 represent. Be careful, that the parameter names and meanings for all classes
 in this list must be the same, otherwise the some parameters can not be found
@@ -158,7 +158,7 @@ file was downloaded, this can be included here.</p>
 <h3>Testing</h3>
 <p>Now it should be tested that the newly added part really works. This is most
 conveniently done using the 
-<a href="/bolts/en/docs/0.3/document/general/utility-script.html">utility script</a>:</p>
+<a href="/en/docs/0.3/document/general/utility-script.html">utility script</a>:</p>
 <pre><code>./bolts.py export openscad
 ./bolts.py test openscad
 </code></pre>
@@ -170,7 +170,7 @@ DIN11850_Range_2("10",1000);
 </code></pre>
 <p>should give you a pipe with nominal diameter 10 and 1m length.</p>
 <h3>Adding connectors</h3>
-<p><a href="/bolts/en/docs/0.3/document/openscad/usage.html">Connectors</a>
+<p><a href="/en/docs/0.3/document/openscad/usage.html">Connectors</a>
 simplify the positioning of parts in OpenSCAD, but require a bit of
 preparation. Three things need to be added: A function for the connectors
 and a entry in the base file and drawings for the documentation.</p>
@@ -214,7 +214,7 @@ infos:</p>
 ...
 </code></pre>
 <p>This is a good time to test again. You can use the utility script like shown
-<a href="/bolts/en/docs/0.3/document/openscad/basemodule.html">earlier</a>. Make sure all
+<a href="/en/docs/0.3/document/openscad/basemodule.html">earlier</a>. Make sure all
 connectors are where they should be and that this remains the case when you use
 a range of parameters.</p>
 <p>The final thing to do is create drawings for the connectors to visually show
@@ -230,7 +230,7 @@ to do is to load these scripts into OpenSCAD, find a good angle and export a
 png using <code>Design-&gt;export as image...</code>. Make sure that it is easy to understand
 from the picture where the connector is located on the part, and how it is
 oriented.The images go into the <code>pipes</code> subdirectory of the <code>drawings</code> folder.</p>
-<p><a href="/bolts/de/docs/static/0.3/openscad-connectordrawings.png"><img alt="Finding a good angle" src="/bolts/de/docs/static/0.3/openscad-connectordrawings.png" /></a></p>
+<p><a href="/de/docs/static/0.3/openscad-connectordrawings.png"><img alt="Finding a good angle" src="/de/docs/static/0.3/openscad-connectordrawings.png" /></a></p>
 <p>The final step is to add entries to the base file in this folder to tell BOLTS
 about all the drawings. Here is an example how it looks for the <code>front-in</code>
 connector:</p>
@@ -250,7 +250,7 @@ this makes things easier. <code>type</code> must be <code>drawing-connector</cod
 <p>and make sure that the classes you have been working on are not listed anymore
 with <code>Missing Connectors</code> and <code>Missing Drawings</code>.</p>
 <h3>Next steps</h3>
-<p>You might want to <a href="/bolts/en/docs/0.3/document/general/development.html">contribute</a> this
+<p>You might want to <a href="/en/docs/0.3/document/general/development.html">contribute</a> this
 part to BOLTS, so that every user can profit from your efforts.</p>
       <h2>Kommentare</h2>
       <div id="comments"></div>
@@ -314,7 +314,7 @@ part to BOLTS, so that every user can profit from your efforts.</p>
 </script>
 
 
-<script src="/bolts/static/js/all.js?9bb454f9"></script>
+<script src="/static/js/all.js?9bb454f9"></script>
 
 </body>
 </html>

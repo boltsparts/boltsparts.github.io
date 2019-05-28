@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title type="text">Recent Blog Entries</title>
-  <id>https://ist-dein-freund.de/bolts/en/blog/atom.xml</id>
+  <id>https://boltsparts.github.io/en/blog/atom.xml</id>
   <updated>2019-05-17T14:00:00Z</updated>
-  <link href="https://ist-dein-freund.de/bolts/" />
-  <link href="https://ist-dein-freund.de/bolts/en/blog/atom.xml" rel="self" />
+  <link href="https://boltsparts.github.io/" />
+  <link href="https://boltsparts.github.io/en/blog/atom.xml" rel="self" />
   <generator>Werkzeug</generator>
-  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+  <entry xml:base="https://boltsparts.github.io/en/blog/atom.xml">
     <title type="text">BOLTS revival</title>
-    <id>https://ist-dein-freund.de/bolts/en/blog/2019/5/17/Revival.html</id>
+    <id>https://boltsparts.github.io/en/blog/2019/5/17/Revival.html</id>
     <updated>2019-05-17T14:00:00Z</updated>
     <published>2019-05-17T14:00:00Z</published>
-    <link href="https://ist-dein-freund.de/bolts/en/blog/2019/5/17/Revival.html" />
+    <link href="https://boltsparts.github.io/en/blog/2019/5/17/Revival.html" />
     <author>
       <name>Johannes</name>
     </author>
@@ -29,16 +29,16 @@
 &lt;/strong&gt; The file distribution for the releases now happens via &lt;a href=&quot;https://github.com/boltsparts/BOLTS/releases&quot;&gt;GitHub&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;</content>
   </entry>
-  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+  <entry xml:base="https://boltsparts.github.io/en/blog/atom.xml">
     <title type="text">Happy new year, miscellany</title>
-    <id>https://ist-dein-freund.de/bolts/en/blog/2016/1/3/Happy-New-Year-2016.html</id>
+    <id>https://boltsparts.github.io/en/blog/2016/1/3/Happy-New-Year-2016.html</id>
     <updated>2016-01-03T23:30:00Z</updated>
     <published>2016-01-03T23:30:00Z</published>
-    <link href="https://ist-dein-freund.de/bolts/en/blog/2016/1/3/Happy-New-Year-2016.html" />
+    <link href="https://boltsparts.github.io/en/blog/2016/1/3/Happy-New-Year-2016.html" />
     <author>
       <name>Johannes</name>
     </author>
-    <summary type="html"><p>I wish everybody a happy new year 2016. I wrote such a post <a href="/bolts/en/blog/2015/1/1/Happy-New-Year.html">last year</a> as well, and expressed my hope that 2015 would be a good year for BOLTS. However 2015 turned out to be a very slow year for BOLTS, as I did not have a lot of time and energy to spend on BOLTS. And I can not promise that this year will be better.</p>
+    <summary type="html"><p>I wish everybody a happy new year 2016. I wrote such a post <a href="/en/blog/2015/1/1/Happy-New-Year.html">last year</a> as well, and expressed my hope that 2015 would be a good year for BOLTS. However 2015 turned out to be a very slow year for BOLTS, as I did not have a lot of time and energy to spend on BOLTS. And I can not promise that this year will be better.</p>
 <p>However, other people did advance the project:</p></summary>
     <content type="html">&lt;p&gt;I wish everybody a happy new year 2016. I wrote such a post &lt;a href=&quot;{{ blog(2015/01/01/Happy-New-Year) }}&quot;&gt;last year&lt;/a&gt; as well, and expressed my hope that 2015 would be a good year for BOLTS. However 2015 turned out to be a very slow year for BOLTS, as I did not have a lot of time and energy to spend on BOLTS. And I can not promise that this year will be better.&lt;/p&gt;
 &lt;p&gt;However, other people did advance the project:&lt;/p&gt;
@@ -48,16 +48,16 @@
 &lt;p&gt;Packaged in &lt;a href=&quot;https://launchpad.net/~freecad-community/+archive/ubuntu/ppa&quot;&gt;FreeCAD community PPA&lt;/a&gt;, thanks abdullah from the FreeCAD Forums.&lt;/p&gt;
 &lt;p&gt;Nice &lt;a href=&quot;https://www.youtube.com/watch?v=FhEo7F3W9K0&quot;&gt;Video Tutorial&lt;/a&gt; by cad1919, which shows the use of BOLTS, the fasteners workbench and the assembly2 workbench for creating a quite complex assembly. BOLTS is used for the ball bearings, but not for the fasteners, as the fastener workbench seems to be much easier to use in this case. So there is something to learn for BOLTS.&lt;/p&gt;</content>
   </entry>
-  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+  <entry xml:base="https://boltsparts.github.io/en/blog/atom.xml">
     <title type="text">New development snapshots</title>
-    <id>https://ist-dein-freund.de/bolts/en/blog/2015/6/28/new-Snapshots.html</id>
+    <id>https://boltsparts.github.io/en/blog/2015/6/28/new-Snapshots.html</id>
     <updated>2015-06-28T13:00:00Z</updated>
     <published>2015-06-28T13:00:00Z</published>
-    <link href="https://ist-dein-freund.de/bolts/en/blog/2015/6/28/new-Snapshots.html" />
+    <link href="https://boltsparts.github.io/en/blog/2015/6/28/new-Snapshots.html" />
     <author>
       <name>Johannes</name>
     </author>
-    <summary type="html"><p>I put new development snapshots <a href="/bolts/en/downloads.html?version=0.3">online</a> for both
+    <summary type="html"><p>I put new development snapshots <a href="/en/downloads.html?version=0.3">online</a> for both
 OpenSCAD and FreeCAD. There is not much new functionality, but a few bugfixes
 that were contributed.</p></summary>
     <content type="html">&lt;p&gt;I put new development snapshots &lt;a href=&quot;{{ url(main.downloads) }}&quot;&gt;online&lt;/a&gt; for both
@@ -74,12 +74,12 @@ in &lt;a href=&quot;https://weblate.stbuehler.de/projects/BOLTS/&quot;&gt;weblat
 continuously  integrated. The translations are not yet used for the FreeCAD and
 OpenSCAD backends, but only show up on the website.&lt;/p&gt;</content>
   </entry>
-  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+  <entry xml:base="https://boltsparts.github.io/en/blog/atom.xml">
     <title type="text">Updates</title>
-    <id>https://ist-dein-freund.de/bolts/en/blog/2015/4/19/Updates.html</id>
+    <id>https://boltsparts.github.io/en/blog/2015/4/19/Updates.html</id>
     <updated>2015-04-19T16:00:00Z</updated>
     <published>2015-04-19T16:00:00Z</published>
-    <link href="https://ist-dein-freund.de/bolts/en/blog/2015/4/19/Updates.html" />
+    <link href="https://boltsparts.github.io/en/blog/2015/4/19/Updates.html" />
     <author>
       <name>Johannes</name>
     </author>
@@ -98,12 +98,12 @@ difficulties windows users have experienced when trying to install BOLTS on
 Windows.&lt;/p&gt;
 &lt;p&gt;And even though not much is happening on the development side of BOLTS, its popularity is rising steadily. The webpage has more than 1000 visitors every month and a few brave anonymous contributors continue to improve the state of &lt;a href=&quot;https://weblate.stbuehler.de/projects/BOLTS/&quot;&gt;the translations&lt;/a&gt; for part descriptions, webpage and documentation. Thanks a lot, whoever you are!&lt;/p&gt;</content>
   </entry>
-  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+  <entry xml:base="https://boltsparts.github.io/en/blog/atom.xml">
     <title type="text">Website fixed</title>
-    <id>https://ist-dein-freund.de/bolts/en/blog/2015/1/29/Website-fixed.html</id>
+    <id>https://boltsparts.github.io/en/blog/2015/1/29/Website-fixed.html</id>
     <updated>2015-01-29T11:00:00Z</updated>
     <published>2015-01-29T11:00:00Z</published>
-    <link href="https://ist-dein-freund.de/bolts/en/blog/2015/1/29/Website-fixed.html" />
+    <link href="https://boltsparts.github.io/en/blog/2015/1/29/Website-fixed.html" />
     <author>
       <name>Johannes</name>
     </author>
@@ -117,12 +117,12 @@ working anymore. I guess that this is a security fix, so I prefer that to break
 instead of being vulnerable. Changing the relative imports to import relative
 to the package seems to fix the problem.&lt;/p&gt;</content>
   </entry>
-  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+  <entry xml:base="https://boltsparts.github.io/en/blog/atom.xml">
     <title type="text">Happy new year, miscellany</title>
-    <id>https://ist-dein-freund.de/bolts/en/blog/2015/1/1/Happy-New-Year.html</id>
+    <id>https://boltsparts.github.io/en/blog/2015/1/1/Happy-New-Year.html</id>
     <updated>2015-01-01T23:30:00Z</updated>
     <published>2015-01-01T23:30:00Z</published>
-    <link href="https://ist-dein-freund.de/bolts/en/blog/2015/1/1/Happy-New-Year.html" />
+    <link href="https://boltsparts.github.io/en/blog/2015/1/1/Happy-New-Year.html" />
     <author>
       <name>Johannes</name>
     </author>
@@ -134,12 +134,12 @@ to the package seems to fix the problem.&lt;/p&gt;</content>
 &lt;p&gt;As someone asked me about more languages for &lt;a href=&quot;https://weblate.stbuehler.de/projects/BOLTS/&quot;&gt;translations&lt;/a&gt;, I tried to add swedish and noticed that I had forgotten how to do this. After I reconstructed that knowledge, I added a script that does that for me, so adding more languages is now easy. So if you want to help with translating BOLTS to another language, drop a comment.&lt;/p&gt;
 &lt;p&gt;As a bit of an outlook, I took on a redesign of the parameter handling code of BOLTS, and I believe I have figured out a very nice design that is much more powerful and flexible than the current code (which is in hindsight actually not so good). The new design will allow for an elegant solution to many new and old features.&lt;/p&gt;</content>
   </entry>
-  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+  <entry xml:base="https://boltsparts.github.io/en/blog/atom.xml">
     <title type="text">BOLTS Lightning Talk at 31C3</title>
-    <id>https://ist-dein-freund.de/bolts/en/blog/2014/12/18/31C3.html</id>
+    <id>https://boltsparts.github.io/en/blog/2014/12/18/31C3.html</id>
     <updated>2014-12-18T09:30:00Z</updated>
     <published>2014-12-18T09:30:00Z</published>
-    <link href="https://ist-dein-freund.de/bolts/en/blog/2014/12/18/31C3.html" />
+    <link href="https://boltsparts.github.io/en/blog/2014/12/18/31C3.html" />
     <author>
       <name>Johannes</name>
     </author>
@@ -160,12 +160,12 @@ and recorded.&lt;/p&gt;
 &lt;p&gt;If you are also there and interested in meeting up and discussing, just drop me
 a note.&lt;/p&gt;</content>
   </entry>
-  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+  <entry xml:base="https://boltsparts.github.io/en/blog/atom.xml">
     <title type="text">BOLTS for FreeCAD should work again tomorrow</title>
-    <id>https://ist-dein-freund.de/bolts/en/blog/2014/11/4/Bug-Fix.html</id>
+    <id>https://boltsparts.github.io/en/blog/2014/11/4/Bug-Fix.html</id>
     <updated>2014-11-04T16:15:00Z</updated>
     <published>2014-11-04T16:15:00Z</published>
-    <link href="https://ist-dein-freund.de/bolts/en/blog/2014/11/4/Bug-Fix.html" />
+    <link href="https://boltsparts.github.io/en/blog/2014/11/4/Bug-Fix.html" />
     <author>
       <name>Johannes</name>
     </author>
@@ -180,12 +180,12 @@ prevented BOLTS from working properly. It was fixed very quickly, so for those
 of you that use daily builds of FreeCAD, tomorrow everything should work again.
 Everyone else was not affected.&lt;/p&gt;</content>
   </entry>
-  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+  <entry xml:base="https://boltsparts.github.io/en/blog/atom.xml">
     <title type="text">New and better website for BOLTS</title>
-    <id>https://ist-dein-freund.de/bolts/en/blog/2014/9/10/New-Webpage.html</id>
+    <id>https://boltsparts.github.io/en/blog/2014/9/10/New-Webpage.html</id>
     <updated>2014-09-10T13:30:00Z</updated>
     <published>2014-09-10T13:30:00Z</published>
-    <link href="https://ist-dein-freund.de/bolts/en/blog/2014/9/10/New-Webpage.html" />
+    <link href="https://boltsparts.github.io/en/blog/2014/9/10/New-Webpage.html" />
     <author>
       <name>Johannes</name>
     </author>
@@ -306,12 +306,12 @@ more difficult to find the new website by googling.&lt;/p&gt;
 downtime. It is possible to avoid this, but this requires a few changes to the
 app, and I have not yet tackled that.&lt;/p&gt;</content>
   </entry>
-  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+  <entry xml:base="https://boltsparts.github.io/en/blog/atom.xml">
     <title type="text">FreeCAD 0.14 released</title>
-    <id>https://ist-dein-freund.de/bolts/en/blog/2014/7/1/FreeCAD-0-14.html</id>
+    <id>https://boltsparts.github.io/en/blog/2014/7/1/FreeCAD-0-14.html</id>
     <updated>2014-07-01T22:00:00Z</updated>
     <published>2014-07-01T22:00:00Z</published>
-    <link href="https://ist-dein-freund.de/bolts/en/blog/2014/7/1/FreeCAD-0-14.html" />
+    <link href="https://boltsparts.github.io/en/blog/2014/7/1/FreeCAD-0-14.html" />
     <author>
       <name>Johannes</name>
     </author>
@@ -332,12 +332,12 @@ details see the
 still working behind the scenes on a major rewrite of large portions of BOLTS,
 which will allow a lot of improvements. Stay tuned.&lt;/p&gt;</content>
   </entry>
-  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+  <entry xml:base="https://boltsparts.github.io/en/blog/atom.xml">
     <title type="text">BOLTS in Thing Tracker Network - Postscriptum</title>
-    <id>https://ist-dein-freund.de/bolts/en/blog/2014/6/12/Thingtracker-postscriptum.html</id>
+    <id>https://boltsparts.github.io/en/blog/2014/6/12/Thingtracker-postscriptum.html</id>
     <updated>2014-06-12T16:00:00Z</updated>
     <published>2014-06-12T16:00:00Z</published>
-    <link href="https://ist-dein-freund.de/bolts/en/blog/2014/6/12/Thingtracker-postscriptum.html" />
+    <link href="https://boltsparts.github.io/en/blog/2014/6/12/Thingtracker-postscriptum.html" />
     <author>
       <name>Johannes</name>
     </author>
@@ -351,12 +351,12 @@ which will allow a lot of improvements. Stay tuned.&lt;/p&gt;</content>
 &lt;li&gt;&lt;a href=&quot;https://johncarlosbaez.wordpress.com/2013/07/29/the-selected-papers-network-part-4/&quot;&gt;What needs to be done to prevent walled gardens&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content>
   </entry>
-  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+  <entry xml:base="https://boltsparts.github.io/en/blog/atom.xml">
     <title type="text">BOLTS in Thing Tracker Network</title>
-    <id>https://ist-dein-freund.de/bolts/en/blog/2014/6/4/Thingtracker-Network.html</id>
+    <id>https://boltsparts.github.io/en/blog/2014/6/4/Thingtracker-Network.html</id>
     <updated>2014-06-04T13:00:00Z</updated>
     <published>2014-06-04T13:00:00Z</published>
-    <link href="https://ist-dein-freund.de/bolts/en/blog/2014/6/4/Thingtracker-Network.html" />
+    <link href="https://boltsparts.github.io/en/blog/2014/6/4/Thingtracker-Network.html" />
     <author>
       <name>Johannes</name>
     </author>
@@ -392,19 +392,19 @@ the tracker.  The only way in which this is or might be useful is to raise
 awareness and activity for TTN and to help with the development of the TTN and
 of tools using it.&lt;/p&gt;</content>
   </entry>
-  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+  <entry xml:base="https://boltsparts.github.io/en/blog/atom.xml">
     <title type="text">BOLTS release 0.3</title>
-    <id>https://ist-dein-freund.de/bolts/en/blog/2014/4/24/BOLT-0_3-released.html</id>
+    <id>https://boltsparts.github.io/en/blog/2014/4/24/BOLT-0_3-released.html</id>
     <updated>2014-04-24T22:00:00Z</updated>
     <published>2014-04-24T22:00:00Z</published>
-    <link href="https://ist-dein-freund.de/bolts/en/blog/2014/4/24/BOLT-0_3-released.html" />
+    <link href="https://boltsparts.github.io/en/blog/2014/4/24/BOLT-0_3-released.html" />
     <author>
       <name>Johannes</name>
     </author>
-    <summary type="html"><p>I am happy to announce a new release for <a href="/bolts/en/index.html?version=0.3">BOLTS</a>,
+    <summary type="html"><p>I am happy to announce a new release for <a href="/en/index.html?version=0.3">BOLTS</a>,
 the Open Library of Technical Specifications. The distributions for
 <a href="http://www.openscad.org/">OpenSCAD</a>, <a href="http://freecadweb.org/">FreeCAD</a> and as
-a collection of IGES files can be found on the <a href="/bolts/en/downloads.html?version=0.3">Download
+a collection of IGES files can be found on the <a href="/en/downloads.html?version=0.3">Download
 page</a>.</p></summary>
     <content type="html">&lt;p&gt;I am happy to announce a new release for &lt;a href=&quot;{{ url(main.index) }}&quot;&gt;BOLTS&lt;/a&gt;,
 the Open Library of Technical Specifications. The distributions for
@@ -446,12 +446,12 @@ release, making BOLTS more useful and uncovering problems that have not yet
 been found.  This is something that you can help with, and I encourage you and
 try to support you with that as good as I can.&lt;/p&gt;</content>
   </entry>
-  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+  <entry xml:base="https://boltsparts.github.io/en/blog/atom.xml">
     <title type="text">Beaming happily</title>
-    <id>https://ist-dein-freund.de/bolts/en/blog/2014/4/23/Beaming.html</id>
+    <id>https://boltsparts.github.io/en/blog/2014/4/23/Beaming.html</id>
     <updated>2014-04-23T17:25:00Z</updated>
     <published>2014-04-23T17:25:00Z</published>
-    <link href="https://ist-dein-freund.de/bolts/en/blog/2014/4/23/Beaming.html" />
+    <link href="https://boltsparts.github.io/en/blog/2014/4/23/Beaming.html" />
     <author>
       <name>Johannes</name>
     </author>
@@ -488,12 +488,12 @@ from the &lt;a href=&quot;http://jreinhardt.github.io/BOLTS/index.html&quot;&gt;
 turn into a stable release unless problems are uncovered, so every bit of
 testing is appreciated.&lt;/p&gt;</content>
   </entry>
-  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+  <entry xml:base="https://boltsparts.github.io/en/blog/atom.xml">
     <title type="text">News Digest</title>
-    <id>https://ist-dein-freund.de/bolts/en/blog/2014/2/2/News-Digest.html</id>
+    <id>https://boltsparts.github.io/en/blog/2014/2/2/News-Digest.html</id>
     <updated>2014-02-02T23:15:00Z</updated>
     <published>2014-02-02T23:15:00Z</published>
-    <link href="https://ist-dein-freund.de/bolts/en/blog/2014/2/2/News-Digest.html" />
+    <link href="https://boltsparts.github.io/en/blog/2014/2/2/News-Digest.html" />
     <author>
       <name>Johannes</name>
     </author>
@@ -524,12 +524,12 @@ them with short explanations:&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;All these improvements are available in the most current &lt;a href=&quot;{{ url(main.downloads) }}&quot;&gt;development snapshot&lt;/a&gt;.&lt;/p&gt;</content>
   </entry>
-  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+  <entry xml:base="https://boltsparts.github.io/en/blog/atom.xml">
     <title type="text">PySide and 2D tables</title>
-    <id>https://ist-dein-freund.de/bolts/en/blog/2014/1/13/PySide-and-Tables.html</id>
+    <id>https://boltsparts.github.io/en/blog/2014/1/13/PySide-and-Tables.html</id>
     <updated>2014-01-13T17:25:00Z</updated>
     <published>2014-01-13T17:25:00Z</published>
-    <link href="https://ist-dein-freund.de/bolts/en/blog/2014/1/13/PySide-and-Tables.html" />
+    <link href="https://boltsparts.github.io/en/blog/2014/1/13/PySide-and-Tables.html" />
     <author>
       <name>Johannes</name>
     </author>
@@ -573,12 +573,12 @@ BOLTS.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;So stay tuned&lt;/p&gt;</content>
   </entry>
-  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+  <entry xml:base="https://boltsparts.github.io/en/blog/atom.xml">
     <title type="text">Parameter description</title>
-    <id>https://ist-dein-freund.de/bolts/en/blog/2014/1/8/Parameter-descriptions.html</id>
+    <id>https://boltsparts.github.io/en/blog/2014/1/8/Parameter-descriptions.html</id>
     <updated>2014-01-08T16:15:00Z</updated>
     <published>2014-01-08T16:15:00Z</published>
-    <link href="https://ist-dein-freund.de/bolts/en/blog/2014/1/8/Parameter-descriptions.html" />
+    <link href="https://boltsparts.github.io/en/blog/2014/1/8/Parameter-descriptions.html" />
     <author>
       <name>Johannes</name>
     </author>
@@ -635,12 +635,12 @@ widget for the free parameters:&lt;/p&gt;
 &lt;p&gt;This feature (along with a few more improvements and fixes) is available in the
 latest development snapshot from the &lt;a href=&quot;{{ url(main.downloads) }}&quot;&gt;download section&lt;/a&gt;.&lt;/p&gt;</content>
   </entry>
-  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+  <entry xml:base="https://boltsparts.github.io/en/blog/atom.xml">
     <title type="text">IGES Backend</title>
-    <id>https://ist-dein-freund.de/bolts/en/blog/2014/1/7/IGES-backend.html</id>
+    <id>https://boltsparts.github.io/en/blog/2014/1/7/IGES-backend.html</id>
     <updated>2014-01-07T12:30:00Z</updated>
     <published>2014-01-07T12:30:00Z</published>
-    <link href="https://ist-dein-freund.de/bolts/en/blog/2014/1/7/IGES-backend.html" />
+    <link href="https://boltsparts.github.io/en/blog/2014/1/7/IGES-backend.html" />
     <author>
       <name>Johannes</name>
     </author>
@@ -691,17 +691,17 @@ only in a 2 MByte tar.xz file.&lt;/p&gt;
 On most Linux distributions the common tools to work with compressed data can
 handle tar.xz, or at least packages are available for xz-tools.&lt;/p&gt;</content>
   </entry>
-  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+  <entry xml:base="https://boltsparts.github.io/en/blog/atom.xml">
     <title type="text">Improvements for BOLTS for OpenSCAD</title>
-    <id>https://ist-dein-freund.de/bolts/en/blog/2013/12/28/OpenSCAD-positioning.html</id>
+    <id>https://boltsparts.github.io/en/blog/2013/12/28/OpenSCAD-positioning.html</id>
     <updated>2013-12-27T23:15:00Z</updated>
     <published>2013-12-27T23:15:00Z</published>
-    <link href="https://ist-dein-freund.de/bolts/en/blog/2013/12/28/OpenSCAD-positioning.html" />
+    <link href="https://boltsparts.github.io/en/blog/2013/12/28/OpenSCAD-positioning.html" />
     <author>
       <name>Johannes</name>
     </author>
     <summary type="html"><p>I am looking for ways to make it easier to use parts from
-<a href="/bolts/en/index.html?version=0.3">BOLTS</a>) in OpenSCAD. At the moment it is a bit awkward
+<a href="/en/index.html?version=0.3">BOLTS</a>) in OpenSCAD. At the moment it is a bit awkward
 because one has to know precisely how the BOLTS part is positioned and oriented
 and then has to translate and rotate it around. This often requires the
 knowledge of some dimensions of the part, so one has to query BOLTS about it,
@@ -801,18 +801,18 @@ batteries do. The names of the connectors are listed in the OpenSCAD section of 
 &lt;p&gt;There is no documentation for this feature (apart from this blog post), because
 I might still change the way things work.&lt;/p&gt;</content>
   </entry>
-  <entry xml:base="https://ist-dein-freund.de/bolts/en/blog/atom.xml">
+  <entry xml:base="https://boltsparts.github.io/en/blog/atom.xml">
     <title type="text">BLT file progress</title>
-    <id>https://ist-dein-freund.de/bolts/en/blog/2013/11/29/BLT-file-progress.html</id>
+    <id>https://boltsparts.github.io/en/blog/2013/11/29/BLT-file-progress.html</id>
     <updated>2013-11-29T00:00:00Z</updated>
     <published>2013-11-29T00:00:00Z</published>
-    <link href="https://ist-dein-freund.de/bolts/en/blog/2013/11/29/BLT-file-progress.html" />
+    <link href="https://boltsparts.github.io/en/blog/2013/11/29/BLT-file-progress.html" />
     <author>
       <name>Johannes</name>
     </author>
-    <summary type="html"><p>This post should now appear on <a href="http://planet.arcol.hu/">Planet RepRap</a>, hi everybody reading this from there. This is the development blog for <a href="/bolts/en/index.html?version=0.3">BOLTS</a>. BOLTS tries to build an open standard parts library for a number of CAD applications.</p>
-<p>BOLTS is a rather young project, but is already useable with <a href="http://www.openscad.org/">OpenSCAD</a> and <a href="http://freecadweb.org/">FreeCAD</a>. Its youth is noticeable by the still relatively <a href="/bolts/en/parts/index.html?version=0.3">small number of parts</a>), though. It is not difficult to add more parts and <a href="/bolts/en/docs/0.3/index.html">well documented</a>, so if you are missing a part in BOLTS, or just think BOLTS is a good idea, <a href="/bolts/en/contribute.html?version=0.3">please help out with improving it</a>.</p>
-<p>If you want to try out BOLTS or learn more about it, you should head to its <a href="/bolts/en/index.html?version=0.3">webpage</a>.</p>
+    <summary type="html"><p>This post should now appear on <a href="http://planet.arcol.hu/">Planet RepRap</a>, hi everybody reading this from there. This is the development blog for <a href="/en/index.html?version=0.3">BOLTS</a>. BOLTS tries to build an open standard parts library for a number of CAD applications.</p>
+<p>BOLTS is a rather young project, but is already useable with <a href="http://www.openscad.org/">OpenSCAD</a> and <a href="http://freecadweb.org/">FreeCAD</a>. Its youth is noticeable by the still relatively <a href="/en/parts/index.html?version=0.3">small number of parts</a>), though. It is not difficult to add more parts and <a href="/en/docs/0.3/index.html">well documented</a>, so if you are missing a part in BOLTS, or just think BOLTS is a good idea, <a href="/en/contribute.html?version=0.3">please help out with improving it</a>.</p>
+<p>If you want to try out BOLTS or learn more about it, you should head to its <a href="/en/index.html?version=0.3">webpage</a>.</p>
 <p>The rest of this post reports on recent developments of one of the important components</p></summary>
     <content type="html">&lt;p&gt;This post should now appear on &lt;a href=&quot;http://planet.arcol.hu/&quot;&gt;Planet RepRap&lt;/a&gt;, hi everybody reading this from there. This is the development blog for &lt;a href=&quot;{{ url(main.index) }}&quot;&gt;BOLTS&lt;/a&gt;. BOLTS tries to build an open standard parts library for a number of CAD applications.&lt;/p&gt;
 &lt;p&gt;BOLTS is a rather young project, but is already useable with &lt;a href=&quot;http://www.openscad.org/&quot;&gt;OpenSCAD&lt;/a&gt; and &lt;a href=&quot;http://freecadweb.org/&quot;&gt;FreeCAD&lt;/a&gt;. Its youth is noticeable by the still relatively &lt;a href=&quot;{{ url(parts.index) }}&quot;&gt;small number of parts&lt;/a&gt;), though. It is not difficult to add more parts and &lt;a href=&quot;{{ url(docs.index) }}&quot;&gt;well documented&lt;/a&gt;, so if you are missing a part in BOLTS, or just think BOLTS is a good idea, &lt;a href=&quot;{{ url(main.contribute) }}&quot;&gt;please help out with improving it&lt;/a&gt;.&lt;/p&gt;

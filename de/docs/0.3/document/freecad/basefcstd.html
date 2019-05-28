@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="/bolts/static/favicon.ico" />
+  <link rel="shortcut icon" href="/static/favicon.ico" />
   
-  <link rel="stylesheet" href="/bolts/static/css/style.css?019e02bb" type="text/css" media="screen">
+  <link rel="stylesheet" href="/static/css/style.css?019e02bb" type="text/css" media="screen">
   
   <title>Documentation</title>
 </head>
@@ -22,22 +22,22 @@
       </div>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li><a href="/bolts/de/index.html">Home</a></li>
-          <li><a href="/bolts/de/blog/index.html">Blog</a></li>
-          <li><a href="/bolts/de/parts/index.html">Teile</a></li>
-          <li><a href="/bolts/de/docs/index.html">Dokumentation</a></li>
-          <li><a href="/bolts/de/contribute.html">Mitmachen</a></li>
-          <li><a href="/bolts/de/downloads.html">Downloads</a></li>
+          <li><a href="/de/index.html">Home</a></li>
+          <li><a href="/de/blog/index.html">Blog</a></li>
+          <li><a href="/de/parts/index.html">Teile</a></li>
+          <li><a href="/de/docs/index.html">Dokumentation</a></li>
+          <li><a href="/de/contribute.html">Mitmachen</a></li>
+          <li><a href="/de/downloads.html">Downloads</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">de<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="/bolts/en/docs/0.3/document/freecad/basefcstd.html">Englisch</a></li>
-              <li><a href="/bolts/de/docs/0.3/document/freecad/basefcstd.html">Deutsch</a></li>
-              <li><a href="/bolts/fr/docs/0.3/document/freecad/basefcstd.html">Französisch</a></li>
-              <li><a href="/bolts/es/docs/0.3/document/freecad/basefcstd.html">Spanisch</a></li>
-              <li><a href="/bolts/sv/docs/0.3/document/freecad/basefcstd.html">Schwedisch</a></li>
+              <li><a href="/en/docs/0.3/document/freecad/basefcstd.html">Englisch</a></li>
+              <li><a href="/de/docs/0.3/document/freecad/basefcstd.html">Deutsch</a></li>
+              <li><a href="/fr/docs/0.3/document/freecad/basefcstd.html">Französisch</a></li>
+              <li><a href="/es/docs/0.3/document/freecad/basefcstd.html">Spanisch</a></li>
+              <li><a href="/sv/docs/0.3/document/freecad/basefcstd.html">Schwedisch</a></li>
             </ul>
           </li>
           <li><a class="github" href="https://github.com/jreinhardt/BOLTS">Github</a></li>
@@ -52,8 +52,8 @@
     <div class="container">
       
       <h2>Documentation for BOLTS 0.3 (current stable version)</h2>
-      <a class="active" href="/bolts/de/docs/0.3/index.html">stable</a>
-      <a href="/bolts/de/docs/0.4/index.html">dev</a>
+      <a class="active" href="/de/docs/0.3/index.html">stable</a>
+      <a href="/de/docs/0.4/index.html">dev</a>
       
     </div>
   </div>
@@ -64,7 +64,7 @@
   <div class="col-sm-8 doc-main">
     <div class="doc-page">
       <h2 class="doc-page-title">Wie man eine fcstd Basisgeometrie erstellt</a></h2>
-      <p>Sie müssen FreeCAD und <a href="/bolts/en/docs/0.3/document/freecad/installation.html">FreeCAD für BOLTS installiert haben</a>.</p>
+      <p>Sie müssen FreeCAD und <a href="/en/docs/0.3/document/freecad/installation.html">FreeCAD für BOLTS installiert haben</a>.</p>
 <p>Diese Anleitung setzt voraus, dass die blt Datei für dieses Teil bereits erstellt ist, und Sie eine
 fcstd Datei mit dem Teil haben, dass sie zu BOLTS hinzufügen wollen.</p>
 <p>Wir tun dies am Beispiel eines Strangpressprofils.</p>
@@ -76,7 +76,7 @@ Länge, die der Länge des Rechtecks in der Datei entspricht. Selektiere das↵
 Rechteck in der Combo Ansicht,dann das Register Daten und ändere den Wert für die↵
 Länge. Das Teil sollte jetzt seine Länge verändern, aber immer noch wie erwartet aussehen. Mache↵
 dies für alle Parameter, überprüfe auch etwaige Kombinationen.</p>
-<p><a href="/bolts/de/docs/static/0.3/fcstd-base1.png"><img alt="Visuelles überprüfen des Teils" src="/bolts/de/docs/static/0.3/fcstd-base1.png" /></a></p>
+<p><a href="/de/docs/static/0.3/fcstd-base1.png"><img alt="Visuelles überprüfen des Teils" src="/de/docs/static/0.3/fcstd-base1.png" /></a></p>
 <h3>Find out feature and property names</h3>
 <p>Für gewöhnlich hat ein Teil mehrere Eigenschaft. Wir benötigen eine Lösung BOLTS mitzuteilen welche Eigenschaft es benutzen soll. Wenn das Teil parametrisch ist, müssen wir auch mitteilen wie die Eigenschaften den Parametern zugeordnet werden.</p>
 <p>Features in FreeCAD have a unique name in a document, but this name is not
@@ -89,7 +89,7 @@ BOLTS.list_names(FreeCAD.ActiveDocument)
 <p>The first line imports and starts BOLTS, the second line calls a function from
 BOLTS that gives out a list of all features with their label and the
 corresponding object names.</p>
-<p><a href="/bolts/de/docs/static/0.3/fcstd-base2.png"><img alt="Featurenamen finden" src="/bolts/de/docs/static/0.3/fcstd-base2.png" /></a></p>
+<p><a href="/de/docs/static/0.3/fcstd-base2.png"><img alt="Featurenamen finden" src="/de/docs/static/0.3/fcstd-base2.png" /></a></p>
 <p>We need to remember the name of the root feature, that BOLTS is supposed to
 insert, and the names of all features that provide parametric behaviour and the
 corresponding names of the properties.</p>
@@ -165,9 +165,9 @@ search path set appropriately, so that typing</p>
 <p>on the FreeCAD python console should do the trick.</p>
 <p>If BOLTS is started successfully, try adding the newly added part to the
 current document with different combinations of parameters.</p>
-<p><a href="/bolts/de/docs/static/0.3/fcstd-base3.png"><img alt="Testen des Ergebnisses" src="/bolts/de/docs/static/0.3/fcstd-base3.png" /></a></p>
+<p><a href="/de/docs/static/0.3/fcstd-base3.png"><img alt="Testen des Ergebnisses" src="/de/docs/static/0.3/fcstd-base3.png" /></a></p>
 <h3>Nächste Schritte</h3>
-<p>You might want to <a href="/bolts/en/docs/0.3/document/general/development.html">contribute</a> this part to
+<p>You might want to <a href="/en/docs/0.3/document/general/development.html">contribute</a> this part to
 BOLTS, so that every user can profit from your efforts.</p>
       <h2>Kommentare</h2>
       <div id="comments"></div>
@@ -231,7 +231,7 @@ BOLTS, so that every user can profit from your efforts.</p>
 </script>
 
 
-<script src="/bolts/static/js/all.js?9bb454f9"></script>
+<script src="/static/js/all.js?9bb454f9"></script>
 
 </body>
 </html>

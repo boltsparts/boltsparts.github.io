@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="/bolts/static/favicon.ico" />
+  <link rel="shortcut icon" href="/static/favicon.ico" />
   
-  <link rel="stylesheet" href="/bolts/static/css/style.css?019e02bb" type="text/css" media="screen">
+  <link rel="stylesheet" href="/static/css/style.css?019e02bb" type="text/css" media="screen">
   
   <title>Documentation</title>
 </head>
@@ -22,22 +22,22 @@
       </div>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li><a href="/bolts/en/index.html">Home</a></li>
-          <li><a href="/bolts/en/blog/index.html">Blog</a></li>
-          <li><a href="/bolts/en/parts/index.html">Parts</a></li>
-          <li><a href="/bolts/en/docs/index.html">Documentation</a></li>
-          <li><a href="/bolts/en/contribute.html">Contribute</a></li>
-          <li><a href="/bolts/en/downloads.html">Downloads</a></li>
+          <li><a href="/en/index.html">Home</a></li>
+          <li><a href="/en/blog/index.html">Blog</a></li>
+          <li><a href="/en/parts/index.html">Parts</a></li>
+          <li><a href="/en/docs/index.html">Documentation</a></li>
+          <li><a href="/en/contribute.html">Contribute</a></li>
+          <li><a href="/en/downloads.html">Downloads</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">en<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="/bolts/en/docs/0.3/document/general/blt-files.html">English</a></li>
-              <li><a href="/bolts/de/docs/0.3/document/general/blt-files.html">German</a></li>
-              <li><a href="/bolts/fr/docs/0.3/document/general/blt-files.html">French</a></li>
-              <li><a href="/bolts/es/docs/0.3/document/general/blt-files.html">Spanish</a></li>
-              <li><a href="/bolts/sv/docs/0.3/document/general/blt-files.html">Swedish</a></li>
+              <li><a href="/en/docs/0.3/document/general/blt-files.html">English</a></li>
+              <li><a href="/de/docs/0.3/document/general/blt-files.html">German</a></li>
+              <li><a href="/fr/docs/0.3/document/general/blt-files.html">French</a></li>
+              <li><a href="/es/docs/0.3/document/general/blt-files.html">Spanish</a></li>
+              <li><a href="/sv/docs/0.3/document/general/blt-files.html">Swedish</a></li>
             </ul>
           </li>
           <li><a class="github" href="https://github.com/jreinhardt/BOLTS">Github</a></li>
@@ -52,8 +52,8 @@
     <div class="container">
       
       <h2>Documentation for BOLTS 0.3 (current stable version)</h2>
-      <a class="active" href="/bolts/en/docs/0.3/index.html">stable</a>
-      <a href="/bolts/en/docs/0.4/index.html">dev</a>
+      <a class="active" href="/en/docs/0.3/index.html">stable</a>
+      <a href="/en/docs/0.4/index.html">dev</a>
       
     </div>
   </div>
@@ -83,14 +83,14 @@ explanation can be found <a href="licensing.html">here</a>. If you are unsure wh
 <a href="http://opensource.org/licenses/MIT">MIT</a> are usually a good choice.</p>
 <p>After the license header follows the collection header. It contains general
 details about the collection. A list of possible fields can be found in the
-<a href="/bolts/en/docs/0.3/specification.html#collection-header">specification</a>, but
+<a href="/en/docs/0.3/specification.html#collection-header">specification</a>, but
 alternatively looking at
 <a href="https://github.com/jreinhardt/BOLTS/tree/master/data">the other collections</a>
 should show you how this works.</p>
 <p>The field blt-version gives the version of the blt file format, which is not
 the necessarily identical to the version of BOLTS. Which version is the current
 one can be found in the
-<a href="/bolts/en/docs/0.3/specification.html#collection-header">specification</a></p>
+<a href="/en/docs/0.3/specification.html#collection-header">specification</a></p>
 <p>For the pipe collection the collection first part of the blt file looks like this:</p>
 <pre><code>#BOLTS - Open Library of Technical Specifications
 #Copyright (c) 2013 Johannes Reinhardt &lt;jreinhardt@ist-dein-freund.de&gt;
@@ -127,7 +127,7 @@ here.</p>
 the license field of the collection header.</p>
 <p>A email address must be given for the author, to have a way of contacting the
 author e.g. for licensing problems.  The license in the license field and the
-license header must agree and be one of the <a href="/bolts/en/docs/0.3/document/general/licensing.html">licenses that BOLTS
+license header must agree and be one of the <a href="/en/docs/0.3/document/general/licensing.html">licenses that BOLTS
 allows</a>. If more than one person contributed
 significantly, then a list of authors can be given:</p>
 <pre><code>author: [Johannes Reinhardt &lt;jreinhardt@ist-dein-freund.de&gt;, John Doe &lt;doe@domain.tld&gt;]
@@ -140,7 +140,7 @@ collection. How to add a class is explained in the next section.</p>
 <h3>Adding classes to a collection</h3>
 <p>After the header follows a list of class descriptions. If you are not sure that
 you know what a class is in BOLTS, you can read a bit about it
-<a href="/bolts/en/docs/0.3/document/general/introduction.html">here</a>.</p>
+<a href="/en/docs/0.3/document/general/introduction.html">here</a>.</p>
 <p>Much of the most important information that BOLTS needs to know about a class
 concerns the different parameters of the part, their types, units and tables
 that connect them.</p>
@@ -166,7 +166,7 @@ that can be used to label the part or to create a BOM.</p>
 can specify length and inner and outer diameter arbitrarily, and one class that
 provides pipes following DIN11850 Range 1.</p>
 <p>Again, more information and inspiration can be found in the
-<a href="/bolts/en/docs/0.3/specification.html#class-element">specification</a> or by looking
+<a href="/en/docs/0.3/specification.html#class-element">specification</a> or by looking
 at other collections.</p>
 <h4>A generic pipe class</h4>
 <p>This is how the generic pipe class looks like</p>
@@ -255,7 +255,7 @@ nominal diameter and the length. The inner and outer diameters will be obtained
 from a table, which is why the parameter <code>dn</code> is indicated to be of type <code>Table
 Index</code>. If the type of a parameter is not indicated, it defaults to <code>Length
 (mm)</code>. Other choices for types for parameters can be found in the
-<a href="/bolts/en/docs/0.3/specification.html#parameter-element">specification</a></p>
+<a href="/en/docs/0.3/specification.html#parameter-element">specification</a></p>
 <p>Then one or several tables can follow in the tables field. Here we have only
 one, linking the nominal diameter to the inner and outer diameter. Table
 Indices should always be strings in YAML, so when there is ambiguity (as it is
@@ -267,18 +267,18 @@ more tables but with conflicting data.</p>
 <p>Finally the source field should now contains the link to the Wikipedia page
 where we got the data for the table from.</p>
 <h3>Testing</h3>
-<p>To test whether you got it right, you can use the <a href="/bolts/en/docs/0.3/document/general/utility-script.html">utility
+<p>To test whether you got it right, you can use the <a href="/en/docs/0.3/document/general/utility-script.html">utility
 script</a> to regenerate the html
 documentation. If there are any problems with your blt file, you should get a
 error message.</p>
 <h3>Further steps</h3>
-<p>A collection becomes really useful, when <a href="/bolts/en/docs/0.3/document/general/introduction.html">base geometries</a>
+<p>A collection becomes really useful, when <a href="/en/docs/0.3/document/general/introduction.html">base geometries</a>
 for its classes exist. Maybe you want to implement a 
-<a href="/bolts/en/docs/0.3/document/openscad/basemodule.html">base module for OpenSCAD</a>
+<a href="/en/docs/0.3/document/openscad/basemodule.html">base module for OpenSCAD</a>
 or a 
-<a href="/bolts/en/docs/0.3/document/freecad/basefunction.html">base function for FreeCAD</a>
+<a href="/en/docs/0.3/document/freecad/basefunction.html">base function for FreeCAD</a>
 for your newly created collection.</p>
-<p>(Actually, the <a href="/bolts/en/docs/0.3/document/openscad/basemodule.html">base module tutorial</a>
+<p>(Actually, the <a href="/en/docs/0.3/document/openscad/basemodule.html">base module tutorial</a>
 explains how to setup a base-module for the pipe collection.)</p>
       <h2>Comments</h2>
       <div id="comments"></div>
@@ -342,7 +342,7 @@ explains how to setup a base-module for the pipe collection.)</p>
 </script>
 
 
-<script src="/bolts/static/js/all.js?9bb454f9"></script>
+<script src="/static/js/all.js?9bb454f9"></script>
 
 </body>
 </html>

@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="/bolts/static/favicon.ico" />
+  <link rel="shortcut icon" href="/static/favicon.ico" />
   
-  <link rel="stylesheet" href="/bolts/static/css/style.css?019e02bb" type="text/css" media="screen">
+  <link rel="stylesheet" href="/static/css/style.css?019e02bb" type="text/css" media="screen">
   
   <title>Documentation</title>
 </head>
@@ -22,22 +22,22 @@
       </div>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li><a href="/bolts/sv/index.html">Home</a></li>
-          <li><a href="/bolts/sv/blog/index.html">Blog</a></li>
-          <li><a href="/bolts/sv/parts/index.html">Parts</a></li>
-          <li><a href="/bolts/sv/docs/index.html">Documentation</a></li>
-          <li><a href="/bolts/sv/contribute.html">Contribute</a></li>
-          <li><a href="/bolts/sv/downloads.html">Downloads</a></li>
+          <li><a href="/sv/index.html">Home</a></li>
+          <li><a href="/sv/blog/index.html">Blog</a></li>
+          <li><a href="/sv/parts/index.html">Parts</a></li>
+          <li><a href="/sv/docs/index.html">Documentation</a></li>
+          <li><a href="/sv/contribute.html">Contribute</a></li>
+          <li><a href="/sv/downloads.html">Downloads</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">sv<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="/bolts/en/docs/0.3/document/general/drawing.html">English</a></li>
-              <li><a href="/bolts/de/docs/0.3/document/general/drawing.html">German</a></li>
-              <li><a href="/bolts/fr/docs/0.3/document/general/drawing.html">French</a></li>
-              <li><a href="/bolts/es/docs/0.3/document/general/drawing.html">Spanish</a></li>
-              <li><a href="/bolts/sv/docs/0.3/document/general/drawing.html">Swedish</a></li>
+              <li><a href="/en/docs/0.3/document/general/drawing.html">English</a></li>
+              <li><a href="/de/docs/0.3/document/general/drawing.html">German</a></li>
+              <li><a href="/fr/docs/0.3/document/general/drawing.html">French</a></li>
+              <li><a href="/es/docs/0.3/document/general/drawing.html">Spanish</a></li>
+              <li><a href="/sv/docs/0.3/document/general/drawing.html">Swedish</a></li>
             </ul>
           </li>
           <li><a class="github" href="https://github.com/jreinhardt/BOLTS">Github</a></li>
@@ -52,8 +52,8 @@
     <div class="container">
       
       <h2>Documentation for BOLTS 0.3 (current stable version)</h2>
-      <a class="active" href="/bolts/sv/docs/0.3/index.html">stable</a>
-      <a href="/bolts/sv/docs/0.4/index.html">dev</a>
+      <a class="active" href="/sv/docs/0.3/index.html">stable</a>
+      <a href="/sv/docs/0.4/index.html">dev</a>
       
     </div>
   </div>
@@ -65,14 +65,14 @@
     <div class="doc-page">
       <h2 class="doc-page-title">How to make a nice drawing for BOLTS</a></h2>
       <h3>Prerequisites</h3>
-<p>You need to have installed <a href="http://freecadweb.org/">FreeCAD</a> and <a href="/bolts/en/docs/0.3/document/freecad/installation.html">BOLTS for
+<p>You need to have installed <a href="http://freecadweb.org/">FreeCAD</a> and <a href="/en/docs/0.3/document/freecad/installation.html">BOLTS for
 FreeCAD</a> and the free Vector Graphics Editor
 <a href="http://inkscape.org/">Inkscape</a>.</p>
 <p>If the part for which you want to create the drawing is not in BOLTS for
-FreeCAD, you also need <a href="http://www.openscad.org/">OpenSCAD</a> and <a href="/bolts/en/docs/0.3/document/openscad/installation.html">BOLTS for
+FreeCAD, you also need <a href="http://www.openscad.org/">OpenSCAD</a> and <a href="/en/docs/0.3/document/openscad/installation.html">BOLTS for
 OpenSCAD</a>.</p>
 <h3>Follow this guide and contribute</h3>
-<p>There is a <a href="/bolts/en/tasks.html?version=0.3">list of classes</a> for which no drawing is
+<p>There is a <a href="/en/tasks.html?version=0.3">list of classes</a> for which no drawing is
 available. You are invited to pick one, follow this guide and contribute the
 result.</p>
 <h3>Scope</h3>
@@ -94,7 +94,7 @@ continue at "Loading a part from BOLTS for OpenSCAD".</p>
 <p>You can skip this step if you want to create a drawing for a part that is only
 in BOLTS for OpenSCAD.</p>
 <p>Start FreeCAD. Add a part of the class for which you want to create the
-drawing, as described <a href="/bolts/en/docs/0.3/document/freecad/usage.html">here</a>. The value of the
+drawing, as described <a href="/en/docs/0.3/document/freecad/usage.html">here</a>. The value of the
 parameters does not matter too much, the default values will be usually fine.</p>
 <h3>Exporting a part from BOLTS for OpenSCAD</h3>
 <p>You can skip this step if you have executed the previous step.</p>
@@ -105,17 +105,17 @@ code</p>
 ISO7089();
 </code></pre>
 <p>The first line includes the BOLTS library. The second line creates a
-part, in this case <a href="/bolts/en/parts/standards/ISO7089.html">a washer</a>.</p>
+part, in this case <a href="/en/parts/standards/ISO7089.html">a washer</a>.</p>
 <p>If you hit F5, or select Design-&gt;Compile, the part should appear in the preview
 window. You can now export the part to a CSG file by choosing Design-&gt;Export as
 CSG....</p>
-<p><a href="/bolts/sv/docs/static/0.3/openscad_drawing2.png"><img alt="Part from BOLTS in OpenSCAD" src="/bolts/sv/docs/static/0.3/openscad_drawing2.png" /></a></p>
+<p><a href="/sv/docs/static/0.3/openscad_drawing2.png"><img alt="Part from BOLTS in OpenSCAD" src="/sv/docs/static/0.3/openscad_drawing2.png" /></a></p>
 <p>Save the file to some place where you can find it again, it is only temporary
 and you can remove it afterwards.</p>
 <p>You can close OpenSCAD now.</p>
 <h3>Loading a CSG file into FreeCAD</h3>
 <p>Start FreeCAD. Then select File-&gt;Open and select the CSG file that you created in the previous step.</p>
-<p><a href="/bolts/sv/docs/static/0.3/openscad_drawing3.png"><img alt="Loading a CSG file into FreeCAD" src="/bolts/sv/docs/static/0.3/openscad_drawing3.png" /></a></p>
+<p><a href="/sv/docs/static/0.3/openscad_drawing3.png"><img alt="Loading a CSG file into FreeCAD" src="/sv/docs/static/0.3/openscad_drawing3.png" /></a></p>
 <p>The part should now be visible in the preview window.</p>
 <h3>Create a drawing</h3>
 <p>You should now have a document with the part for which you want to create the
@@ -127,13 +127,13 @@ obj = FreeCAD.ActiveDocument.ActiveObject
 BOLTS.make_drawing(4.5,obj)
 </code></pre>
 <p>The first line starts BOLTS for FreeCAD (see also
-<a href="/bolts/en/docs/0.3/document/freecad/usage.html">here</a>, the second one creates a variable containing
+<a href="/en/docs/0.3/document/freecad/usage.html">here</a>, the second one creates a variable containing
 the part and the third line calls a helper function from the BOLTS module.</p>
 <p>This helper function has two parameters, a scaling factor and the object, and
 it creates a new drawing from the BOLTS template and inserts various views on
 the object.</p>
 <p>Now an additional object should have vanished in the combo view, a page. </p>
-<p><a href="/bolts/sv/docs/static/0.3/drawing1.png"><img alt="Finished drawing of washer" src="/bolts/sv/docs/static/0.3/drawing1.png" /></a></p>
+<p><a href="/sv/docs/static/0.3/drawing1.png"><img alt="Finished drawing of washer" src="/sv/docs/static/0.3/drawing1.png" /></a></p>
 <p>You can open it in a new drawing viewer by double clicking on it. There will be
 nothing visible, because the drawing needs to be recomputed, which you can do
 by pressing the keys Ctrl-r.</p>
@@ -144,7 +144,7 @@ different views to add dimensions, but the part should be not too tiny.</p>
 <p>If the scaling factor was not good, you can close the Drawing Viewer, delete
 the Page Object from the Combo View and type the last line again, with an
 adjusted scaling factor.</p>
-<p><a href="/bolts/sv/docs/static/0.3/drawing2.png"><img alt="Finished drawing of washer" src="/bolts/sv/docs/static/0.3/drawing2.png" /></a></p>
+<p><a href="/sv/docs/static/0.3/drawing2.png"><img alt="Finished drawing of washer" src="/sv/docs/static/0.3/drawing2.png" /></a></p>
 <p>When you are happy with the drawing, change to the Drawing Workbench, make sure
 the page object is selected in the Combo View and then choose Drawing-&gt;Export
 Page (or use the button in the Drawing toolbar).</p>
@@ -161,12 +161,12 @@ get horizontal (top), vertical (left) and diagonal (corner) guidelines.</p>
 dimensions. The image below shows a possible choice: The inner diameter will be
 indicated on the left side of the front view, the outer below. The thickness
 will be indicated on the left side view.</p>
-<p><a href="/bolts/sv/docs/static/0.3/drawing3.png"><img alt="Guidelines" src="/bolts/sv/docs/static/0.3/drawing3.png" /></a></p>
+<p><a href="/sv/docs/static/0.3/drawing3.png"><img alt="Guidelines" src="/sv/docs/static/0.3/drawing3.png" /></a></p>
 <p>Select the bezier line tool (Shift-F6 or the corresponding icon). Then click on
 one of the guidelines, press Ctrl to lock in the angle to vertical or
 horizontal and then click on the other guideline. The cursor should snap to the
 guideline. Now finish the path by pressing Enter. Repeat for all dimensions.</p>
-<p><a href="/bolts/sv/docs/static/0.3/drawing4.png"><img alt="Raw dimension lines" src="/bolts/sv/docs/static/0.3/drawing4.png" /></a></p>
+<p><a href="/sv/docs/static/0.3/drawing4.png"><img alt="Raw dimension lines" src="/sv/docs/static/0.3/drawing4.png" /></a></p>
 <p>To convert these lines into nice dimensions open the fill and stroke dialog
 using Object-&gt;Fill and Stroke and select the Stroke Style tab. Change to the
 selection cursor (arrow icon in the toolbar), select one of your lines and do
@@ -182,14 +182,14 @@ of your dimension.</p>
 <p>If the dimension is very small (like the thickness of the washer), put
 DistanceEnd as Start Marker and DistanceStart as End Marker.</p>
 <p>Repeat for all lines.</p>
-<p><a href="/bolts/sv/docs/static/0.3/drawing5.png"><img alt="Dimension lines" src="/bolts/sv/docs/static/0.3/drawing5.png" /></a></p>
+<p><a href="/sv/docs/static/0.3/drawing5.png"><img alt="Dimension lines" src="/sv/docs/static/0.3/drawing5.png" /></a></p>
 <p>Then choose the text tool in the toolbar on the left and add the dimension
 names. You can look them up on the
-<a href="/bolts/en/parts/standards/ISO7089.html">Specification page</a> by following
+<a href="/en/parts/standards/ISO7089.html">Specification page</a> by following
 the source url or by checking the blt file.</p>
 <p>In the case of the washer we have inner diameter d1, outer diameter d2 and
 thickness s.</p>
-<p><a href="/bolts/sv/docs/static/0.3/drawing6.png"><img alt="Dimension lines with labels" src="/bolts/sv/docs/static/0.3/drawing6.png" /></a></p>
+<p><a href="/sv/docs/static/0.3/drawing6.png"><img alt="Dimension lines with labels" src="/sv/docs/static/0.3/drawing6.png" /></a></p>
 <p>Now remove the guidelines by hovering over them until they change color and
 then pressing delete.</p>
 <h3>Filenames and PNG export</h3>
@@ -230,7 +230,7 @@ drawing directory by adding an entry of the form:</p>
 filename is relative to the subdirectory of the collection and given without
 extension to cover both svg and png versions. The type field distinguishes
 drawings that explain the parameters and dimensions of a part from other images
-that e.g. show <a href="/bolts/en/docs/0.3/document/openscad/basemodule.html#adding_connectors">the location of connectors</a></p>
+that e.g. show <a href="/en/docs/0.3/document/openscad/basemodule.html#adding_connectors">the location of connectors</a></p>
       <h2>Comments</h2>
       <div id="comments"></div>
     </div>
@@ -293,7 +293,7 @@ that e.g. show <a href="/bolts/en/docs/0.3/document/openscad/basemodule.html#add
 </script>
 
 
-<script src="/bolts/static/js/all.js?9bb454f9"></script>
+<script src="/static/js/all.js?9bb454f9"></script>
 
 </body>
 </html>

@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="/bolts/static/favicon.ico" />
+  <link rel="shortcut icon" href="/static/favicon.ico" />
   
-  <link rel="stylesheet" href="/bolts/static/css/style.css?019e02bb" type="text/css" media="screen">
+  <link rel="stylesheet" href="/static/css/style.css?019e02bb" type="text/css" media="screen">
   
   <title>Blog</title>
 </head>
@@ -22,22 +22,22 @@
       </div>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li><a href="/bolts/en/index.html">Home</a></li>
-          <li><a href="/bolts/en/blog/index.html">Blog</a></li>
-          <li><a href="/bolts/en/parts/index.html">Parts</a></li>
-          <li><a href="/bolts/en/docs/index.html">Documentation</a></li>
-          <li><a href="/bolts/en/contribute.html">Contribute</a></li>
-          <li><a href="/bolts/en/downloads.html">Downloads</a></li>
+          <li><a href="/en/index.html">Home</a></li>
+          <li><a href="/en/blog/index.html">Blog</a></li>
+          <li><a href="/en/parts/index.html">Parts</a></li>
+          <li><a href="/en/docs/index.html">Documentation</a></li>
+          <li><a href="/en/contribute.html">Contribute</a></li>
+          <li><a href="/en/downloads.html">Downloads</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">en<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="/bolts/en/blog/2013/12/28/OpenSCAD-positioning.html">English</a></li>
-              <li><a href="/bolts/de/blog/2013/12/28/OpenSCAD-positioning.html">German</a></li>
-              <li><a href="/bolts/fr/blog/2013/12/28/OpenSCAD-positioning.html">French</a></li>
-              <li><a href="/bolts/es/blog/2013/12/28/OpenSCAD-positioning.html">Spanish</a></li>
-              <li><a href="/bolts/sv/blog/2013/12/28/OpenSCAD-positioning.html">Swedish</a></li>
+              <li><a href="/en/blog/2013/12/28/OpenSCAD-positioning.html">English</a></li>
+              <li><a href="/de/blog/2013/12/28/OpenSCAD-positioning.html">German</a></li>
+              <li><a href="/fr/blog/2013/12/28/OpenSCAD-positioning.html">French</a></li>
+              <li><a href="/es/blog/2013/12/28/OpenSCAD-positioning.html">Spanish</a></li>
+              <li><a href="/sv/blog/2013/12/28/OpenSCAD-positioning.html">Swedish</a></li>
             </ul>
           </li>
           <li><a class="github" href="https://github.com/jreinhardt/BOLTS">Github</a></li>
@@ -59,10 +59,10 @@
 <div class="row">
   <div class="col-sm-8 blog-main">
     <div class="blog-post">
-      <h2 class="blog-post-title"><a href="/bolts/en/blog/2013/12/28/OpenSCAD-positioning.html">Improvements for BOLTS for OpenSCAD</a></h2>
+      <h2 class="blog-post-title"><a href="/en/blog/2013/12/28/OpenSCAD-positioning.html">Improvements for BOLTS for OpenSCAD</a></h2>
       <p class="blog-post-meta">Posted on Dec 27, 2013, 11:15:00 PM by Johannes</p>
       <p>I am looking for ways to make it easier to use parts from
-<a href="/bolts/en/index.html?version=0.3">BOLTS</a>) in OpenSCAD. At the moment it is a bit awkward
+<a href="/en/index.html?version=0.3">BOLTS</a>) in OpenSCAD. At the moment it is a bit awkward
 because one has to know precisely how the BOLTS part is positioned and oriented
 and then has to translate and rotate it around. This often requires the
 knowledge of some dimensions of the part, so one has to query BOLTS about it,
@@ -124,7 +124,7 @@ operation can be used to position and orient the part. This way things like
 "put that bolt the so that its tip is here" or "the head of that bolt should
 be at this point" can be expressed in a compact and readable way.</p>
 
-<p><a href="/bolts/en/blog/static/openscad-connectors.png"><img alt="Connector positions" src="/bolts/en/blog/static/openscad-connectors.png" /></a></p>
+<p><a href="/en/blog/static/openscad-connectors.png"><img alt="Connector positions" src="/en/blog/static/openscad-connectors.png" /></a></p>
 
 <h3>Example: Bolted connection</h3>
 
@@ -157,19 +157,19 @@ align(nut_cs,cube_cs,[10+s,0,0]) ISO4035("M4");
 orientation of the bolted connection, one just has to change cube_cs.
 Changing the size of the bolts and washers change M4 is also easy.</p>
 
-<p><a href="/bolts/en/blog/static/openscad-positioningexample.png"><img alt="Bolted connection example" src="/bolts/en/blog/static/openscad-positioningexample.png" /></a></p>
+<p><a href="/en/blog/static/openscad-positioningexample.png"><img alt="Bolted connection example" src="/en/blog/static/openscad-positioningexample.png" /></a></p>
 
 <h3>Try it</h3>
 
 <p>You can try this functionality with the most recent development snapshot from
-the <a href="/bolts/en/downloads.html?version=0.3">BOLTS page</a>. Either place the contents of the
+the <a href="/en/downloads.html?version=0.3">BOLTS page</a>. Either place the contents of the
 archive in the same directory as the .scad files that use BOLTS, or follow the
 instructions on 
-<a href="/bolts/en/docs/0.4/document/openscad/installation.html">how to install BOLTS for OpenSCAD</a>.</p>
+<a href="/en/docs/0.4/document/openscad/installation.html">how to install BOLTS for OpenSCAD</a>.</p>
 
 <p>Not all parts have connectors yet, but nuts, washers, hex bolts and
 batteries do. The names of the connectors are listed in the OpenSCAD section of the
-<a href="/bolts/en/parts/index.html?version=0.3">part page</a>.</p>
+<a href="/en/parts/index.html?version=0.3">part page</a>.</p>
 
 <p>There is no documentation for this feature (apart from this blog post), because
 I might still change the way things work.</p>
@@ -235,7 +235,7 @@ I might still change the way things work.</p>
 </script>
 
 
-<script src="/bolts/static/js/all.js?9bb454f9"></script>
+<script src="/static/js/all.js?9bb454f9"></script>
 
 </body>
 </html>
